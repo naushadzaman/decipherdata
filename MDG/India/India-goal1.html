@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
+
+<head>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta charset="utf-8"/>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Progress of India in MDG</title>
+
+    <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../../css/nivo-slider.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/jquery.fancybox-1.3.4.css" type="text/css" />
+
+    <!--[if lt IE 9]>
+	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../js/jquery-1.6.1.min.js"><\/script>')</script>
+
+    <script src="js/jquery.smoothscroll.js"></script>
+    <script src="../../js/jquery.nivo.slider.pack.js"></script>
+    <script src="../../js/jquery.easing-1.3.pack.js"></script>
+    <script src="../../js/jquery.fancybox-1.3.4.pack.js"></script>
+    <script src="../../js/init.js"></script>
+        
+        <!-- Don't touch this! -->
+        
+        
+        <script class="include" type="text/javascript" src="../../jqplot/examples/../jquery.jqplot.min.js"></script>
+        <script type="text/javascript" src="../../jqplot/examples/syntaxhighlighter/scripts/shCore.min.js"></script>
+        <script type="text/javascript" src="../../jqplot/examples/syntaxhighlighter/scripts/shBrushJScript.min.js"></script>
+        <script type="text/javascript" src="../../jqplot/examples/syntaxhighlighter/scripts/shBrushXml.min.js"></script>
+        <!-- End Don't touch this! -->
+        
+        <!-- Additional plugins go here -->
+        
+        <script class="include" language="javascript" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.highlighter.min.js"></script>
+        <script class="include" language="javascript" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.cursor.min.js"></script>
+        <script class="include" language="javascript" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.dateAxisRenderer.min.js"></script>
+        
+        <!-- End additional plugins -->
+        
+        <!-- Bar/Plot plugins go here -->
+        
+        <script class="include" language="javascript" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.barRenderer.min.js"></script>
+        <script class="include" language="javascript" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.categoryAxisRenderer.min.js"></script>
+        <script class="include" language="javascript" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.pointLabels.min.js"></script>
+        <script class="include" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.pieRenderer.min.js"></script>
+        
+        <!-- End Bar/Plot plugins -->
+
+        
+        <script type="text/javascript" src="../../jqplot/examples/example.min.js"></script>
+
+        <link class="include" rel="stylesheet" type="text/css" href="../../jqplot/examples/../jquery.jqplot.min.css" />
+        <link rel="stylesheet" type="text/css" href="../../jqplot/examples/examples.min.css" />
+        <link type="text/css" rel="stylesheet" href="../../jqplot/examples/syntaxhighlighter/styles/shCoreDefault.min.css" />
+        <link type="text/css" rel="stylesheet" href="../../jqplot/examples/syntaxhighlighter/styles/shThemejqPlot.min.css" />
+        
+        
+        <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="../../jqplot/examples/../excanvas.js"></script><![endif]-->
+
+
+</head>
+
+<body>
+
+<!-- header-wrap -->
+<div id="header-wrap">
+    <header>
+
+        <hgroup>
+            <h1><a href="index.html">Progress of India in MDG</a></h1>
+            <h3>Progress of India in MDG</h3>
+        </hgroup>
+
+        <nav>
+
+	        <ul>
+                <li><a href="http://www.decipherdata.org">Home</a></li>
+                <li><a href="India-goal1.html">Goal 1</a></li>
+                <li><a href="India-goal2.html">Goal 2</a></li>
+                <li><a href="India-goal3.html">Goal 3</a></li>
+                <li><a href="India-goal4.html">Goal 4</a></li>
+                <li><a href="India-goal5.html">Goal 5</a></li>
+                <li><a href="India-goal6.html">Goal 6</a></li>
+                <li><a href="India-goal7.html">Goal 7</a></li>
+                <li><a href="India-goal8.html">Goal 8</a></li>
+
+            </ul>
+        </nav>
+
+    </header>
+</div>
+    
+
+<!-- stat data -->
+<script class="code" type="text/javascript">
+$(document).ready(function(){
+var India=[[2005, 8.4], [2010, 6.2], [2012, 6.2]];
+var World=[];
+var SouthAsia=[];
+var Best=[[1990, ("Cote d'Ivoire", 3.0)], [1995, ('Algeria', 3.2)], [2000, ('Thailand', 3.0)], [2005, ('Malaysia', 1.4)], [2010, ('Ukraine', 0.4)], [2012, ('Ukraine', 0.4)]];
+var Worst=[[1990, ('Sierra Leone', 58.6)], [1995, ('Sierra Leone', 58.6)], [2000, ('Sierra Leone', 58.6)], [2005, ('Lesotho', 37.9)], [2010, ('Equatorial Guinea', 45.3)], [2012, ('Equatorial Guinea', 45.3)]];
+
+var plotSIPOVNAGP = $.jqplot("vSIPOVNAGP", [India, World, SouthAsia, Best, Worst], {
+	 title:' Poverty gap at national poverty line (%)',
+	 axes:{yaxis:{min:-9.53174061433, max:68.5317406143}, xaxis:{min:1989, max:2021, label:'Year'}},
+	 legend: {show: true } ,
+	 series:[
+		 {label:'India', showMarker: false, lineWidth: 3, color:'green'}, 
+		 {label:'World', showMarker: false, lineWidth: 1, linePattern: 'dashed', color: 'rgb(66, 98, 144)'}, 
+		 {label:'SouthAsia', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'purple'}, 
+		 {label:'Best', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'yellow'},
+		 {label:'Worst', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'red'}
+		 ]
+	 });
+});
+</script>
+<script class="code" type="text/javascript">
+$(document).ready(function(){
+var India=[[1990, 15.81], [1995, 13.56], [2000, 13.56], [2005, 10.51], [2010, 7.49], [2012, 7.49]];
+var World=[];
+var SouthAsia=[[1990, 16.13], [1995, 14.87], [2000, 12.19], [2005, 9.89], [2010, 8.63], [2012, 8.63]];
+var Best=[[1990, ('Argentina', 0.0)], [1995, ('Slovak Republic', 0.0)], [2000, ('Seychelles', 0.0)], [2005, ('Bulgaria', 0.0)], [2010, ('Russian Federation', 0.0)], [2012, ('Russian Federation', 0.0)]];
+var Worst=[[1990, ('Madagascar', 50.52)], [1995, ('Mali', 53.09)], [2000, ('Mali', 53.09)], [2005, ('Burundi', 47.28)], [2010, ('"Congo - Dem. Rep."', 52.76)], [2012, ('"Congo - Dem. Rep."', 52.76)]];
+
+var plotSIPOVGAPS = $.jqplot("vSIPOVGAPS", [India, World, SouthAsia, Best, Worst], {
+	 title:' Poverty gap at $1.25 a day (PPP) (%)',
+	 axes:{yaxis:{min:-10.0, max:63.09}, xaxis:{min:1989, max:2021, label:'Year'}},
+	 legend: {show: true } ,
+	 series:[
+		 {label:'India', showMarker: false, lineWidth: 3, color:'green'}, 
+		 {label:'World', showMarker: false, lineWidth: 1, linePattern: 'dashed', color: 'rgb(66, 98, 144)'}, 
+		 {label:'SouthAsia', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'purple'}, 
+		 {label:'Best', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'yellow'},
+		 {label:'Worst', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'red'}
+		 ]
+	 });
+});
+</script>
+<script class="code" type="text/javascript">
+$(document).ready(function(){
+var India=[[1995, 45.3], [2000, 45.3], [2005, 37.2], [2010, 29.8], [2012, 29.8]];
+var World=[];
+var SouthAsia=[];
+var Best=[[1990, ('Tunisia', 6.7)], [1995, ('Tunisia', 6.2)], [2000, ('Tunisia', 4.2)], [2005, ('China', 2.8)], [2010, ('China', 2.8)], [2012, ('China', 2.8)]];
+var Worst=[[1990, ('Sierra Leone', 81.6)], [1995, ('Sierra Leone', 81.6)], [2000, ('Tajikistan', 96.0)], [2005, ('Burundi', 81.0)], [2010, ('Haiti', 77.0)], [2012, ('Haiti', 77.0)]];
+
+var plotSIPOVNAHC = $.jqplot("vSIPOVNAHC", [India, World, SouthAsia, Best, Worst], {
+	 title:' Poverty headcount ratio at national poverty line (% of population)',
+	 axes:{yaxis:{min:-6.90833333333, max:105.708333333}, xaxis:{min:1989, max:2021, label:'Year'}},
+	 legend: {show: true } ,
+	 series:[
+		 {label:'India', showMarker: false, lineWidth: 3, color:'green'}, 
+		 {label:'World', showMarker: false, lineWidth: 1, linePattern: 'dashed', color: 'rgb(66, 98, 144)'}, 
+		 {label:'SouthAsia', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'purple'}, 
+		 {label:'Best', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'yellow'},
+		 {label:'Worst', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'red'}
+		 ]
+	 });
+});
+</script>
+<script class="code" type="text/javascript">
+$(document).ready(function(){
+var India=[[1990, 53.59], [1995, 49.4], [2000, 49.4], [2005, 41.64], [2010, 32.67], [2012, 32.67]];
+var World=[];
+var SouthAsia=[[1990, 53.81], [1995, 51.7], [2000, 45.11], [2005, 39.43], [2010, 35.98], [2012, 35.98]];
+var Best=[[1990, ('Argentina', 0.0)], [1995, ('Slovak Republic', 0.0)], [2000, ('Seychelles', 0.0)], [2005, ('Bulgaria', 0.0)], [2010, ('Russian Federation', 0.0)], [2012, ('Russian Federation', 0.0)]];
+var Worst=[[1990, ('Madagascar', 85.89)], [1995, ('Mali', 86.08)], [2000, ('Burundi', 86.43)], [2005, ('Burundi', 86.43)], [2010, ('"Congo - Dem. Rep."', 87.72)], [2012, ('"Congo - Dem. Rep."', 87.72)]];
+
+var plotSIPOVDDAY = $.jqplot("vSIPOVDDAY", [India, World, SouthAsia, Best, Worst], {
+	 title:' Poverty headcount ratio at $1.25 a day (PPP) (% of population)',
+	 axes:{yaxis:{min:-10.0, max:97.72}, xaxis:{min:1989, max:2021, label:'Year'}},
+	 legend: {show: true } ,
+	 series:[
+		 {label:'India', showMarker: false, lineWidth: 3, color:'green'}, 
+		 {label:'World', showMarker: false, lineWidth: 1, linePattern: 'dashed', color: 'rgb(66, 98, 144)'}, 
+		 {label:'SouthAsia', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'purple'}, 
+		 {label:'Best', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'yellow'},
+		 {label:'Worst', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'red'}
+		 ]
+	 });
+});
+</script>
+<script class="code" type="text/javascript">
+$(document).ready(function(){
+var India=[[1990, 8.84], [1995, 9.09], [2000, 9.09], [2005, 8.64], [2010, 8.64], [2012, 8.64]];
+var World=[];
+var SouthAsia=[];
+var Best=[[1990, ('Slovak Republic', 11.97)], [1995, ('Slovak Republic', 11.85)], [2000, ('Japan', 10.58)], [2005, ('Japan', 10.58)], [2010, ('Japan', 10.58)], [2012, ('Japan', 10.58)]];
+var Worst=[[1990, ('Panama', 0.85)], [1995, ('Panama', 1.44)], [2000, ('Bolivia', 0.82)], [2005, ('"Micronesia - Fed. Sts."', 1.59)], [2010, ('"Micronesia - Fed. Sts."', 1.59)], [2012, ('"Micronesia - Fed. Sts."', 1.59)]];
+
+var plotSIDSTFRST20 = $.jqplot("vSIDSTFRST20", [India, World, SouthAsia, Best, Worst], {
+	 title:' Income share held by lowest 20%',
+	 axes:{yaxis:{min:-8.4949540518, max:21.2849540518}, xaxis:{min:1989, max:2021, label:'Year'}},
+	 legend: {show: true } ,
+	 series:[
+		 {label:'India', showMarker: false, lineWidth: 3, color:'green'}, 
+		 {label:'World', showMarker: false, lineWidth: 1, linePattern: 'dashed', color: 'rgb(66, 98, 144)'}, 
+		 {label:'SouthAsia', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'purple'}, 
+		 {label:'Best', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'yellow'},
+		 {label:'Worst', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'red'}
+		 ]
+	 });
+});
+</script>
+<script class="code" type="text/javascript">
+$(document).ready(function(){
+var India=[[1995, 58.2], [2000, 56.9], [2005, 58.2], [2010, 53.6], [2012, 53.6]];
+var World=[[1995, 61.8485], [2000, 61.1902], [2005, 61.1777], [2010, 60.2563], [2012, 60.2563]];
+var SouthAsia=[[1995, 58.3357], [2000, 57.1918], [2005, 58.2028], [2010, 54.9324], [2012, 54.9324]];
+var Best=[[1995, ('Rwanda', 86.9)], [2000, ('Rwanda', 85.4)], [2005, ('Madagascar', 84.3)], [2010, ('Qatar', 85.8)], [2012, ('Qatar', 85.8)]];
+var Worst=[[1995, ('West Bank and Gaza', 29.3)], [2000, ('Algeria', 30.8)], [2005, ('West Bank and Gaza', 30.3)], [2010, ('West Bank and Gaza', 30.7)], [2012, ('West Bank and Gaza', 30.7)]];
+
+var plotSLEMPTOTLSPZS = $.jqplot("vSLEMPTOTLSPZS", [India, World, SouthAsia, Best, Worst], {
+	 title:' "Employment to population ratio - 15+ - total (%)"',
+	 axes:{yaxis:{min:22.6716915995, max:93.5283084005}, xaxis:{min:1989, max:2021, label:'Year'}},
+	 legend: {show: true } ,
+	 series:[
+		 {label:'India', showMarker: false, lineWidth: 3, color:'green'}, 
+		 {label:'World', showMarker: false, lineWidth: 1, linePattern: 'dashed', color: 'rgb(66, 98, 144)'}, 
+		 {label:'SouthAsia', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'purple'}, 
+		 {label:'Best', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'yellow'},
+		 {label:'Worst', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'red'}
+		 ]
+	 });
+});
+</script>
+<script class="code" type="text/javascript">
+$(document).ready(function(){
+var India=[[1995, 34.1], [2000, 32.9], [2005, 35.1], [2010, 27.7], [2012, 27.7]];
+var World=[[1995, 48.8423], [2000, 48.6103], [2005, 48.9759], [2010, 47.9032], [2012, 47.9032]];
+var SouthAsia=[[1995, 34.3427], [2000, 33.3458], [2005, 35.2293], [2010, 30.2009], [2012, 30.2009]];
+var Best=[[1995, ('Rwanda', 86.0)], [2000, ('Rwanda', 86.1)], [2005, ('Rwanda', 85.4)], [2010, ('Rwanda', 86.1)], [2012, ('Rwanda', 86.1)]];
+var Worst=[[1995, ('Algeria', 7.5)], [2000, ('Algeria', 7.8)], [2005, ('Jordan', 9.0)], [2010, ('Syrian Arab Republic', 10.0)], [2012, ('Syrian Arab Republic', 10.0)]];
+
+var plotSLEMPTOTLSPFEZS = $.jqplot("vSLEMPTOTLSPFEZS", [India, World, SouthAsia, Best, Worst], {
+	 title:' "Employment to population ratio - 15+ - female (%)"',
+	 axes:{yaxis:{min:-1.62891986063, max:95.2289198606}, xaxis:{min:1989, max:2021, label:'Year'}},
+	 legend: {show: true } ,
+	 series:[
+		 {label:'India', showMarker: false, lineWidth: 3, color:'green'}, 
+		 {label:'World', showMarker: false, lineWidth: 1, linePattern: 'dashed', color: 'rgb(66, 98, 144)'}, 
+		 {label:'SouthAsia', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'purple'}, 
+		 {label:'Best', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'yellow'},
+		 {label:'Worst', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'red'}
+		 ]
+	 });
+});
+</script>
+<script class="code" type="text/javascript">
+$(document).ready(function(){
+var India=[[1995, 80.7], [2000, 79.3], [2005, 79.9], [2010, 78.1], [2012, 78.1]];
+var World=[[1995, 74.9114], [2000, 73.8402], [2005, 73.4753], [2010, 72.7169], [2012, 72.7169]];
+var SouthAsia=[[1995, 80.8147], [2000, 79.5644], [2005, 79.9511], [2010, 78.5496], [2012, 78.5496]];
+var Best=[[1995, ('Qatar', 94.3)], [2000, ('Qatar', 91.5)], [2005, ('Qatar', 93.7)], [2010, ('Qatar', 94.9)], [2012, ('Qatar', 94.9)]];
+var Worst=[[1995, ('"Macedonia - FYR"', 46.5)], [2000, ('"Macedonia - FYR"', 45.6)], [2005, ('"Macedonia - FYR"', 40.6)], [2010, ('Moldova', 40.5)], [2012, ('Moldova', 40.5)]];
+
+var plotSLEMPTOTLSPMAZS = $.jqplot("vSLEMPTOTLSPMAZS", [India, World, SouthAsia, Best, Worst], {
+	 title:' "Employment to population ratio - 15+ - male (%)"',
+	 axes:{yaxis:{min:34.7676501581, max:100.632349842}, xaxis:{min:1989, max:2021, label:'Year'}},
+	 legend: {show: true } ,
+	 series:[
+		 {label:'India', showMarker: false, lineWidth: 3, color:'green'}, 
+		 {label:'World', showMarker: false, lineWidth: 1, linePattern: 'dashed', color: 'rgb(66, 98, 144)'}, 
+		 {label:'SouthAsia', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'purple'}, 
+		 {label:'Best', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'yellow'},
+		 {label:'Worst', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'red'}
+		 ]
+	 });
+});
+</script>
+<script class="code" type="text/javascript">
+$(document).ready(function(){
+var India=[[1995, 44.5], [2000, 42.0], [2005, 42.4], [2010, 33.9], [2012, 33.9]];
+var World=[[1995, 49.6374], [2000, 46.2289], [2005, 45.229], [2010, 42.6705], [2012, 42.6705]];
+var SouthAsia=[[1995, 45.4009], [2000, 43.0826], [2005, 43.6954], [2010, 37.2199], [2012, 37.2199]];
+var Best=[[1995, ('Rwanda', 79.2)], [2000, ('Nepal', 78.6)], [2005, ('Nepal', 74.8)], [2010, ('Nepal', 73.3)], [2012, ('Nepal', 73.3)]];
+var Worst=[[1995, ('Mauritania', 15.8)], [2000, ('Saudi Arabia', 15.5)], [2005, ('"Macedonia - FYR"', 12.4)], [2010, ('Namibia', 10.7)], [2012, ('Namibia', 10.7)]];
+
+var plotSLEMP1524SPZS = $.jqplot("vSLEMP1524SPZS", [India, World, SouthAsia, Best, Worst], {
+	 title:' "Employment to population ratio - ages 15-24 - total (%)"',
+	 axes:{yaxis:{min:2.05101010101, max:87.848989899}, xaxis:{min:1989, max:2021, label:'Year'}},
+	 legend: {show: true } ,
+	 series:[
+		 {label:'India', showMarker: false, lineWidth: 3, color:'green'}, 
+		 {label:'World', showMarker: false, lineWidth: 1, linePattern: 'dashed', color: 'rgb(66, 98, 144)'}, 
+		 {label:'SouthAsia', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'purple'}, 
+		 {label:'Best', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'yellow'},
+		 {label:'Worst', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'red'}
+		 ]
+	 });
+});
+</script>
+<script class="code" type="text/javascript">
+$(document).ready(function(){
+var India=[[1995, 26.5], [2000, 24.2], [2005, 25.1], [2010, 17.2], [2012, 17.2]];
+var World=[[1995, 42.3605], [2000, 38.937], [2005, 37.9522], [2010, 35.5736], [2012, 35.5736]];
+var SouthAsia=[[1995, 27.793], [2000, 25.365], [2005, 26.5162], [2010, 20.9462], [2012, 20.9462]];
+var Best=[[1995, ('Rwanda', 79.5)], [2000, ('Nepal', 77.5)], [2005, ('Nepal', 74.5)], [2010, ('Rwanda', 74.6)], [2012, ('Rwanda', 74.6)]];
+var Worst=[[1995, ('Iraq', 2.8)], [2000, ('Iraq', 2.8)], [2005, ('Iraq', 2.7)], [2010, ('Iraq', 2.4)], [2012, ('Iraq', 2.4)]];
+
+var plotSLEMP1524SPFEZS = $.jqplot("vSLEMP1524SPFEZS", [India, World, SouthAsia, Best, Worst], {
+	 title:' "Employment to population ratio - ages 15-24 - female (%)"',
+	 axes:{yaxis:{min:-7.29811320755, max:89.1981132075}, xaxis:{min:1989, max:2021, label:'Year'}},
+	 legend: {show: true } ,
+	 series:[
+		 {label:'India', showMarker: false, lineWidth: 3, color:'green'}, 
+		 {label:'World', showMarker: false, lineWidth: 1, linePattern: 'dashed', color: 'rgb(66, 98, 144)'}, 
+		 {label:'SouthAsia', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'purple'}, 
+		 {label:'Best', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'yellow'},
+		 {label:'Worst', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'red'}
+		 ]
+	 });
+});
+</script>
+<script class="code" type="text/javascript">
+$(document).ready(function(){
+var India=[[1995, 61.0], [2000, 58.4], [2005, 58.4], [2010, 49.1], [2012, 49.1]];
+var World=[[1995, 56.6102], [2000, 53.2287], [2005, 52.2285], [2010, 49.3711], [2012, 49.3711]];
+var SouthAsia=[[1995, 61.7152], [2000, 59.5716], [2005, 59.715], [2010, 52.2292], [2012, 52.2292]];
+var Best=[[1995, ('Paraguay', 82.3)], [2000, ('Nepal', 79.6)], [2005, ('Ethiopia', 79.1)], [2010, ('Qatar', 77.7)], [2012, ('Qatar', 77.7)]];
+var Worst=[[1995, ('Gabon', 20.7)], [2000, ('South Africa', 17.8)], [2005, ('"Macedonia - FYR"', 14.2)], [2010, ('Namibia', 15.0)], [2012, ('Namibia', 15.0)]];
+
+var plotSLEMP1524SPMAZS = $.jqplot("vSLEMP1524SPMAZS", [India, World, SouthAsia, Best, Worst], {
+	 title:' "Employment to population ratio - ages 15-24 - male (%)"',
+	 axes:{yaxis:{min:5.92539489672, max:90.5746051033}, xaxis:{min:1989, max:2021, label:'Year'}},
+	 legend: {show: true } ,
+	 series:[
+		 {label:'India', showMarker: false, lineWidth: 3, color:'green'}, 
+		 {label:'World', showMarker: false, lineWidth: 1, linePattern: 'dashed', color: 'rgb(66, 98, 144)'}, 
+		 {label:'SouthAsia', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'purple'}, 
+		 {label:'Best', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'yellow'},
+		 {label:'Worst', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'red'}
+		 ]
+	 });
+});
+</script>
+<script class="code" type="text/javascript">
+$(document).ready(function(){
+var India=[[2005, 82.8], [2010, 82.8], [2012, 82.8]];
+var World=[];
+var SouthAsia=[[2010, 80.5603], [2012, 80.5603]];
+var Best=[[1990, ('Estonia', 2.3)], [1995, ('Russian Federation', 2.0)], [2000, ('Qatar', 0.7)], [2005, ('Qatar', 0.4)], [2010, ('Qatar', 0.2)], [2012, ('Qatar', 0.2)]];
+var Worst=[[1990, ('Burkina Faso', 96.4)], [1995, ('Burkina Faso', 95.2)], [2000, ('Burkina Faso', 95.2)], [2005, ('Burundi', 94.6)], [2010, ('Burundi', 94.6)], [2012, ('Burundi', 94.6)]];
+
+var plotSLEMPVULNZS = $.jqplot("vSLEMPVULNZS", [India, World, SouthAsia, Best, Worst], {
+	 title:' "Vulnerable employment - total (% of total employment)"',
+	 axes:{yaxis:{min:-9.77925311203, max:106.379253112}, xaxis:{min:1989, max:2021, label:'Year'}},
+	 legend: {show: true } ,
+	 series:[
+		 {label:'India', showMarker: false, lineWidth: 3, color:'green'}, 
+		 {label:'World', showMarker: false, lineWidth: 1, linePattern: 'dashed', color: 'rgb(66, 98, 144)'}, 
+		 {label:'SouthAsia', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'purple'}, 
+		 {label:'Best', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'yellow'},
+		 {label:'Worst', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'red'}
+		 ]
+	 });
+});
+</script>
+<script class="code" type="text/javascript">
+$(document).ready(function(){
+var India=[[1990, 3531.0], [1995, 4111.0], [2000, 5063.0], [2005, 6283.0], [2010, 8401.0], [2012, 8401.0]];
+var World=[[1995, 12648.1454], [2000, 13942.4014], [2005, 15724.9058], [2010, 17997.2647], [2012, 17997.2647]];
+var SouthAsia=[[1995, 4235.8813], [2000, 5114.4529], [2005, 6199.2403], [2010, 7984.7158], [2012, 7984.7158]];
+var Best=[[1990, ('United States', 47906.0)], [1995, ('United States', 51574.0)], [2000, ('United States', 58622.0)], [2005, ('United States', 63800.0)], [2010, ('United States', 68126.0)], [2012, ('United States', 68126.0)]];
+var Worst=[[1990, ('Tanzania', 1130.0)], [1995, ('"Congo - Dem. Rep."', 839.0)], [2000, ('"Congo - Dem. Rep."', 602.0)], [2005, ('"Congo - Dem. Rep."', 633.0)], [2010, ('"Congo - Dem. Rep."', 690.0)], [2012, ('"Congo - Dem. Rep."', 690.0)]];
+
+var plotSLGDPPCAPEMKD = $.jqplot("vSLGDPPCAPEMKD", [India, World, SouthAsia, Best, Worst], {
+	 title:' GDP per person employed (constant 1990 PPP $)',
+	 axes:{yaxis:{min:592.088365675, max:68135.9116343}, xaxis:{min:1989, max:2021, label:'Year'}},
+	 legend: {show: true } ,
+	 series:[
+		 {label:'India', showMarker: false, lineWidth: 3, color:'green'}, 
+		 {label:'World', showMarker: false, lineWidth: 1, linePattern: 'dashed', color: 'rgb(66, 98, 144)'}, 
+		 {label:'SouthAsia', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'purple'}, 
+		 {label:'Best', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'yellow'},
+		 {label:'Worst', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'red'}
+		 ]
+	 });
+});
+</script>
+<script class="code" type="text/javascript">
+$(document).ready(function(){
+var India=[[2005, 20.0], [2010, 20.0], [2012, 20.0]];
+var World=[];
+var SouthAsia=[[2005, 20.3847], [2010, 20.3847], [2012, 20.3847]];
+var Best=[[1990, ('American Samoa', 0.2)], [1995, ('Barbados', 0.0)], [2000, ('Qatar', 0.0)], [2005, ('United Arab Emirates', 0.0)], [2010, ('United Arab Emirates', 0.0)], [2012, ('United Arab Emirates', 0.0)]];
+var Worst=[[1990, ('Burkina Faso', 66.2)], [1995, ('Burkina Faso', 69.2)], [2000, ('Burkina Faso', 69.2)], [2005, ('Burkina Faso', 57.3)], [2010, ('Madagascar', 52.3)], [2012, ('Madagascar', 52.3)]];
+
+var plotSLFAMWORKZS = $.jqplot("vSLFAMWORKZS", [India, World, SouthAsia, Best, Worst], {
+	 title:' "Contributing family workers - total (% of total employed)"',
+	 axes:{yaxis:{min:-10.0, max:79.2}, xaxis:{min:1989, max:2021, label:'Year'}},
+	 legend: {show: true } ,
+	 series:[
+		 {label:'India', showMarker: false, lineWidth: 3, color:'green'}, 
+		 {label:'World', showMarker: false, lineWidth: 1, linePattern: 'dashed', color: 'rgb(66, 98, 144)'}, 
+		 {label:'SouthAsia', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'purple'}, 
+		 {label:'Best', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'yellow'},
+		 {label:'Worst', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'red'}
+		 ]
+	 });
+});
+</script>
+<script class="code" type="text/javascript">
+$(document).ready(function(){
+var India=[[1990, 59.5], [1995, 50.7], [2000, 44.4], [2005, 44.4], [2010, 43.5], [2012, 43.5]];
+var World=[[1990, 25.1], [1995, 22.7], [2000, 20.3], [2005, 18.1], [2010, 16.1], [2012, 15.7]];
+var SouthAsia=[[1990, 51.8815], [1995, 47.2751], [2000, 42.7146], [2005, 38.2747], [2010, 34.0221], [2012, 33.1992]];
+var Best=[[1990, ('Italy', 1.3)], [1995, ('Croatia', 0.5)], [2000, ('Australia', 0.0)], [2005, ('Australia', 0.0)], [2010, ('Australia', 0.0)], [2012, ('Australia', 0.0)]];
+var Worst=[[1990, ('Bangladesh', 61.5)], [1995, ('Bangladesh', 58.0)], [2000, ('Bangladesh', 48.2)], [2005, ('India', 44.4)], [2010, ('Timor-Leste', 45.3)], [2012, ('Timor-Leste', 45.3)]];
+
+var plotSHSTAMALNZS = $.jqplot("vSHSTAMALNZS", [India, World, SouthAsia, Best, Worst], {
+	 title:' "Malnutrition prevalence - weight for age (% of children under 5)"',
+	 axes:{yaxis:{min:-10.0, max:71.5}, xaxis:{min:1989, max:2021, label:'Year'}},
+	 legend: {show: true } ,
+	 series:[
+		 {label:'India', showMarker: false, lineWidth: 3, color:'green'}, 
+		 {label:'World', showMarker: false, lineWidth: 1, linePattern: 'dashed', color: 'rgb(66, 98, 144)'}, 
+		 {label:'SouthAsia', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'purple'}, 
+		 {label:'Best', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'yellow'},
+		 {label:'Worst', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'red'}
+		 ]
+	 });
+});
+</script>
+<script class="code" type="text/javascript">
+$(document).ready(function(){
+var India=[[1995, 20.0], [2000, 17.0], [2005, 20.0], [2010, 19.0], [2012, 19.0]];
+var World=[[1995, 16.4043], [2000, 14.0037], [2005, 13.7817], [2010, 12.9086], [2012, 12.9086]];
+var SouthAsia=[[1995, 22.3223], [2000, 19.7367], [2005, 21.3308], [2010, 20.2765], [2012, 20.2765]];
+var Best=[[1995, ('Canada', 5.0)], [2000, ('Canada', 5.0)], [2005, ('Canada', 5.0)], [2010, ('Canada', 5.0)], [2012, ('Canada', 5.0)]];
+var Worst=[[1995, ('Ethiopia', 69.0)], [2000, ('Eritrea', 64.0)], [2005, ('Eritrea', 70.0)], [2010, ('Eritrea', 65.0)], [2012, ('Eritrea', 65.0)]];
+
+var plotSNITKDEFCZS = $.jqplot("vSNITKDEFCZS", [India, World, SouthAsia, Best, Worst], {
+	 title:' Prevalence of undernourishment (% of population)',
+	 axes:{yaxis:{min:-4.28571428571, max:79.2857142857}, xaxis:{min:1989, max:2021, label:'Year'}},
+	 legend: {show: true } ,
+	 series:[
+		 {label:'India', showMarker: false, lineWidth: 3, color:'green'}, 
+		 {label:'World', showMarker: false, lineWidth: 1, linePattern: 'dashed', color: 'rgb(66, 98, 144)'}, 
+		 {label:'SouthAsia', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'purple'}, 
+		 {label:'Best', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'yellow'},
+		 {label:'Worst', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'red'}
+		 ]
+	 });
+});
+</script>
+
+<script class="code" type="text/javascript">
+  $(document).ready(function(){
+	 var SIPOVNAGP = [26.19];
+	 var SIPOVGAPS = [44.76];
+	 var SIPOVNAHC = [34.22];
+	 var SIPOVDDAY = [33.87];
+	 var SIDSTFRST20 = [-4.95];
+	 var SLEMPTOTLSPZS = [-5.80];
+	 var SLEMPTOTLSPFEZS = [-15.81];
+	 var SLEMPTOTLSPMAZS = [-1.51];
+	 var SLEMP1524SPZS = [-19.29];
+	 var SLEMP1524SPFEZS = [-28.93];
+	 var SLEMP1524SPMAZS = [-15.92];
+	 var SLEMPVULNZS = [-0.00];
+	 var SLGDPPCAPEMKD = [65.93];
+	 var SLFAMWORKZS = [-0.00];
+	 var SHSTAMALNZS = [2.03];
+	 var SNITKDEFCZS = [-11.76];
+	 var plot1 = $.jqplot('chart1', [SIPOVNAGP, SIPOVGAPS, SIPOVNAHC, SIPOVDDAY, SIDSTFRST20, SLEMPTOTLSPZS, SLEMPTOTLSPFEZS, SLEMPTOTLSPMAZS, SLEMP1524SPZS, SLEMP1524SPFEZS, SLEMP1524SPMAZS, SLEMPVULNZS, SLGDPPCAPEMKD, SLFAMWORKZS, SHSTAMALNZS, SNITKDEFCZS], {
+	 seriesDefaults:{
+		 renderer:$.jqplot.BarRenderer,
+		 rendererOptions: {fillToZero: true}
+	 },
+	 series:[
+		{label:'Poverty gap at national poverty line (%)'},
+		{label:'Poverty gap at $1.25 a day (PPP) (%)'},
+		{label:'Poverty headcount ratio at national poverty line (% of population)'},
+		{label:'Poverty headcount ratio at $1.25 a day (PPP) (% of population)'},
+		{label:'Income share held by lowest 20%'},
+		{label:'Employment to population ratio - 15+ - total (%)'},
+		{label:'Employment to population ratio - 15+ - female (%)'},
+		{label:'Employment to population ratio - 15+ - male (%)'},
+		{label:'Employment to population ratio - ages 15-24 - total (%)'},
+		{label:'Employment to population ratio - ages 15-24 - female (%)'},
+		{label:'Employment to population ratio - ages 15-24 - male (%)'},
+		{label:'Vulnerable employment - total (% of total employment)'},
+		{label:'GDP per person employed (constant 1990 PPP $)'},
+		{label:'Contributing family workers - total (% of total employed)'},
+		{label:'Malnutrition prevalence - weight for age (% of children under 5)'},
+		{label:'Prevalence of undernourishment (% of population)'},
+	 ],
+	 legend: {
+		 show: true,
+		 placement: 'outsideGrid'
+	 },
+	 axes: {
+		 xaxis: {
+		 renderer: $.jqplot.CategoryAxisRenderer,
+		 label: "Percentage Positive/Negative Improvement for Indicators"
+		 },
+		 yaxis: {
+		 pad: 1.05,
+		 tickOptions: {formatString: '%d%'}
+		 }
+	 } 
+	 });
+  });
+</script>
+
+
+
+<script class="code" type="text/javascript">
+  $(document).ready(function(){
+	 var plot3 = $.jqplot('pie3', [[['upper bucket', 2], ['upper-middle bucket', 3], ['lower-middle bucket', 6], ['lower bucket', 5]]], {
+	 seriesDefaults:{
+		 shadow: false,
+		 renderer:$.jqplot.PieRenderer,
+		 rendererOptions:{
+		 sliceMargin: 4,
+		 startAngle: -90,
+		 seriesColors: [ "green", "lime", "orange", "red"]
+		 }
+	 },
+	 legend:{ show: true },
+	 });
+  });
+</script>
+
+<div class="content-wrap">
+<!-- main -->
+<section>
+</section><section id="main">
+<div>
+	 <h1>Progress of India in <a href="http://mdgs.un.org/unsd/mdg/Host.aspx?Content=Indicators/OfficialList.htm">MDG</a></h1>
+	 <h2>Goal 1: Eradicate extreme poverty and hunger</h2>
+	 <p class="intro">
+		 <h3>Goals and Targets:</h3>
+		 <ol>
+		   <li>
+			 Target 1.A: Halve, between 1990 and 2015, the proportion of people whose income is less than one dollar a day<br>
+			 <h4>Indicators:</h4>
+			 <ul>
+				 <li><a href="#SI.POV.NAGP">Poverty gap at national poverty line (%)</a></li>
+				 <li><a href="#SI.POV.GAPS">Poverty gap at $1.25 a day (PPP) (%)</a></li>
+				 <li><a href="#SI.POV.NAHC">Poverty headcount ratio at national poverty line (% of population)</a></li>
+				 <li><a href="#SI.POV.DDAY">Poverty headcount ratio at $1.25 a day (PPP) (% of population)</a></li>
+				 <li><a href="#SI.DST.FRST.20">Income share held by lowest 20%</a></li>
+			 </ul>
+		   </li>
+		   <li>
+			 Target 1.B: Achieve full and productive employment and decent work for all, including women and young people<br>
+			 <h4>Indicators:</h4>
+			 <ul>
+				 <li><a href="#SL.EMP.TOTL.SP.ZS">Employment to population ratio - 15+ - total (%)</a></li>
+				 <li><a href="#SL.EMP.TOTL.SP.FE.ZS">Employment to population ratio - 15+ - female (%)</a></li>
+				 <li><a href="#SL.EMP.TOTL.SP.MA.ZS">Employment to population ratio - 15+ - male (%)</a></li>
+				 <li><a href="#SL.EMP.1524.SP.ZS">Employment to population ratio - ages 15-24 - total (%)</a></li>
+				 <li><a href="#SL.EMP.1524.SP.FE.ZS">Employment to population ratio - ages 15-24 - female (%)</a></li>
+				 <li><a href="#SL.EMP.1524.SP.MA.ZS">Employment to population ratio - ages 15-24 - male (%)</a></li>
+				 <li><a href="#SL.EMP.VULN.ZS">Vulnerable employment - total (% of total employment)</a></li>
+				 <li><a href="#SL.GDP.PCAP.EM.KD">GDP per person employed (constant 1990 PPP $)</a></li>
+				 <li><a href="#SL.FAM.WORK.ZS">Contributing family workers - total (% of total employed)</a></li>
+			 </ul>
+		   </li>
+		   <li>
+			 Target 1.C: Halve, between 1990 and 2015, the proportion of people who suffer from hunger<br>
+			 <h4>Indicators:</h4>
+			 <ul>
+				 <li><a href="#SH.STA.MALN.ZS">Malnutrition prevalence - weight for age (% of children under 5)</a></li>
+				 <li><a href="#SN.ITK.DEFC.ZS">Prevalence of undernourishment (% of population)</a></li>
+			 </ul>
+		   </li>
+		 </ol>
+	 </p>
+</div>
+<a class="back-to-top" href="#main">Back to Top</a>
+</section>
+<section id="summary-goal1">
+	<h1>India's Performance Summary for Goal 1</h1>
+<br><p>	 <h2>Percentage Increase/Decrease for Goal 1 Indicators, since 2000.</h2>
+	<center>
+	  <div id="chart1" style="width:800px; height:480px;"></div>
+	</center>
+</p>
+<p></p>
+<p>
+	 <h2>Summary of Current Status.</h2>
+
+<ul>
+	 <li>Employment to population ratio - 15+ - male (%) <a href="#SL.EMP.TOTL.SP.MA.ZS"><font color='grey'>[detail]</font></a>, Income share held by lowest 20% <a href="#SI.DST.FRST.20"><font color='grey'>[detail]</font></a></li>
+
+	 <li>Poverty headcount ratio at national poverty line (% of population) <a href="#SI.POV.NAHC"><font color='grey'>[detail]</font></a>, Poverty gap at national poverty line (%) <a href="#SI.POV.NAGP"><font color='grey'>[detail]</font></a>, Employment to population ratio - ages 15-24 - male (%) <a href="#SL.EMP.1524.SP.MA.ZS"><font color='grey'>[detail]</font></a></li>
+
+	 <li>Poverty headcount ratio at $1.25 a day (PPP) (% of population) <a href="#SI.POV.DDAY"><font color='grey'>[detail]</font></a>, GDP per person employed (constant 1990 PPP $) <a href="#SL.GDP.PCAP.EM.KD"><font color='grey'>[detail]</font></a>, Employment to population ratio - 15+ - total (%) <a href="#SL.EMP.TOTL.SP.ZS"><font color='grey'>[detail]</font></a>, Prevalence of undernourishment (% of population) <a href="#SN.ITK.DEFC.ZS"><font color='grey'>[detail]</font></a>, Employment to population ratio - ages 15-24 - total (%) <a href="#SL.EMP.1524.SP.ZS"><font color='grey'>[detail]</font></a>, Poverty gap at $1.25 a day (PPP) (%) <a href="#SI.POV.GAPS"><font color='grey'>[detail]</font></a></li>
+
+	 <li>Vulnerable employment - total (% of total employment) <a href="#SL.EMP.VULN.ZS"><font color='grey'>[detail]</font></a>, Malnutrition prevalence - weight for age (% of children under 5) <a href="#SH.STA.MALN.ZS"><font color='grey'>[detail]</font></a>, Employment to population ratio - 15+ - female (%) <a href="#SL.EMP.TOTL.SP.FE.ZS"><font color='grey'>[detail]</font></a>, Contributing family workers - total (% of total employed) <a href="#SL.FAM.WORK.ZS"><font color='grey'>[detail]</font></a>, Employment to population ratio - ages 15-24 - female (%) <a href="#SL.EMP.1524.SP.FE.ZS"><font color='grey'>[detail]</font></a></li>
+
+</ul>
+
+	<center>
+	  <div id="pie3" style="margin-top:20px; margin-left:20px; width:400px; height:200px;"></div>
+	</center>
+</p>
+<a class="back-to-top" href="#main">Back to Top</a>
+</section>
+<p></p>
+<section id="SI.POV.NAGP">
+	 <h1><a href="http://data.worldbank.org/indicator/SI.POV.NAGP"> Poverty gap at national poverty line (%)</a></h1>
+
+	 <br><br>
+	 <p>		 <h2>Performance of India</h2>
+		 <ul>			 <li>Progress status (year: 2012): <font color="green"><b>26.19% Increase</b></font>, since 2005.</li>			 <li>Current status (year: 2012): India is in the <font color="lime">upper-middle</b></font> bucket, with the position 23 (value: 6.2) out of 78 countries.<br>
+[Best: Ukraine, position: 1, value: 0.4; Worst: Equatorial Guinea, position: 78, value: 45.3]</li>		 </ul>	 </p>	 <p>		 <h2>Performance over time against the Best, Worst, South Asia and World </h2>
+	 </p>	 <center>
+	   <div id="vSIPOVNAGP" style="height:300px; width:600px;"></div>
+	 </center>
+	 <div class="row no-bottom-margin">
+		 <section class="row2left">
+		   <h2>most inverse-correlated indicators</h2>
+		   <font color="grey" size=2>could be negative cause or negative effect of  Poverty gap at national poverty line (%)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/DT.DOD.PBND.CD"> "PPG - bonds (DOD - current US$)"</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.CUR.USDL.ZS"> "Currency composition of PPG debt - U.S. dollars (%)"</a> <font color="grey" size=2>[corr score: -0.93]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.DOD.PRVT.CD"> "PPG - private creditors (DOD - current US$)"</a> <font color="grey" size=2>[corr score: -0.93]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.DIS.MIBR.CD"> "PPG - IBRD (DIS - current US$)"</a> <font color="grey" size=2>[corr score: -0.92]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IC.EXP.COST.CD"> Cost to export (US$ per container)</a> <font color="grey" size=2>[corr score: -0.92]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.GRE.PRVT"> "Average grant element on new external debt commitments - private (%)"</a> <font color="grey" size=2>[corr score: -0.92]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.GPA.OFFT"> "Average grace period on new external debt commitments - official (years)"</a> <font color="grey" size=2>[corr score: -0.91]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/FB.CBK.BRCH.P5"> "Commercial bank branches (per 100,000 adults)"</a> <font color="grey" size=2>[corr score: -0.89]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.DOD.DPPG.CD"> "External debt stocks - public and publicly guaranteed (PPG) (DOD - current US$)"</a> <font color="grey" size=2>[corr score: -0.89]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.DOD.PUBS.CD"> "External debt stocks - long-term public sector (DOD - current US$)"</a> <font color="grey" size=2>[corr score: -0.89]</font><br></li>
+		   </ol>
+		 </section>
+		 <section class="row2right">
+		   <h2>most correlated indicators</h2>
+		   <font color="grey" size=2>could be positive cause or positive effect of  Poverty gap at national poverty line (%)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SI.POV.RUGP"> Poverty gap at rural poverty line (%)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SI.POV.URGP"> Poverty gap at urban poverty line (%)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IQ.CPA.PUBS.XQ"> CPIA public sector management and institutions cluster average (1=low to 6=high)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IQ.CPA.FINQ.XQ"> CPIA quality of budgetary and financial management rating (1=low to 6=high)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/AG.LND.CREL.HA"> Land under cereal production (hectares)</a> <font color="grey" size=2>[corr score: 0.93]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NY.GSR.NFCY.KN"> Net income from abroad (constant LCU)</a> <font color="grey" size=2>[corr score: 0.90]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NY.GSR.NFCY.CN"> Net income from abroad (current LCU)</a> <font color="grey" size=2>[corr score: 0.90]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NY.GSR.NFCY.CD"> Net income from abroad (current US$)</a> <font color="grey" size=2>[corr score: 0.90]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DC.DAC.NZLL.CD"> "Net bilateral aid flows from DAC donors - New Zealand (current US$)"</a> <font color="grey" size=2>[corr score: 0.89]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NV.IND.MANF.ZS"> "Manufacturing - value added (% of GDP)"</a> <font color="grey" size=2>[corr score: 0.87]</font><br></li>
+		   </ol>
+		 </section>
+	 </div>
+	 <a class="back-to-top" href="#main">Back to Top</a>
+</section>
+
+<p>
+</p>
+
+<section id="SI.POV.GAPS">
+	 <h1><a href="http://data.worldbank.org/indicator/SI.POV.GAPS"> Poverty gap at $1.25 a day (PPP) (%)</a></h1>
+
+	 <br><br>
+	 <p>		 <h2>Performance of India</h2>
+		 <ul>			 <li>Progress status (year: 2012): <font color="green"><b>44.76% Increase</b></font>, since 2000.</li>			 <li>Current status (year: 2012): India is in the <font color="orange">lower-middle</b></font> bucket, with the position 81 (value: 7.49) out of 123 countries.<br>
+[Best: Russian Federation, position: 1, value: 0.0; Worst: "Congo - Dem. Rep.", position: 123, value: 52.76]</li>		 </ul>	 </p>	 <p>		 <h2>Performance over time against the Best, Worst, South Asia and World </h2>
+	 </p>	 <center>
+	   <div id="vSIPOVGAPS" style="height:300px; width:600px;"></div>
+	 </center>
+	 <div class="row no-bottom-margin">
+		 <section class="row2left">
+		   <h2>most inverse-correlated indicators</h2>
+		   <font color="grey" size=2>could be negative cause or negative effect of  Poverty gap at $1.25 a day (PPP) (%)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SL.IND.EMPL.MA.ZS"> "Employees - industry - male (% of male employment)"</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.IND.EMPL.ZS"> Employment in industry (% of total employment)</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.SRV.EMPL.ZS"> Employment in services (% of total employment)</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.IND.EMPL.FE.ZS"> "Employees - industry - female (% of female employment)"</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.MMR.RISK"> Lifetime risk of maternal death (1 in: rate varies by country)</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/ST.INT.TRNX.CD"> "International tourism - expenditures for passenger transport items (current US$)"</a> <font color="grey" size=2>[corr score: -0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NE.EXP.GNFS.KN"> Exports of goods and services (constant LCU)</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NE.EXP.GNFS.KD"> Exports of goods and services (constant 2000 US$)</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/BM.GSR.NFSV.CD"> "Service imports (BoP - current US$)"</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/TM.VAL.SERV.CD.WT"> Commercial service imports (current US$)</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+		   </ol>
+		 </section>
+		 <section class="row2right">
+		   <h2>most correlated indicators</h2>
+		   <font color="grey" size=2>could be positive cause or positive effect of  Poverty gap at $1.25 a day (PPP) (%)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SI.POV.RUHC"> Poverty headcount ratio at rural poverty line (% of rural population)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SI.POV.NAHC"> Poverty headcount ratio at national poverty line (% of population)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SI.POV.GAP2"> Poverty gap at $2 a day (PPP) (%)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SI.POV.2DAY"> Poverty headcount ratio at $2 a day (PPP) (% of population)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SM.POP.TOTL"> "International migrant stock - total"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SI.POV.DDAY"> Poverty headcount ratio at $1.25 a day (PPP) (% of population)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.AGR.EMPL.ZS"> Employment in agriculture (% of total employment)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SM.POP.TOTL.ZS"> International migrant stock (% of population)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SI.POV.URHC"> Poverty headcount ratio at urban poverty line (% of urban population)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SM.POP.NETM"> Net migration</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+		   </ol>
+		 </section>
+	 </div>
+	 <a class="back-to-top" href="#main">Back to Top</a>
+</section>
+
+<p>
+</p>
+
+<section id="SI.POV.NAHC">
+	 <h1><a href="http://data.worldbank.org/indicator/SI.POV.NAHC"> Poverty headcount ratio at national poverty line (% of population)</a></h1>
+
+	 <br><br>
+	 <p>		 <h2>Performance of India</h2>
+		 <ul>			 <li>Progress status (year: 2012): <font color="green"><b>34.22% Increase</b></font>, since 2000.</li>			 <li>Current status (year: 2012): India is in the <font color="lime">upper-middle</b></font> bucket, with the position 47 (value: 29.8) out of 112 countries.<br>
+[Best: China, position: 1, value: 2.8; Worst: Haiti, position: 112, value: 77.0]</li>		 </ul>	 </p>	 <p>		 <h2>Performance over time against the Best, Worst, South Asia and World </h2>
+	 </p>	 <center>
+	   <div id="vSIPOVNAHC" style="height:300px; width:600px;"></div>
+	 </center>
+	 <div class="row no-bottom-margin">
+		 <section class="row2left">
+		   <h2>most inverse-correlated indicators</h2>
+		   <font color="grey" size=2>could be negative cause or negative effect of  Poverty headcount ratio at national poverty line (% of population)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SL.IND.EMPL.MA.ZS"> "Employees - industry - male (% of male employment)"</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.IND.EMPL.ZS"> Employment in industry (% of total employment)</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.SRV.EMPL.ZS"> Employment in services (% of total employment)</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.IND.EMPL.FE.ZS"> "Employees - industry - female (% of female employment)"</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.MMR.RISK"> Lifetime risk of maternal death (1 in: rate varies by country)</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/ST.INT.TRNX.CD"> "International tourism - expenditures for passenger transport items (current US$)"</a> <font color="grey" size=2>[corr score: -0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NE.EXP.GNFS.KN"> Exports of goods and services (constant LCU)</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NE.EXP.GNFS.KD"> Exports of goods and services (constant 2000 US$)</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/AG.LND.FRST.K2"> Forest area (sq. km)</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/AG.LND.FRST.ZS"> Forest area (% of land area)</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+		   </ol>
+		 </section>
+		 <section class="row2right">
+		   <h2>most correlated indicators</h2>
+		   <font color="grey" size=2>could be positive cause or positive effect of  Poverty headcount ratio at national poverty line (% of population)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SI.POV.RUHC"> Poverty headcount ratio at rural poverty line (% of rural population)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SM.POP.TOTL"> "International migrant stock - total"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SI.POV.GAPS"> Poverty gap at $1.25 a day (PPP) (%)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SM.POP.TOTL.ZS"> International migrant stock (% of population)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SI.POV.URHC"> Poverty headcount ratio at urban poverty line (% of urban population)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SM.POP.NETM"> Net migration</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SI.POV.GAP2"> Poverty gap at $2 a day (PPP) (%)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SI.POV.2DAY"> Poverty headcount ratio at $2 a day (PPP) (% of population)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.STA.MMRT"> "Maternal mortality ratio (modeled estimate - per 100,000 live births)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SI.POV.DDAY"> Poverty headcount ratio at $1.25 a day (PPP) (% of population)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+		   </ol>
+		 </section>
+	 </div>
+	 <a class="back-to-top" href="#main">Back to Top</a>
+</section>
+
+<p>
+</p>
+
+<section id="SI.POV.DDAY">
+	 <h1><a href="http://data.worldbank.org/indicator/SI.POV.DDAY"> Poverty headcount ratio at $1.25 a day (PPP) (% of population)</a></h1>
+
+	 <br><br>
+	 <p>		 <h2>Performance of India</h2>
+		 <ul>			 <li>Progress status (year: 2012): <font color="green"><b>33.87% Increase</b></font>, since 2000.</li>			 <li>Current status (year: 2012): India is in the <font color="orange">lower-middle</b></font> bucket, with the position 89 (value: 32.67) out of 123 countries.<br>
+[Best: Russian Federation, position: 1, value: 0.0; Worst: "Congo - Dem. Rep.", position: 123, value: 87.72]</li>		 </ul>	 </p>	 <p>		 <h2>Performance over time against the Best, Worst, South Asia and World </h2>
+	 </p>	 <center>
+	   <div id="vSIPOVDDAY" style="height:300px; width:600px;"></div>
+	 </center>
+	 <div class="row no-bottom-margin">
+		 <section class="row2left">
+		   <h2>most inverse-correlated indicators</h2>
+		   <font color="grey" size=2>could be negative cause or negative effect of  Poverty headcount ratio at $1.25 a day (PPP) (% of population)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SL.IND.EMPL.ZS"> Employment in industry (% of total employment)</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.SRV.EMPL.ZS"> Employment in services (% of total employment)</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.IND.EMPL.FE.ZS"> "Employees - industry - female (% of female employment)"</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.IND.EMPL.MA.ZS"> "Employees - industry - male (% of male employment)"</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.MMR.RISK"> Lifetime risk of maternal death (1 in: rate varies by country)</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.SRV.EMPL.FE.ZS"> "Employees - services - female (% of female employment)"</a> <font color="grey" size=2>[corr score: -0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/ST.INT.TRNX.CD"> "International tourism - expenditures for passenger transport items (current US$)"</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/BM.GSR.NFSV.CD"> "Service imports (BoP - current US$)"</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/TM.VAL.SERV.CD.WT"> Commercial service imports (current US$)</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NE.EXP.GNFS.CD"> Exports of goods and services (current US$)</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+		   </ol>
+		 </section>
+		 <section class="row2right">
+		   <h2>most correlated indicators</h2>
+		   <font color="grey" size=2>could be positive cause or positive effect of  Poverty headcount ratio at $1.25 a day (PPP) (% of population)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SL.AGR.EMPL.ZS"> Employment in agriculture (% of total employment)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SI.POV.2DAY"> Poverty headcount ratio at $2 a day (PPP) (% of population)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SI.POV.GAP2"> Poverty gap at $2 a day (PPP) (%)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SI.POV.GAPS"> Poverty gap at $1.25 a day (PPP) (%)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SI.POV.RUHC"> Poverty headcount ratio at rural poverty line (% of rural population)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SI.POV.NAHC"> Poverty headcount ratio at national poverty line (% of population)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SM.POP.TOTL"> "International migrant stock - total"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.AGR.EMPL.FE.ZS"> "Employees - agriculture - female (% of female employment)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SM.POP.TOTL.ZS"> International migrant stock (% of population)</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SI.POV.URHC"> Poverty headcount ratio at urban poverty line (% of urban population)</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+		   </ol>
+		 </section>
+	 </div>
+	 <a class="back-to-top" href="#main">Back to Top</a>
+</section>
+
+<p>
+</p>
+
+<section id="SI.DST.FRST.20">
+	 <h1><a href="http://data.worldbank.org/indicator/SI.DST.FRST.20"> Income share held by lowest 20%</a></h1>
+
+	 <br><br>
+	 <p>		 <h2>Performance of India</h2>
+		 <ul>			 <li>Progress status (year: 2012): <font color="red"><b>4.95% Decrease</b></font>, since 2000.</li>			 <li>Current status (year: 2012): India is in the <font color="green"><b>upper</b></font> bucket, with the position 136 (value: 8.64) out of 155 countries.<br>
+[Best: Japan, position: 155, value: 10.58; Worst: "Micronesia - Fed. Sts.", position: 1, value: 1.59]</li>		 </ul>	 </p>	 <p>		 <h2>Performance over time against the Best, Worst, South Asia and World </h2>
+	 </p>	 <center>
+	   <div id="vSIDSTFRST20" style="height:300px; width:600px;"></div>
+	 </center>
+	 <div class="row no-bottom-margin">
+		 <section class="row2left">
+		   <h2>most inverse-correlated indicators</h2>
+		   <font color="grey" size=2>could be negative cause or negative effect of  Income share held by lowest 20%</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SL.SRV.0714.FE.ZS"> "Child employment in services - female (% of female economically active children ages 7-14)"</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.ATM.METH.EG.ZS"> Energy related methane emissions (% of total)</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.ATM.NOXE.EG.KT.CE"> Nitrous oxide emissions in energy sector (thousand metric tons of CO2 equivalent)</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.MNF.0714.ZS"> Child employment in manufacturing (% of economically active children ages 7-14)</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.POP.TECH.RD.P6"> Technicians in R&D (per million people)</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.ATM.METH.EG.KT.CE"> Methane emissions in energy sector (thousand metric tons of CO2 equivalent)</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.POP.SCIE.RD.P6"> Researchers in R&D (per million people)</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SI.DST.05TH.20"> Income share held by highest 20%</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.ATM.NOXE.KT.CE"> Nitrous oxide emissions (thousand metric tons of CO2 equivalent)</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.ATM.METH.KT.CE"> Methane emissions (kt of CO2 equivalent)</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+		   </ol>
+		 </section>
+		 <section class="row2right">
+		   <h2>most correlated indicators</h2>
+		   <font color="grey" size=2>could be positive cause or positive effect of  Income share held by lowest 20%</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SL.AGR.0714.FE.ZS"> "Child employment in agriculture - female (% of female economically active children ages 7-14)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.AGR.0714.MA.ZS"> "Child employment in agriculture - male (% of male economically active children ages 7-14)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.ATM.PFCG.KT.CE"> PFC gas emissions (thousand metric tons of CO2 equivalent)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.ATM.NOXE.AG.ZS"> Agricultural nitrous oxide emissions (% of total)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.EMP.MPYR.ZS"> "Employers - total (% of employment)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.REG.BRTH.RU.ZS"> "Completeness of birth registration - rural (%)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IC.ELC.DURS"> Delay in obtaining an electrical connection (days)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SN.ITK.SALT.ZS"> Consumption of iodized salt (% of households)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.CON.1524.FE.ZS"> "Condom use - population ages 15-24 - female (% of females ages 15-24)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.REG.BRTH.UR.ZS"> "Completeness of birth registration - urban (%)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+		   </ol>
+		 </section>
+	 </div>
+	 <a class="back-to-top" href="#main">Back to Top</a>
+</section>
+
+<p>
+</p>
+
+<section id="SL.EMP.TOTL.SP.ZS">
+	 <h1><a href="http://data.worldbank.org/indicator/SL.EMP.TOTL.SP.ZS"> "Employment to population ratio - 15+ - total (%)"</a></h1>
+
+	 <br><br>
+	 <p>		 <h2>Performance of India</h2>
+		 <ul>			 <li>Progress status (year: 2012): <font color="red"><b>5.80% Decrease</b></font>, since 2000.</li>			 <li>Current status (year: 2012): India is in the <font color="orange">lower-middle</b></font> bucket, with the position 57 (value: 53.6) out of 172 countries.<br>
+[Best: Qatar, position: 172, value: 85.8; Worst: West Bank and Gaza, position: 1, value: 30.7]</li>		 </ul>	 </p>	 <p>		 <h2>Performance over time against the Best, Worst, South Asia and World </h2>
+	 </p>	 <center>
+	   <div id="vSLEMPTOTLSPZS" style="height:300px; width:600px;"></div>
+	 </center>
+	 <div class="row no-bottom-margin">
+		 <section class="row2left">
+		   <h2>most inverse-correlated indicators</h2>
+		   <font color="grey" size=2>could be negative cause or negative effect of  "Employment to population ratio - 15+ - total (%)"</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/DC.DAC.DEUL.CD"> "Net bilateral aid flows from DAC donors - Germany (current US$)"</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.TDS.PNGB.CD"> "PNG - bonds (TDS - current US$)"</a> <font color="grey" size=2>[corr score: -0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IS.ROD.DESL.PC"> Road sector diesel fuel consumption per capita (kg of oil equivalent)</a> <font color="grey" size=2>[corr score: -0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.DOD.OFFT.CD"> "PPG - official creditors (DOD - current US$)"</a> <font color="grey" size=2>[corr score: -0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.DOD.MIBR.CD"> "PPG - IBRD (DOD - current US$)"</a> <font color="grey" size=2>[corr score: -0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.DOD.MLAT.CD"> "PPG - multilateral (DOD - current US$)"</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IS.ROD.DESL.KT"> Road sector diesel fuel consumption (kt of oil equivalent)</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IT.NET.BBND.P2"> Fixed broadband Internet subscribers (per 100 people)</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IT.NET.BBND"> Fixed broadband Internet subscribers</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IS.ROD.ENGY.PC"> Road sector energy consumption per capita (kg of oil equivalent)</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+		   </ol>
+		 </section>
+		 <section class="row2right">
+		   <h2>most correlated indicators</h2>
+		   <font color="grey" size=2>could be positive cause or positive effect of  "Employment to population ratio - 15+ - total (%)"</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SL.EMP.TOTL.SP.FE.ZS"> "Employment to population ratio - 15+ - female (%)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.ACTI.ZS"> "Labor force participation rate - total (% of total population ages 15-64)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.ACTI.FE.ZS"> "Labor force participation rate - female (% of female population ages 15-64)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.CACT.FE.ZS"> "Labor participation rate - female (% of female population ages 15+)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.CACT.ZS"> "Labor participation rate - total (% of total population ages 15+)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.CACT.FM.ZS"> Ratio of female to male labor participation rate (%)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.TOTL.FE.ZS"> "Labor force - female (% of total labor force)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.ACTI.MA.ZS"> "Labor force participation rate - male (% of male population ages 15-64)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.EMP.1524.SP.FE.ZS"> "Employment to population ratio - ages 15-24 - female (%)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.EMP.TOTL.SP.MA.ZS"> "Employment to population ratio - 15+ - male (%)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+		   </ol>
+		 </section>
+	 </div>
+	 <a class="back-to-top" href="#main">Back to Top</a>
+</section>
+
+<p>
+</p>
+
+<section id="SL.EMP.TOTL.SP.FE.ZS">
+	 <h1><a href="http://data.worldbank.org/indicator/SL.EMP.TOTL.SP.FE.ZS"> "Employment to population ratio - 15+ - female (%)"</a></h1>
+
+	 <br><br>
+	 <p>		 <h2>Performance of India</h2>
+		 <ul>			 <li>Progress status (year: 2012): <font color="red"><b>15.81% Decrease</b></font>, since 2000.</li>			 <li>Current status (year: 2012): India is in the <font color="red">lower</b></font> bucket, with the position 21 (value: 27.7) out of 171 countries.<br>
+[Best: Rwanda, position: 171, value: 86.1; Worst: Syrian Arab Republic, position: 1, value: 10.0]</li>		 </ul>	 </p>	 <p>		 <h2>Performance over time against the Best, Worst, South Asia and World </h2>
+	 </p>	 <center>
+	   <div id="vSLEMPTOTLSPFEZS" style="height:300px; width:600px;"></div>
+	 </center>
+	 <div class="row no-bottom-margin">
+		 <section class="row2left">
+		   <h2>most inverse-correlated indicators</h2>
+		   <font color="grey" size=2>could be negative cause or negative effect of  "Employment to population ratio - 15+ - female (%)"</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/DC.DAC.DEUL.CD"> "Net bilateral aid flows from DAC donors - Germany (current US$)"</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.TDS.PNGB.CD"> "PNG - bonds (TDS - current US$)"</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IS.ROD.DESL.PC"> Road sector diesel fuel consumption per capita (kg of oil equivalent)</a> <font color="grey" size=2>[corr score: -0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.DOD.OFFT.CD"> "PPG - official creditors (DOD - current US$)"</a> <font color="grey" size=2>[corr score: -0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.DOD.MIBR.CD"> "PPG - IBRD (DOD - current US$)"</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IS.ROD.DESL.KT"> Road sector diesel fuel consumption (kt of oil equivalent)</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.DOD.MLAT.CD"> "PPG - multilateral (DOD - current US$)"</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.AMT.PNGB.CD"> "PNG - bonds (AMT - current US$)"</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IT.NET.BBND"> Fixed broadband Internet subscribers</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IT.NET.BBND.P2"> Fixed broadband Internet subscribers (per 100 people)</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+		   </ol>
+		 </section>
+		 <section class="row2right">
+		   <h2>most correlated indicators</h2>
+		   <font color="grey" size=2>could be positive cause or positive effect of  "Employment to population ratio - 15+ - female (%)"</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SL.EMP.TOTL.SP.ZS"> "Employment to population ratio - 15+ - total (%)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.ACTI.FE.ZS"> "Labor force participation rate - female (% of female population ages 15-64)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.ACTI.ZS"> "Labor force participation rate - total (% of total population ages 15-64)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.CACT.FE.ZS"> "Labor participation rate - female (% of female population ages 15+)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.CACT.FM.ZS"> Ratio of female to male labor participation rate (%)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.CACT.ZS"> "Labor participation rate - total (% of total population ages 15+)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.TOTL.FE.ZS"> "Labor force - female (% of total labor force)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.ACTI.MA.ZS"> "Labor force participation rate - male (% of male population ages 15-64)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.EMP.1524.SP.FE.ZS"> "Employment to population ratio - ages 15-24 - female (%)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.CACT.MA.ZS"> "Labor participation rate - male (% of male population ages 15+)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+		   </ol>
+		 </section>
+	 </div>
+	 <a class="back-to-top" href="#main">Back to Top</a>
+</section>
+
+<p>
+</p>
+
+<section id="SL.EMP.TOTL.SP.MA.ZS">
+	 <h1><a href="http://data.worldbank.org/indicator/SL.EMP.TOTL.SP.MA.ZS"> "Employment to population ratio - 15+ - male (%)"</a></h1>
+
+	 <br><br>
+	 <p>		 <h2>Performance of India</h2>
+		 <ul>			 <li>Progress status (year: 2012): <font color="red"><b>1.51% Decrease</b></font>, since 2000.</li>			 <li>Current status (year: 2012): India is in the <font color="green"><b>upper</b></font> bucket, with the position 141 (value: 78.1) out of 171 countries.<br>
+[Best: Qatar, position: 171, value: 94.9; Worst: Moldova, position: 1, value: 40.5]</li>		 </ul>	 </p>	 <p>		 <h2>Performance over time against the Best, Worst, South Asia and World </h2>
+	 </p>	 <center>
+	   <div id="vSLEMPTOTLSPMAZS" style="height:300px; width:600px;"></div>
+	 </center>
+	 <div class="row no-bottom-margin">
+		 <section class="row2left">
+		   <h2>most inverse-correlated indicators</h2>
+		   <font color="grey" size=2>could be negative cause or negative effect of  "Employment to population ratio - 15+ - male (%)"</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/IS.VEH.PCAR.P3"> "Passenger cars (per 1,000 people)"</a> <font color="grey" size=2>[corr score: -0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.DOD.MIBR.CD"> "PPG - IBRD (DOD - current US$)"</a> <font color="grey" size=2>[corr score: -0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DC.DAC.DEUL.CD"> "Net bilateral aid flows from DAC donors - Germany (current US$)"</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IS.ROD.DESL.PC"> Road sector diesel fuel consumption per capita (kg of oil equivalent)</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.TDS.PNGB.CD"> "PNG - bonds (TDS - current US$)"</a> <font color="grey" size=2>[corr score: -0.95]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IS.VEH.NVEH.P3"> "Motor vehicles (per 1,000 people)"</a> <font color="grey" size=2>[corr score: -0.95]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.NFL.BLTC.CD"> "PPG - bilateral concessional (NFL - current US$)"</a> <font color="grey" size=2>[corr score: -0.95]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.UND.DPPG.CD"> "Undisbursed external debt - total (UND - current US$)"</a> <font color="grey" size=2>[corr score: -0.94]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.NTR.BLTC.CD"> "PPG - bilateral concessional (NTR - current US$)"</a> <font color="grey" size=2>[corr score: -0.94]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.DOD.MLAT.CD"> "PPG - multilateral (DOD - current US$)"</a> <font color="grey" size=2>[corr score: -0.94]</font><br></li>
+		   </ol>
+		 </section>
+		 <section class="row2right">
+		   <h2>most correlated indicators</h2>
+		   <font color="grey" size=2>could be positive cause or positive effect of  "Employment to population ratio - 15+ - male (%)"</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SL.EMP.TOTL.SP.ZS"> "Employment to population ratio - 15+ - total (%)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.EMP.TOTL.SP.FE.ZS"> "Employment to population ratio - 15+ - female (%)"</a> <font color="grey" size=2>[corr score: 0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.ACTI.FE.ZS"> "Labor force participation rate - female (% of female population ages 15-64)"</a> <font color="grey" size=2>[corr score: 0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.ACTI.ZS"> "Labor force participation rate - total (% of total population ages 15-64)"</a> <font color="grey" size=2>[corr score: 0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.CACT.FE.ZS"> "Labor participation rate - female (% of female population ages 15+)"</a> <font color="grey" size=2>[corr score: 0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.CACT.FM.ZS"> Ratio of female to male labor participation rate (%)</a> <font color="grey" size=2>[corr score: 0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.TOTL.FE.ZS"> "Labor force - female (% of total labor force)"</a> <font color="grey" size=2>[corr score: 0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.CACT.ZS"> "Labor participation rate - total (% of total population ages 15+)"</a> <font color="grey" size=2>[corr score: 0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.ACTI.MA.ZS"> "Labor force participation rate - male (% of male population ages 15-64)"</a> <font color="grey" size=2>[corr score: 0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.EMP.1524.SP.FE.ZS"> "Employment to population ratio - ages 15-24 - female (%)"</a> <font color="grey" size=2>[corr score: 0.97]</font><br></li>
+		   </ol>
+		 </section>
+	 </div>
+	 <a class="back-to-top" href="#main">Back to Top</a>
+</section>
+
+<p>
+</p>
+
+<section id="SL.EMP.1524.SP.ZS">
+	 <h1><a href="http://data.worldbank.org/indicator/SL.EMP.1524.SP.ZS"> "Employment to population ratio - ages 15-24 - total (%)"</a></h1>
+
+	 <br><br>
+	 <p>		 <h2>Performance of India</h2>
+		 <ul>			 <li>Progress status (year: 2012): <font color="red"><b>19.29% Decrease</b></font>, since 2000.</li>			 <li>Current status (year: 2012): India is in the <font color="orange">lower-middle</b></font> bucket, with the position 69 (value: 33.9) out of 172 countries.<br>
+[Best: Nepal, position: 172, value: 73.3; Worst: Namibia, position: 1, value: 10.7]</li>		 </ul>	 </p>	 <p>		 <h2>Performance over time against the Best, Worst, South Asia and World </h2>
+	 </p>	 <center>
+	   <div id="vSLEMP1524SPZS" style="height:300px; width:600px;"></div>
+	 </center>
+	 <div class="row no-bottom-margin">
+		 <section class="row2left">
+		   <h2>most inverse-correlated indicators</h2>
+		   <font color="grey" size=2>could be negative cause or negative effect of  "Employment to population ratio - ages 15-24 - total (%)"</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/DT.DOD.MLAT.CD"> "PPG - multilateral (DOD - current US$)"</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.DOD.OFFT.CD"> "PPG - official creditors (DOD - current US$)"</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IT.NET.BBND.P2"> Fixed broadband Internet subscribers (per 100 people)</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NE.CON.GOVT.KD"> General government final consumption expenditure (constant 2000 US$)</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NE.CON.GOVT.KN"> General government final consumption expenditure (constant LCU)</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IT.NET.BBND"> Fixed broadband Internet subscribers</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DC.DAC.DEUL.CD"> "Net bilateral aid flows from DAC donors - Germany (current US$)"</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/BM.GSR.ROYL.CD"> "Royalty and license fees - payments (BoP - current US$)"</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.DOD.DLXF.CD"> "External debt stocks - long-term (DOD - current US$)"</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IT.CEL.SETS.P2"> Mobile cellular subscriptions (per 100 people)</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+		   </ol>
+		 </section>
+		 <section class="row2right">
+		   <h2>most correlated indicators</h2>
+		   <font color="grey" size=2>could be positive cause or positive effect of  "Employment to population ratio - ages 15-24 - total (%)"</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SL.EMP.1524.SP.MA.ZS"> "Employment to population ratio - ages 15-24 - male (%)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.EMP.1524.SP.FE.ZS"> "Employment to population ratio - ages 15-24 - female (%)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.CACT.MA.ZS"> "Labor participation rate - male (% of male population ages 15+)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.ACTI.MA.ZS"> "Labor force participation rate - male (% of male population ages 15-64)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.CACT.ZS"> "Labor participation rate - total (% of total population ages 15+)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.EMP.TOTL.SP.ZS"> "Employment to population ratio - 15+ - total (%)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.CUR.UKPS.ZS"> "Currency composition of PPG debt - Pound sterling (%)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.ACTI.ZS"> "Labor force participation rate - total (% of total population ages 15-64)"</a> <font color="grey" size=2>[corr score: 0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.EMP.TOTL.SP.FE.ZS"> "Employment to population ratio - 15+ - female (%)"</a> <font color="grey" size=2>[corr score: 0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.CACT.FE.ZS"> "Labor participation rate - female (% of female population ages 15+)"</a> <font color="grey" size=2>[corr score: 0.98]</font><br></li>
+		   </ol>
+		 </section>
+	 </div>
+	 <a class="back-to-top" href="#main">Back to Top</a>
+</section>
+
+<p>
+</p>
+
+<section id="SL.EMP.1524.SP.FE.ZS">
+	 <h1><a href="http://data.worldbank.org/indicator/SL.EMP.1524.SP.FE.ZS"> "Employment to population ratio - ages 15-24 - female (%)"</a></h1>
+
+	 <br><br>
+	 <p>		 <h2>Performance of India</h2>
+		 <ul>			 <li>Progress status (year: 2012): <font color="red"><b>28.93% Decrease</b></font>, since 2000.</li>			 <li>Current status (year: 2012): India is in the <font color="red">lower</b></font> bucket, with the position 30 (value: 17.2) out of 171 countries.<br>
+[Best: Rwanda, position: 171, value: 74.6; Worst: Iraq, position: 1, value: 2.4]</li>		 </ul>	 </p>	 <p>		 <h2>Performance over time against the Best, Worst, South Asia and World </h2>
+	 </p>	 <center>
+	   <div id="vSLEMP1524SPFEZS" style="height:300px; width:600px;"></div>
+	 </center>
+	 <div class="row no-bottom-margin">
+		 <section class="row2left">
+		   <h2>most inverse-correlated indicators</h2>
+		   <font color="grey" size=2>could be negative cause or negative effect of  "Employment to population ratio - ages 15-24 - female (%)"</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/DT.DOD.MLAT.CD"> "PPG - multilateral (DOD - current US$)"</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.DOD.OFFT.CD"> "PPG - official creditors (DOD - current US$)"</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DC.DAC.DEUL.CD"> "Net bilateral aid flows from DAC donors - Germany (current US$)"</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IT.NET.BBND.P2"> Fixed broadband Internet subscribers (per 100 people)</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IT.NET.BBND"> Fixed broadband Internet subscribers</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.DOD.DLXF.CD"> "External debt stocks - long-term (DOD - current US$)"</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IS.ROD.ENGY.PC"> Road sector energy consumption per capita (kg of oil equivalent)</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IS.ROD.DESL.KT"> Road sector diesel fuel consumption (kt of oil equivalent)</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NE.CON.GOVT.KN"> General government final consumption expenditure (constant LCU)</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NE.CON.GOVT.KD"> General government final consumption expenditure (constant 2000 US$)</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+		   </ol>
+		 </section>
+		 <section class="row2right">
+		   <h2>most correlated indicators</h2>
+		   <font color="grey" size=2>could be positive cause or positive effect of  "Employment to population ratio - ages 15-24 - female (%)"</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SL.EMP.1524.SP.ZS"> "Employment to population ratio - ages 15-24 - total (%)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.CACT.MA.ZS"> "Labor participation rate - male (% of male population ages 15+)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.ACTI.MA.ZS"> "Labor force participation rate - male (% of male population ages 15-64)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.EMP.1524.SP.MA.ZS"> "Employment to population ratio - ages 15-24 - male (%)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.CACT.ZS"> "Labor participation rate - total (% of total population ages 15+)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.EMP.TOTL.SP.ZS"> "Employment to population ratio - 15+ - total (%)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.ACTI.ZS"> "Labor force participation rate - total (% of total population ages 15-64)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.EMP.TOTL.SP.FE.ZS"> "Employment to population ratio - 15+ - female (%)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.CACT.FE.ZS"> "Labor participation rate - female (% of female population ages 15+)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.ACTI.FE.ZS"> "Labor force participation rate - female (% of female population ages 15-64)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+		   </ol>
+		 </section>
+	 </div>
+	 <a class="back-to-top" href="#main">Back to Top</a>
+</section>
+
+<p>
+</p>
+
+<section id="SL.EMP.1524.SP.MA.ZS">
+	 <h1><a href="http://data.worldbank.org/indicator/SL.EMP.1524.SP.MA.ZS"> "Employment to population ratio - ages 15-24 - male (%)"</a></h1>
+
+	 <br><br>
+	 <p>		 <h2>Performance of India</h2>
+		 <ul>			 <li>Progress status (year: 2012): <font color="red"><b>15.92% Decrease</b></font>, since 2000.</li>			 <li>Current status (year: 2012): India is in the <font color="lime">upper-middle</b></font> bucket, with the position 102 (value: 49.1) out of 171 countries.<br>
+[Best: Qatar, position: 171, value: 77.7; Worst: Namibia, position: 1, value: 15.0]</li>		 </ul>	 </p>	 <p>		 <h2>Performance over time against the Best, Worst, South Asia and World </h2>
+	 </p>	 <center>
+	   <div id="vSLEMP1524SPMAZS" style="height:300px; width:600px;"></div>
+	 </center>
+	 <div class="row no-bottom-margin">
+		 <section class="row2left">
+		   <h2>most inverse-correlated indicators</h2>
+		   <font color="grey" size=2>could be negative cause or negative effect of  "Employment to population ratio - ages 15-24 - male (%)"</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/DT.DOD.MLAT.CD"> "PPG - multilateral (DOD - current US$)"</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IT.NET.BBND.P2"> Fixed broadband Internet subscribers (per 100 people)</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NE.CON.GOVT.KN"> General government final consumption expenditure (constant LCU)</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NE.CON.GOVT.KD"> General government final consumption expenditure (constant 2000 US$)</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.DOD.OFFT.CD"> "PPG - official creditors (DOD - current US$)"</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IT.NET.BBND"> Fixed broadband Internet subscribers</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/BM.GSR.ROYL.CD"> "Royalty and license fees - payments (BoP - current US$)"</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IT.CEL.SETS.P2"> Mobile cellular subscriptions (per 100 people)</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.DOD.DLXF.CD"> "External debt stocks - long-term (DOD - current US$)"</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/GC.XPN.INTP.CN"> Interest payments (current LCU)</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+		   </ol>
+		 </section>
+		 <section class="row2right">
+		   <h2>most correlated indicators</h2>
+		   <font color="grey" size=2>could be positive cause or positive effect of  "Employment to population ratio - ages 15-24 - male (%)"</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SL.EMP.1524.SP.ZS"> "Employment to population ratio - ages 15-24 - total (%)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.EMP.1524.SP.FE.ZS"> "Employment to population ratio - ages 15-24 - female (%)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.CACT.MA.ZS"> "Labor participation rate - male (% of male population ages 15+)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.ACTI.MA.ZS"> "Labor force participation rate - male (% of male population ages 15-64)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.CUR.UKPS.ZS"> "Currency composition of PPG debt - Pound sterling (%)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.CACT.ZS"> "Labor participation rate - total (% of total population ages 15+)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.TBS.INCD"> "Incidence of tuberculosis (per 100,000 people)"</a> <font color="grey" size=2>[corr score: 0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.EMP.TOTL.SP.ZS"> "Employment to population ratio - 15+ - total (%)"</a> <font color="grey" size=2>[corr score: 0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.ACTI.ZS"> "Labor force participation rate - total (% of total population ages 15-64)"</a> <font color="grey" size=2>[corr score: 0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.EMP.TOTL.SP.FE.ZS"> "Employment to population ratio - 15+ - female (%)"</a> <font color="grey" size=2>[corr score: 0.98]</font><br></li>
+		   </ol>
+		 </section>
+	 </div>
+	 <a class="back-to-top" href="#main">Back to Top</a>
+</section>
+
+<p>
+</p>
+
+<section id="SL.EMP.VULN.ZS">
+	 <h1><a href="http://data.worldbank.org/indicator/SL.EMP.VULN.ZS"> "Vulnerable employment - total (% of total employment)"</a></h1>
+
+	 <br><br>
+	 <p>		 <h2>Performance of India</h2>
+		 <ul>			 <li>Progress status (year: 2012): <font color="green"><b>0.00% Increase</b></font>, since 2005.</li>			 <li>Current status (year: 2012): India is in the <font color="red">lower</b></font> bucket, with the position 133 (value: 82.8) out of 149 countries.<br>
+[Best: Qatar, position: 1, value: 0.2; Worst: Burundi, position: 149, value: 94.6]</li>		 </ul>	 </p>	 <p>		 <h2>Performance over time against the Best, Worst, South Asia and World </h2>
+	 </p>	 <center>
+	   <div id="vSLEMPVULNZS" style="height:300px; width:600px;"></div>
+	 </center>
+	 <div class="row no-bottom-margin">
+		 <section class="row2left">
+		   <h2>most inverse-correlated indicators</h2>
+		   <font color="grey" size=2>could be negative cause or negative effect of  "Vulnerable employment - total (% of total employment)"</font>
+		   <ol>
+		   </ol>
+		 </section>
+		 <section class="row2right">
+		   <h2>most correlated indicators</h2>
+		   <font color="grey" size=2>could be positive cause or positive effect of  "Vulnerable employment - total (% of total employment)"</font>
+		   <ol>
+		   </ol>
+		 </section>
+	 </div>
+	 <a class="back-to-top" href="#main">Back to Top</a>
+</section>
+
+<p>
+</p>
+
+<section id="SL.GDP.PCAP.EM.KD">
+	 <h1><a href="http://data.worldbank.org/indicator/SL.GDP.PCAP.EM.KD"> GDP per person employed (constant 1990 PPP $)</a></h1>
+
+	 <br><br>
+	 <p>		 <h2>Performance of India</h2>
+		 <ul>			 <li>Progress status (year: 2012): <font color="green"><b>65.93% Increase</b></font>, since 2000.</li>			 <li>Current status (year: 2012): India is in the <font color="orange">lower-middle</b></font> bucket, with the position 31 (value: 8401.0) out of 121 countries.<br>
+[Best: United States, position: 121, value: 68126.0; Worst: "Congo - Dem. Rep.", position: 1, value: 690.0]</li>		 </ul>	 </p>	 <p>		 <h2>Performance over time against the Best, Worst, South Asia and World </h2>
+	 </p>	 <center>
+	   <div id="vSLGDPPCAPEMKD" style="height:300px; width:600px;"></div>
+	 </center>
+	 <div class="row no-bottom-margin">
+		 <section class="row2left">
+		   <h2>most inverse-correlated indicators</h2>
+		   <font color="grey" size=2>could be negative cause or negative effect of  GDP per person employed (constant 1990 PPP $)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/EG.USE.CRNW.ZS"> Combustible renewables and waste (% of total energy)</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.RUR.TOTL.ZS"> Rural population (% of total population)</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.TBS.INCD"> "Incidence of tuberculosis (per 100,000 people)"</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.AMRT.MA"> "Mortality rate - adult - male (per 1,000 male adults)"</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.POP.0014.TO.ZS"> Population ages 0-14 (% of total)</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.AMRT.FE"> "Mortality rate - adult - female (per 1,000 female adults)"</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.DYN.NMRT"> "Mortality rate - neonatal (per 1,000 live births)"</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.POP.DPND.YG"> "Age dependency ratio - young (% of working-age population)"</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.POP.DPND"> Age dependency ratio (% of working-age population)</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.IMRT.IN"> "Mortality rate - infant (per 1,000 live births)"</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+		   </ol>
+		 </section>
+		 <section class="row2right">
+		   <h2>most correlated indicators</h2>
+		   <font color="grey" size=2>could be positive cause or positive effect of  GDP per person employed (constant 1990 PPP $)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/NE.GDI.FPRV.CN"> "Gross fixed capital formation - private sector (current LCU)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IS.RRS.GOOD.MT.K6"> "Railways - goods transported (million ton-km)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NV.IND.TOTL.KD"> "Industry - value added (constant 2000 US$)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NV.IND.TOTL.KN"> "Industry - value added (constant LCU)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NV.IND.MANF.KN"> "Manufacturing - value added (constant LCU)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NV.IND.MANF.KD"> "Manufacturing - value added (constant 2000 US$)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/AG.PRD.LVSK.XD"> Livestock production index (2004-2006 = 100)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NY.GNS.ICTR.CN"> Gross savings (current LCU)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/ST.INT.DPRT"> "International tourism - number of departures"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NY.ADJ.DKAP.CD"> Adjusted savings: consumption of fixed capital (current US$)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+		   </ol>
+		 </section>
+	 </div>
+	 <a class="back-to-top" href="#main">Back to Top</a>
+</section>
+
+<p>
+</p>
+
+<section id="SL.FAM.WORK.ZS">
+	 <h1><a href="http://data.worldbank.org/indicator/SL.FAM.WORK.ZS"> "Contributing family workers - total (% of total employed)"</a></h1>
+
+	 <br><br>
+	 <p>		 <h2>Performance of India</h2>
+		 <ul>			 <li>Progress status (year: 2012): <font color="green"><b>0.00% Increase</b></font>, since 2005.</li>			 <li>Current status (year: 2012): India is in the <font color="red">lower</b></font> bucket, with the position 130 (value: 20.0) out of 161 countries.<br>
+[Best: United Arab Emirates, position: 1, value: 0.0; Worst: Madagascar, position: 161, value: 52.3]</li>		 </ul>	 </p>	 <p>		 <h2>Performance over time against the Best, Worst, South Asia and World </h2>
+	 </p>	 <center>
+	   <div id="vSLFAMWORKZS" style="height:300px; width:600px;"></div>
+	 </center>
+	 <div class="row no-bottom-margin">
+		 <section class="row2left">
+		   <h2>most inverse-correlated indicators</h2>
+		   <font color="grey" size=2>could be negative cause or negative effect of  "Contributing family workers - total (% of total employed)"</font>
+		   <ol>
+		   </ol>
+		 </section>
+		 <section class="row2right">
+		   <h2>most correlated indicators</h2>
+		   <font color="grey" size=2>could be positive cause or positive effect of  "Contributing family workers - total (% of total employed)"</font>
+		   <ol>
+		   </ol>
+		 </section>
+	 </div>
+	 <a class="back-to-top" href="#main">Back to Top</a>
+</section>
+
+<p>
+</p>
+
+<section id="SH.STA.MALN.ZS">
+	 <h1><a href="http://data.worldbank.org/indicator/SH.STA.MALN.ZS"> "Malnutrition prevalence - weight for age (% of children under 5)"</a></h1>
+
+	 <br><br>
+	 <p>		 <h2>Performance of India</h2>
+		 <ul>			 <li>Progress status (year: 2012): <font color="green"><b>2.03% Increase</b></font>, since 2000.</li>			 <li>Current status (year: 2012): India is in the <font color="red">lower</b></font> bucket, with the position 148 (value: 43.5) out of 149 countries.<br>
+[Best: Australia, position: 1, value: 0.0; Worst: Timor-Leste, position: 149, value: 45.3]</li>		 </ul>	 </p>	 <p>		 <h2>Performance over time against the Best, Worst, South Asia and World </h2>
+	 </p>	 <center>
+	   <div id="vSHSTAMALNZS" style="height:300px; width:600px;"></div>
+	 </center>
+	 <div class="row no-bottom-margin">
+		 <section class="row2left">
+		   <h2>most inverse-correlated indicators</h2>
+		   <font color="grey" size=2>could be negative cause or negative effect of  "Malnutrition prevalence - weight for age (% of children under 5)"</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SH.STA.ARIC.ZS"> ARI treatment (% of children under 5 taken to a health provider)</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IC.FRM.BNKS.ZS"> Firms using banks to finance investment (% of firms)</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.STA.ORCF.ZS"> Diarrhea treatment (% of children under 5 receiving oral rehydration and continued feeding)</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.STA.BFED.ZS"> Exclusive breastfeeding (% of children under 6 months)</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.STA.WAST.ZS"> Prevalence of wasting (% of children under 5)</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IC.FRM.CRIM.ZS"> "Losses due to theft - robbery - vandalism - and arson (% sales)"</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.CON.1524.MA.ZS"> "Condom use - population ages 15-24 - male (% of males ages 15-24)"</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.HOU.FEMA.ZS"> Female headed households (% of households with a female head)</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.0714.SW.ZS"> "Economically active children - study and work (% of economically active children - ages 7-14)"</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.0714.MA.ZS"> "Economically active children - male (% of male children ages 7-14)"</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+		   </ol>
+		 </section>
+		 <section class="row2right">
+		   <h2>most correlated indicators</h2>
+		   <font color="grey" size=2>could be positive cause or positive effect of  "Malnutrition prevalence - weight for age (% of children under 5)"</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SP.REG.BRTH.RU.ZS"> "Completeness of birth registration - rural (%)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IC.ELC.DURS"> Delay in obtaining an electrical connection (days)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SN.ITK.SALT.ZS"> Consumption of iodized salt (% of households)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.CON.1524.FE.ZS"> "Condom use - population ages 15-24 - female (% of females ages 15-24)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.REG.BRTH.UR.ZS"> "Completeness of birth registration - urban (%)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.STA.OWGH.ZS"> Prevalence of overweight (% of children under 5)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.MLR.TRET.ZS"> Children with fever receiving antimalarial drugs (% of children under age 5 with fever)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.UWT.TFRT"> Unmet need for contraception (% of married women ages 15-49)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.STA.BRTW.ZS"> Low-birthweight babies (% of births)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.STA.STNT.ZS"> "Malnutrition prevalence - height for age (% of children under 5)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+		   </ol>
+		 </section>
+	 </div>
+	 <a class="back-to-top" href="#main">Back to Top</a>
+</section>
+
+<p>
+</p>
+
+<section id="SN.ITK.DEFC.ZS">
+	 <h1><a href="http://data.worldbank.org/indicator/SN.ITK.DEFC.ZS"> Prevalence of undernourishment (% of population)</a></h1>
+
+	 <br><br>
+	 <p>		 <h2>Performance of India</h2>
+		 <ul>			 <li>Progress status (year: 2012): <font color="red"><b>11.76% Decrease</b></font>, since 2000.</li>			 <li>Current status (year: 2012): India is in the <font color="orange">lower-middle</b></font> bucket, with the position 126 (value: 19.0) out of 170 countries.<br>
+[Best: Canada, position: 1, value: 5.0; Worst: Eritrea, position: 170, value: 65.0]</li>		 </ul>	 </p>	 <p>		 <h2>Performance over time against the Best, Worst, South Asia and World </h2>
+	 </p>	 <center>
+	   <div id="vSNITKDEFCZS" style="height:300px; width:600px;"></div>
+	 </center>
+	 <div class="row no-bottom-margin">
+		 <section class="row2left">
+		   <h2>most inverse-correlated indicators</h2>
+		   <font color="grey" size=2>could be negative cause or negative effect of  Prevalence of undernourishment (% of population)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/IS.VEH.ROAD.K1"> Vehicles (per km of road)</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/FB.CBK.DPTR.P3"> "Depositors with commercial banks (per 1,000 adults)"</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IC.BUS.NREG"> New businesses registered (number)</a> <font color="grey" size=2>[corr score: -0.95]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IC.BUS.NDNS.ZS"> "New business density (new registrations per 1,000 people ages 15-64)"</a> <font color="grey" size=2>[corr score: -0.94]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IS.VEH.NVEH.P3"> "Motor vehicles (per 1,000 people)"</a> <font color="grey" size=2>[corr score: -0.89]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IS.VEH.PCAR.P3"> "Passenger cars (per 1,000 people)"</a> <font color="grey" size=2>[corr score: -0.88]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/FB.CBK.BRCH.P5"> "Commercial bank branches (per 100,000 adults)"</a> <font color="grey" size=2>[corr score: -0.88]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IC.EXP.COST.CD"> Cost to export (US$ per container)</a> <font color="grey" size=2>[corr score: -0.83]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/AG.CON.FERT.ZS"> Fertilizer consumption (kilograms per hectare of arable land)</a> <font color="grey" size=2>[corr score: -0.83]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.INT.DIMF.CD"> "IMF charges (INT - current US$)"</a> <font color="grey" size=2>[corr score: -0.82]</font><br></li>
+		   </ol>
+		 </section>
+		 <section class="row2right">
+		   <h2>most correlated indicators</h2>
+		   <font color="grey" size=2>could be positive cause or positive effect of  Prevalence of undernourishment (% of population)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/ER.BDV.TOTL.XQ"> GEF benefits index for biodiversity (0 = no biodiversity potential to 100 = maximum)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IC.PRP.DURS"> Time required to register property (days)</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.MED.NUMW.P3"> "Nurses and midwives (per 1,000 people)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.SEC.REPT.ZS"> "Repeaters - secondary - total (% of total enrollment)"</a> <font color="grey" size=2>[corr score: 0.87]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/ER.PTD.TOTL.ZS"> Terrestrial and marine protected areas (% of total territorial area)</a> <font color="grey" size=2>[corr score: 0.82]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/ER.LND.PTLD.ZS"> Terrestrial protected areas (% of total land area)</a> <font color="grey" size=2>[corr score: 0.82]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.NFL.IMFC.CD"> "Net financial flows - IMF concessional (NFL - current US$)"</a> <font color="grey" size=2>[corr score: 0.82]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.SEC.REPT.MA.ZS"> "Repeaters - secondary - male (% of male enrollment)"</a> <font color="grey" size=2>[corr score: 0.82]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IC.EXP.DURS"> Time to export (days)</a> <font color="grey" size=2>[corr score: 0.81]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.ADT.1524.LT.FM.ZS"> Ratio of young literate females to males (% ages 15-24)</a> <font color="grey" size=2>[corr score: 0.79]</font><br></li>
+		   </ol>
+		 </section>
+	 </div>
+	 <a class="back-to-top" href="#main">Back to Top</a>
+</section>
+
+<p>
+</p>
+
+</div>
+
+    
+<!-- footer -->
+<footer>
+
+    <div class="footer-content">
+<!-- 
+        <ul class="footer-menu">
+            <li><a href="#main">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#about-us">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <!-- <li class="rss-feed"><a href="#">RSS Feed</a></li> -->
+        </ul>
+
+
+        <p class="footer-text">Copyright DecipherData.Org [<a href="http://www.decipherdata.org">www.decipherdata.org</a>] and Naushad UzZaman [<a href="http://www.naushad.uzzaman.com">www.naushad.uzzaman.com</a>]. &nbsp;&nbsp;&nbsp; <br>
+		<font size=1, color="grey">Theme adapted from <a href="http://www.styleshout.com/">Styleshout</a>.</font>
+		</p>
+    </div>
+
+</footer>
+
+</body>
+</html>

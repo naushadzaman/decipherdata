@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
+
+<head>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta charset="utf-8"/>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Progress of India in Climate Change</title>
+
+    <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../../css/nivo-slider.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/jquery.fancybox-1.3.4.css" type="text/css" />
+
+    <!--[if lt IE 9]>
+	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../js/jquery-1.6.1.min.js"><\/script>')</script>
+
+    <script src="js/jquery.smoothscroll.js"></script>
+    <script src="../../js/jquery.nivo.slider.pack.js"></script>
+    <script src="../../js/jquery.easing-1.3.pack.js"></script>
+    <script src="../../js/jquery.fancybox-1.3.4.pack.js"></script>
+    <script src="../../js/init.js"></script>
+        
+        <!-- Don't touch this! -->
+        
+        
+        <script class="include" type="text/javascript" src="../../jqplot/examples/../jquery.jqplot.min.js"></script>
+        <script type="text/javascript" src="../../jqplot/examples/syntaxhighlighter/scripts/shCore.min.js"></script>
+        <script type="text/javascript" src="../../jqplot/examples/syntaxhighlighter/scripts/shBrushJScript.min.js"></script>
+        <script type="text/javascript" src="../../jqplot/examples/syntaxhighlighter/scripts/shBrushXml.min.js"></script>
+        <!-- End Don't touch this! -->
+        
+        <!-- Additional plugins go here -->
+        
+        <script class="include" language="javascript" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.highlighter.min.js"></script>
+        <script class="include" language="javascript" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.cursor.min.js"></script>
+        <script class="include" language="javascript" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.dateAxisRenderer.min.js"></script>
+        
+        <!-- End additional plugins -->
+        
+        <!-- Bar/Plot plugins go here -->
+        
+        <script class="include" language="javascript" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.barRenderer.min.js"></script>
+        <script class="include" language="javascript" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.categoryAxisRenderer.min.js"></script>
+        <script class="include" language="javascript" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.pointLabels.min.js"></script>
+        <script class="include" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.pieRenderer.min.js"></script>
+        
+        <!-- End Bar/Plot plugins -->
+
+        
+        <script type="text/javascript" src="../../jqplot/examples/example.min.js"></script>
+
+        <link class="include" rel="stylesheet" type="text/css" href="../../jqplot/examples/../jquery.jqplot.min.css" />
+        <link rel="stylesheet" type="text/css" href="../../jqplot/examples/examples.min.css" />
+        <link type="text/css" rel="stylesheet" href="../../jqplot/examples/syntaxhighlighter/styles/shCoreDefault.min.css" />
+        <link type="text/css" rel="stylesheet" href="../../jqplot/examples/syntaxhighlighter/styles/shThemejqPlot.min.css" />
+        
+        
+        <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="../../jqplot/examples/../excanvas.js"></script><![endif]-->
+
+
+</head>
+
+<body>
+
+<!-- header-wrap -->
+<div id="header-wrap">
+    <header>
+
+        <hgroup>
+            <h1><a href="index.html">Progress of India in Climate Change</a></h1>
+            <h3>Progress of India in Climate Change</h3>
+        </hgroup>
+
+        <nav>
+
+	        <ul>
+                <li><a href="http://www.decipherdata.org">Home</a></li>
+
+            </ul>
+        </nav>
+
+    </header>
+</div>
+    
+
+<!-- stat data -->
+<script class="code" type="text/javascript">
+$(document).ready(function(){
+var India=[[1990, 690576.774], [1995, 920046.633], [2000, 1186663.202], [2005, 1411127.606], [2010, 1742697.746], [2012, 1742697.746]];
+var World=[[1990, 22310882.411], [1995, 23290125.425], [2000, 24752250.0], [2005, 29651362.0], [2010, 32082583.0], [2012, 32082583.0]];
+var SouthAsia=[[1990, 782042.755], [1995, 1036972.595], [2000, 1336053.115], [2005, 1602354.322], [2010, 1970176.424], [2012, 1970176.424]];
+var Best=[[1990, ('Namibia', 7.334)], [1995, ('Turks and Caicos Islands', 11.001)], [2000, ('Turks and Caicos Islands', 14.668)], [2005, ('Kiribati', 25.669)], [2010, ('Kiribati', 29.336)], [2012, ('Kiribati', 29.336)]];
+var Worst=[[1990, ('United States', 4879376.206)], [1995, ('United States', 5237968.469)], [2000, ('United States', 5512399.415)], [2005, ('China', 5790016.984)], [2010, ('China', 7031916.207)], [2012, ('China', 7031916.207)]];
+
+var plotENATMCO2EKT = $.jqplot("vENATMCO2EKT", [India, World, SouthAsia, Best, Worst], {
+	 title:' CO2 emissions (kt)',
+	 axes:{yaxis:{min:-2.66599771402, max:32082593.0}, xaxis:{min:1989, max:2021, label:'Year'}},
+	 legend: {show: true } ,
+	 series:[
+		 {label:'India', showMarker: false, lineWidth: 3, color:'green'}, 
+		 {label:'World', showMarker: false, lineWidth: 1, linePattern: 'dashed', color: 'rgb(66, 98, 144)'}, 
+		 {label:'SouthAsia', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'purple'}, 
+		 {label:'Best', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'yellow'},
+		 {label:'Worst', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'red'}
+		 ]
+	 });
+});
+</script>
+<script class="code" type="text/javascript">
+$(document).ready(function(){
+var India=[[1990, 0.7903], [1995, 0.9539], [2000, 1.126], [2005, 1.2378], [2010, 1.4634], [2012, 1.4634]];
+var World=[[1990, 4.2126], [1995, 4.0755], [2000, 4.0457], [2005, 4.5595], [2010, 4.762], [2012, 4.762]];
+var SouthAsia=[[1990, 0.6819], [1995, 0.815], [2000, 0.9555], [2005, 1.0562], [2010, 1.2419], [2012, 1.2419]];
+var Best=[[1990, ('Somalia', 0.0028)], [1995, ('Somalia', 0.0017)], [2000, ('Chad', 0.0214)], [2005, ('Burundi', 0.0228)], [2010, ('Burundi', 0.0226)], [2012, ('Burundi', 0.0226)]];
+var Worst=[[1990, ('Aruba', 29.6206)], [1995, ('Qatar', 61.481)], [2000, ('Qatar', 58.7693)], [2005, ('Qatar', 63.211)], [2010, ('Qatar', 49.0506)], [2012, ('Qatar', 49.0506)]];
+
+var plotENATMCO2EPC = $.jqplot("vENATMCO2EPC", [India, World, SouthAsia, Best, Worst], {
+	 title:' CO2 emissions (metric tons per capita)',
+	 axes:{yaxis:{min:-9.99803105947, max:73.2107310595}, xaxis:{min:1989, max:2021, label:'Year'}},
+	 legend: {show: true } ,
+	 series:[
+		 {label:'India', showMarker: false, lineWidth: 3, color:'green'}, 
+		 {label:'World', showMarker: false, lineWidth: 1, linePattern: 'dashed', color: 'rgb(66, 98, 144)'}, 
+		 {label:'SouthAsia', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'purple'}, 
+		 {label:'Best', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'yellow'},
+		 {label:'Worst', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'red'}
+		 ]
+	 });
+});
+</script>
+<script class="code" type="text/javascript">
+$(document).ready(function(){
+var India=[[2010, 94.0], [2012, 94.0]];
+var World=[[2010, 3097.0], [2012, 3105.0]];
+var SouthAsia=[];
+var Best=[[2010, ('San Marino', 0.0)], [2012, ('San Marino', 0.0)]];
+var Worst=[[2010, ('Indonesia', 183.0)], [2012, ('Indonesia', 184.0)]];
+
+var plotENMAMTHRDNO = $.jqplot("vENMAMTHRDNO", [India, World, SouthAsia, Best, Worst], {
+	 title:' "Mammal species - threatened"',
+	 axes:{yaxis:{min:-10.0, max:3115.0}, xaxis:{min:1989, max:2021, label:'Year'}},
+	 legend: {show: true } ,
+	 series:[
+		 {label:'India', showMarker: false, lineWidth: 3, color:'green'}, 
+		 {label:'World', showMarker: false, lineWidth: 1, linePattern: 'dashed', color: 'rgb(66, 98, 144)'}, 
+		 {label:'SouthAsia', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'purple'}, 
+		 {label:'Best', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'yellow'},
+		 {label:'Worst', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'red'}
+		 ]
+	 });
+});
+</script>
+<script class="code" type="text/javascript">
+$(document).ready(function(){
+var India=[[1990, 21.5052], [1995, 21.5052], [2000, 21.9932], [2005, 22.7732], [2010, 23.017], [2012, 23.017]];
+var World=[[1990, 32.0414], [1995, 32.0414], [2000, 31.4105], [2005, 31.2205], [2010, 31.1049], [2012, 31.1049]];
+var SouthAsia=[[1990, 16.6363], [1995, 16.6363], [2000, 16.6456], [2005, 17.0147], [2010, 17.1149], [2012, 17.1149]];
+var Best=[[1990, ('Suriname', 94.7179)], [1995, ('Suriname', 94.7179)], [2000, ('Suriname', 94.7179)], [2005, ('Suriname', 94.7179)], [2010, ('Suriname', 94.6026)], [2012, ('Suriname', 94.6026)]];
+var Worst=[[1990, ('Monaco', 0.0)], [1995, ('Monaco', 0.0)], [2000, ('Monaco', 0.0)], [2005, ('Monaco', 0.0)], [2010, ('Monaco', 0.0)], [2012, ('Monaco', 0.0)]];
+
+var plotAGLNDFRSTZS = $.jqplot("vAGLNDFRSTZS", [India, World, SouthAsia, Best, Worst], {
+	 title:' Forest area (% of land area)',
+	 axes:{yaxis:{min:-10.0, max:104.7179}, xaxis:{min:1989, max:2021, label:'Year'}},
+	 legend: {show: true } ,
+	 series:[
+		 {label:'India', showMarker: false, lineWidth: 3, color:'green'}, 
+		 {label:'World', showMarker: false, lineWidth: 1, linePattern: 'dashed', color: 'rgb(66, 98, 144)'}, 
+		 {label:'SouthAsia', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'purple'}, 
+		 {label:'Best', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'yellow'},
+		 {label:'Worst', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'red'}
+		 ]
+	 });
+});
+</script>
+<script class="code" type="text/javascript">
+$(document).ready(function(){
+var India=[[1990, 268.1356], [1995, 352.2943], [2000, 386.6379], [2005, 455.8574], [2010, 570.9315], [2012, 570.9315]];
+var World=[[1990, 2115.3378], [1995, 2189.1991], [2000, 2378.7778], [2005, 2659.3112], [2010, 2806.9247], [2012, 2806.9247]];
+var SouthAsia=[[1990, 241.8698], [1995, 318.3522], [2000, 349.5069], [2005, 420.6076], [2010, 516.9426], [2012, 516.9426]];
+var Best=[[1990, ('Ethiopia', 22.3862)], [1995, ('Cambodia', 10.6543)], [2000, ('Ethiopia', 22.9803)], [2005, ('Ethiopia', 34.4717)], [2010, ('Haiti', 35.6844)], [2012, ('Haiti', 35.6844)]];
+var Worst=[[1990, ('Norway', 23353.915)], [1995, ('Norway', 24528.4439)], [2000, ('Iceland', 26201.5256)], [2005, ('Iceland', 27988.0297)], [2010, ('Iceland', 51259.1876)], [2012, ('Iceland', 51259.1876)]];
+
+var plotEGUSEELECKHPC = $.jqplot("vEGUSEELECKHPC", [India, World, SouthAsia, Best, Worst], {
+	 title:' Electric power consumption (kWh per capita)',
+	 axes:{yaxis:{min:0.656378515189, max:51269.1855215}, xaxis:{min:1989, max:2021, label:'Year'}},
+	 legend: {show: true } ,
+	 series:[
+		 {label:'India', showMarker: false, lineWidth: 3, color:'green'}, 
+		 {label:'World', showMarker: false, lineWidth: 1, linePattern: 'dashed', color: 'rgb(66, 98, 144)'}, 
+		 {label:'SouthAsia', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'purple'}, 
+		 {label:'Best', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'yellow'},
+		 {label:'Worst', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'red'}
+		 ]
+	 });
+});
+</script>
+<script class="code" type="text/javascript">
+$(document).ready(function(){
+var India=[[1990, 60.8908], [1995, 60.8034], [2000, 61.4064], [2005, 60.4933], [2010, 60.5286], [2012, 60.5286]];
+var World=[[1990, 39.5203], [1995, 37.9358], [2000, 38.0439], [2005, 37.8322], [2010, 37.656], [2012, 37.656]];
+var SouthAsia=[[1990, 54.8932], [1995, 54.794], [2000, 55.2746], [2005, 54.7933], [2010, 54.6353], [2012, 54.6353]];
+var Best=[[1990, ('Uruguay', 84.7046)], [1995, ('Uruguay', 84.876)], [2000, ('Burundi', 88.3956)], [2005, ('Burundi', 89.0187)], [2010, ('Uruguay', 84.6018)], [2012, ('Uruguay', 84.6018)]];
+var Worst=[[1990, ('Suriname', 0.5641)], [1995, ('Suriname', 0.5705)], [2000, ('Suriname', 0.5641)], [2005, ('Singapore', 0.0)], [2010, ('Bermuda', 0.0)], [2012, ('Bermuda', 0.0)]];
+
+var plotAGLNDAGRIZS = $.jqplot("vAGLNDAGRIZS", [India, World, SouthAsia, Best, Worst], {
+	 title:' Agricultural land (% of land area)',
+	 axes:{yaxis:{min:-10.0, max:99.0187}, xaxis:{min:1989, max:2021, label:'Year'}},
+	 legend: {show: true } ,
+	 series:[
+		 {label:'India', showMarker: false, lineWidth: 3, color:'green'}, 
+		 {label:'World', showMarker: false, lineWidth: 1, linePattern: 'dashed', color: 'rgb(66, 98, 144)'}, 
+		 {label:'SouthAsia', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'purple'}, 
+		 {label:'Best', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'yellow'},
+		 {label:'Worst', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'red'}
+		 ]
+	 });
+});
+</script>
+<script class="code" type="text/javascript">
+$(document).ready(function(){
+var India=[[1990, 3.26608014286e+11], [1995, 3.66599645609e+11], [2000, 4.74691627708e+11], [2005, 8.34216944755e+11], [2010, 1.6843237165e+12], [2012, 1.84798185364e+12]];
+var World=[[1990, 2.1976859783e+13], [1995, 2.97798466029e+13], [2000, 3.23293468151e+13], [2005, 4.56753433974e+13], [2010, 6.31359948373e+13], [2012, 6.99936930365e+13]];
+var SouthAsia=[[1990, 4.11656315567e+11], [1995, 4.86545109487e+11], [2000, 6.22810670489e+11], [2005, 1.04525665438e+12], [2010, 2.04796649929e+12], [2012, 2.27182514045e+12]];
+var Best=[[1990, ('United States', 5750800000000.0)], [1995, ('United States', 7338400000000.0)], [2000, ('United States', 9898800000000.0)], [2005, ('United States', 12564300000000.0)], [2010, ('United States', 14447100000000.0)], [2012, ('United States', 15094000000000.0)]];
+var Worst=[[1990, ('Tuvalu', 8824746.2381)], [1995, ('Tuvalu', 11025679.5148)], [2000, ('Tuvalu', 13940067.4077)], [2005, ('Tuvalu', 22186782.4723)], [2010, ('Tuvalu', 31351969.2185)], [2012, ('Tuvalu', 35784426.8317)]];
+
+var plotNYGDPMKTPCD = $.jqplot("vNYGDPMKTPCD", [India, World, SouthAsia, Best, Worst], {
+	 title:' GDP (current US$)',
+	 axes:{yaxis:{min:8824736.2381, max:6.99936930365e+13}, xaxis:{min:1989, max:2021, label:'Year'}},
+	 legend: {show: true } ,
+	 series:[
+		 {label:'India', showMarker: false, lineWidth: 3, color:'green'}, 
+		 {label:'World', showMarker: false, lineWidth: 1, linePattern: 'dashed', color: 'rgb(66, 98, 144)'}, 
+		 {label:'SouthAsia', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'purple'}, 
+		 {label:'Best', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'yellow'},
+		 {label:'Worst', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'red'}
+		 ]
+	 });
+});
+</script>
+<script class="code" type="text/javascript">
+$(document).ready(function(){
+var India=[[1990, 25.547], [1995, 26.607], [2000, 27.667], [2005, 29.235], [2010, 30.93], [2012, 31.295]];
+var World=[[1990, 42.8833], [1995, 44.7037], [2000, 46.6073], [2005, 49.0613], [2010, 51.5224], [2012, 51.9916]];
+var SouthAsia=[[1990, 24.9824], [1995, 26.134], [2000, 27.3105], [2005, 28.8701], [2010, 30.5587], [2012, 30.9279]];
+var Best=[[1990, ('Rwanda', 5.416)], [1995, ('Burundi', 7.211)], [2000, ('Burundi', 8.246)], [2005, ('Burundi', 9.375)], [2010, ('Burundi', 10.642)], [2012, ('Burundi', 10.928)]];
+var Worst=[[1990, ('Singapore', 100.0)], [1995, ('Singapore', 100.0)], [2000, ('"Macao SAR - China"', 100.0)], [2005, ('"Macao SAR - China"', 100.0)], [2010, ('"Macao SAR - China"', 100.0)], [2012, ('"Macao SAR - China"', 100.0)]];
+
+var plotSPURBTOTLINZS = $.jqplot("vSPURBTOTLINZS", [India, World, SouthAsia, Best, Worst], {
+	 title:' Urban population (% of total)',
+	 axes:{yaxis:{min:-4.0424, max:109.4584}, xaxis:{min:1989, max:2021, label:'Year'}},
+	 legend: {show: true } ,
+	 series:[
+		 {label:'India', showMarker: false, lineWidth: 3, color:'green'}, 
+		 {label:'World', showMarker: false, lineWidth: 1, linePattern: 'dashed', color: 'rgb(66, 98, 144)'}, 
+		 {label:'SouthAsia', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'purple'}, 
+		 {label:'Best', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'yellow'},
+		 {label:'Worst', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'red'}
+		 ]
+	 });
+});
+</script>
+
+<script class="code" type="text/javascript">
+  $(document).ready(function(){
+	 var ENATMCO2EKT = [-46.86];
+	 var ENATMCO2EPC = [-29.96];
+	 var ENMAMTHRDNO = [-0.00];
+	 var AGLNDFRSTZS = [4.66];
+	 var EGUSEELECKHPC = [-47.67];
+	 var AGLNDAGRIZS = [-1.43];
+	 var NYGDPMKTPCD = [289.30];
+	 var SPURBTOTLINZS = [-13.11];
+	 var plot1 = $.jqplot('chart1', [ENATMCO2EKT, ENATMCO2EPC, ENMAMTHRDNO, AGLNDFRSTZS, EGUSEELECKHPC, AGLNDAGRIZS, NYGDPMKTPCD, SPURBTOTLINZS], {
+	 seriesDefaults:{
+		 renderer:$.jqplot.BarRenderer,
+		 rendererOptions: {fillToZero: true}
+	 },
+	 series:[
+		{label:'CO2 emissions (kt)'},
+		{label:'CO2 emissions (metric tons per capita)'},
+		{label:'Mammal species, threatened'},
+		{label:'Forest area (% of land area)'},
+		{label:'Electric power consumption (kWh per capita)'},
+		{label:'Agricultural land (% of land area)'},
+		{label:'GDP (current US$)'},
+		{label:'Urban population (% of total)'},
+	 ],
+	 legend: {
+		 show: true,
+		 placement: 'outsideGrid'
+	 },
+	 axes: {
+		 xaxis: {
+		 renderer: $.jqplot.CategoryAxisRenderer,
+		 label: "Percentage Positive/Negative Improvement for Indicators"
+		 },
+		 yaxis: {
+		 pad: 1.05,
+		 tickOptions: {formatString: '%d%'}
+		 }
+	 } 
+	 });
+  });
+</script>
+
+
+
+<script class="code" type="text/javascript">
+  $(document).ready(function(){
+	 var plot3 = $.jqplot('pie3', [[['upper bucket', 4], ['upper-middle bucket', 1], ['lower-middle bucket', 1], ['lower bucket', 2]]], {
+	 seriesDefaults:{
+		 shadow: false,
+		 renderer:$.jqplot.PieRenderer,
+		 rendererOptions:{
+		 sliceMargin: 4,
+		 startAngle: -90,
+		 seriesColors: [ "green", "lime", "orange", "red"]
+		 }
+	 },
+	 legend:{ show: true },
+	 });
+  });
+</script>
+
+<div class="content-wrap">
+<!-- main -->
+<section>
+</section><section id="main">
+<div>
+	 <h1>Progress of India in <a href="http://mdgs.un.org/unsd/mdg/Host.aspx?Content=Indicators/OfficialList.htm">MDG</a></h1>
+	 <h2>Goal: Improve on Climate Change</h2>
+	 <p class="intro">
+		 <h3>Goals and Targets:</h3>
+		 <ol>
+		   <li>
+			 Climate Change Progress<br>
+			 <h4>Indicators:</h4>
+			 <ul>
+				 <li><a href="#EN.ATM.CO2E.KT">CO2 emissions (kt)</a></li>
+				 <li><a href="#EN.ATM.CO2E.PC">CO2 emissions (metric tons per capita)</a></li>
+				 <li><a href="#EN.MAM.THRD.NO">Mammal species, threatened</a></li>
+				 <li><a href="#AG.LND.FRST.ZS">Forest area (% of land area)</a></li>
+				 <li><a href="#EG.USE.ELEC.KH.PC">Electric power consumption (kWh per capita)</a></li>
+				 <li><a href="#AG.LND.AGRI.ZS">Agricultural land (% of land area)</a></li>
+				 <li><a href="#NY.GDP.MKTP.CD">GDP (current US$)</a></li>
+				 <li><a href="#SP.URB.TOTL.IN.ZS">Urban population (% of total)</a></li>
+			 </ul>
+		   </li>
+		 </ol>
+	 </p>
+</div>
+<a class="back-to-top" href="#main">Back to Top</a>
+</section>
+<section id="summary-goal1">
+	<h1>India's Performance Summary for Goal 1</h1>
+<br><p>	 <h2>Percentage Increase/Decrease for Goal 1 Indicators, since 2000.</h2>
+	<center>
+	  <div id="chart1" style="width:800px; height:240px;"></div>
+	</center>
+</p>
+<p></p>
+<p>
+	 <h2>Summary of Current Status.</h2>
+
+<ul>
+	 <li>Indicators in <font color="green"><b>upper</b></font> bucket: Agricultural land (% of land area) <a href="#AG.LND.AGRI.ZS"><font color='grey'>[detail]</font></a>, Electric power consumption (kWh per capita) <a href="#EG.USE.ELEC.KH.PC"><font color='grey'>[detail]</font></a>, Urban population (% of total) <a href="#SP.URB.TOTL.IN.ZS"><font color='grey'>[detail]</font></a>, GDP (current US$) <a href="#NY.GDP.MKTP.CD"><font color='grey'>[detail]</font></a></li>
+
+	 <li>Indicators in <font color="lime"><b>upper-middle</b></font> bucket: CO2 emissions (metric tons per capita) <a href="#EN.ATM.CO2E.PC"><font color='grey'>[detail]</font></a></li>
+
+	 <li>Indicators in <font color="orange"><b>lower-middle</b></font> bucket: Forest area (% of land area) <a href="#AG.LND.FRST.ZS"><font color='grey'>[detail]</font></a></li>
+
+	 <li>Indicators in <font color="red"><b>lower</b></font> bucket: Mammal species, threatened <a href="#EN.MAM.THRD.NO"><font color='grey'>[detail]</font></a>, CO2 emissions (kt) <a href="#EN.ATM.CO2E.KT"><font color='grey'>[detail]</font></a></li>
+
+</ul>
+
+	<center>
+	  <div id="pie3" style="margin-top:20px; margin-left:20px; width:400px; height:200px;"></div>
+	</center>
+</p>
+<a class="back-to-top" href="#main">Back to Top</a>
+</section>
+<p></p>
+<section id="EN.ATM.CO2E.KT">
+	 <h1><a href="http://data.worldbank.org/indicator/EN.ATM.CO2E.KT"> CO2 emissions (kt)</a></h1>
+
+	 <br><br>
+	 <p>		 <h2>Performance of India</h2>
+		 <ul>			 <li>Progress status (year: 2012): <font color="red"><b>46.86% Decrease</b></font>, since 2000.</li>			 <li>Current status (year: 2012): India is in the <font color="red">lower</b></font> bucket, with the position 194 (value: 1742697.746) out of 196 countries.<br>
+[Best: Kiribati, position: 1, value: 29.336; Worst: China, position: 196, value: 7031916.207]</li>		 </ul>	 </p>	 <p>		 <h2>Performance over time against the Best, Worst, South Asia and World </h2>
+	 </p>	 <center>
+	   <div id="vENATMCO2EKT" style="height:300px; width:600px;"></div>
+	 </center>
+	 <div class="row no-bottom-margin">
+		 <section class="row2left">
+		   <h2>most inverse-correlated indicators</h2>
+		   <font color="grey" size=2>could be negative cause or negative effect of  CO2 emissions (kt)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/EN.CO2.BLDG.ZS"> CO2 emissions from residential buildings and commercial and public services (% of total fuel combustion)</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EG.USE.CRNW.ZS"> Combustible renewables and waste (% of total energy)</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.DOD.ALLC.ZS"> Concessional debt (% of total external debt)</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.DOD.MLAT.ZS"> Multilateral debt (% of total external debt)</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.AMRT.MA"> "Mortality rate - adult - male (per 1,000 male adults)"</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.AMRT.FE"> "Mortality rate - adult - female (per 1,000 female adults)"</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/TM.TAX.TCOM.WM.AR.ZS"> "Tariff rate - applied - weighted mean - primary products (%)"</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NE.RSB.GNFS.ZS"> External balance on goods and services (% of GDP)</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/TM.TAX.TCOM.WM.FN.ZS"> "Tariff rate - most favored nation - weighted mean - primary products (%)"</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/BN.GSR.MRCH.CD"> "Net trade in goods (BoP - current US$)"</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+		   </ol>
+		 </section>
+		 <section class="row2right">
+		   <h2>most correlated indicators</h2>
+		   <font color="grey" size=2>could be positive cause or positive effect of  CO2 emissions (kt)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/EN.ATM.CO2E.SF.KT"> CO2 emissions from solid fuel consumption (kt)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EG.USE.ELEC.KH"> Electric power consumption (kWh)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.ATM.CO2E.PC"> CO2 emissions (metric tons per capita)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EG.USE.ELEC.KH.PC"> Electric power consumption (kWh per capita)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.CO2.ETOT.MT"> "CO2 emissions from electricity and heat production - total (million metric tons)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.PRE.ENRR.MA"> "School enrollment - preprimary - male (% gross)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.PRE.ENRR"> "School enrollment - preprimary (% gross)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IP.JRN.ARTC.SC"> Scientific and technical journal articles</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/TM.QTY.MRCH.XD.WD"> Import volume index (2000 = 100)</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EG.ELC.PROD.KH"> Electricity production (kWh)</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+		   </ol>
+		 </section>
+	 </div>
+	 <a class="back-to-top" href="#main">Back to Top</a>
+</section>
+
+<p>
+</p>
+
+<section id="EN.ATM.CO2E.PC">
+	 <h1><a href="http://data.worldbank.org/indicator/EN.ATM.CO2E.PC"> CO2 emissions (metric tons per capita)</a></h1>
+
+	 <br><br>
+	 <p>		 <h2>Performance of India</h2>
+		 <ul>			 <li>Progress status (year: 2012): <font color="red"><b>29.96% Decrease</b></font>, since 2000.</li>			 <li>Current status (year: 2012): India is in the <font color="lime">upper-middle</b></font> bucket, with the position 73 (value: 1.4634) out of 196 countries.<br>
+[Best: Burundi, position: 1, value: 0.0226; Worst: Qatar, position: 196, value: 49.0506]</li>		 </ul>	 </p>	 <p>		 <h2>Performance over time against the Best, Worst, South Asia and World </h2>
+	 </p>	 <center>
+	   <div id="vENATMCO2EPC" style="height:300px; width:600px;"></div>
+	 </center>
+	 <div class="row no-bottom-margin">
+		 <section class="row2left">
+		   <h2>most inverse-correlated indicators</h2>
+		   <font color="grey" size=2>could be negative cause or negative effect of  CO2 emissions (metric tons per capita)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/EN.CO2.BLDG.ZS"> CO2 emissions from residential buildings and commercial and public services (% of total fuel combustion)</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.DOD.ALLC.ZS"> Concessional debt (% of total external debt)</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EG.USE.CRNW.ZS"> Combustible renewables and waste (% of total energy)</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/BN.GSR.MRCH.CD"> "Net trade in goods (BoP - current US$)"</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NE.RSB.GNFS.ZS"> External balance on goods and services (% of GDP)</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/TM.TAX.TCOM.WM.AR.ZS"> "Tariff rate - applied - weighted mean - primary products (%)"</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/TM.TAX.TCOM.WM.FN.ZS"> "Tariff rate - most favored nation - weighted mean - primary products (%)"</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.DOD.MLAT.ZS"> Multilateral debt (% of total external debt)</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.AMRT.MA"> "Mortality rate - adult - male (per 1,000 male adults)"</a> <font color="grey" size=2>[corr score: -0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.AMRT.FE"> "Mortality rate - adult - female (per 1,000 female adults)"</a> <font color="grey" size=2>[corr score: -0.97]</font><br></li>
+		   </ol>
+		 </section>
+		 <section class="row2right">
+		   <h2>most correlated indicators</h2>
+		   <font color="grey" size=2>could be positive cause or positive effect of  CO2 emissions (metric tons per capita)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/EN.ATM.CO2E.KT"> CO2 emissions (kt)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EG.USE.ELEC.KH.PC"> Electric power consumption (kWh per capita)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.ATM.CO2E.SF.KT"> CO2 emissions from solid fuel consumption (kt)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/TM.QTY.MRCH.XD.WD"> Import volume index (2000 = 100)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EG.USE.ELEC.KH"> Electric power consumption (kWh)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.CO2.ETOT.MT"> "CO2 emissions from electricity and heat production - total (million metric tons)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/BM.GSR.FCTY.CD"> "Income payments (BoP - current US$)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IS.AIR.DPRT"> "Air transport - registered carrier departures worldwide"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EG.ELC.PROD.KH"> Electricity production (kWh)</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.CO2.TRAN.MT"> CO2 emissions from transport (million metric tons)</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+		   </ol>
+		 </section>
+	 </div>
+	 <a class="back-to-top" href="#main">Back to Top</a>
+</section>
+
+<p>
+</p>
+
+<section id="EN.MAM.THRD.NO">
+	 <h1><a href="http://data.worldbank.org/indicator/EN.MAM.THRD.NO"> "Mammal species - threatened"</a></h1>
+
+	 <br><br>
+	 <p>		 <h2>Performance of India</h2>
+		 <ul>			 <li>Progress status (year: 2012): <font color="green"><b>0.00% Increase</b></font>, since 2010.</li>			 <li>Current status (year: 2012): India is in the <font color="red">lower</b></font> bucket, with the position 206 (value: 94.0) out of 208 countries.<br>
+[Best: San Marino, position: 1, value: 0.0; Worst: Indonesia, position: 208, value: 184.0]</li>		 </ul>	 </p>	 <p>		 <h2>Performance over time against the Best, Worst, South Asia and World </h2>
+	 </p>	 <center>
+	   <div id="vENMAMTHRDNO" style="height:300px; width:600px;"></div>
+	 </center>
+	 <div class="row no-bottom-margin">
+		 <section class="row2left">
+		   <h2>most inverse-correlated indicators</h2>
+		   <font color="grey" size=2>could be negative cause or negative effect of  "Mammal species - threatened"</font>
+		   <ol>
+		   </ol>
+		 </section>
+		 <section class="row2right">
+		   <h2>most correlated indicators</h2>
+		   <font color="grey" size=2>could be positive cause or positive effect of  "Mammal species - threatened"</font>
+		   <ol>
+		   </ol>
+		 </section>
+	 </div>
+	 <a class="back-to-top" href="#main">Back to Top</a>
+</section>
+
+<p>
+</p>
+
+<section id="AG.LND.FRST.ZS">
+	 <h1><a href="http://data.worldbank.org/indicator/AG.LND.FRST.ZS"> Forest area (% of land area)</a></h1>
+
+	 <br><br>
+	 <p>		 <h2>Performance of India</h2>
+		 <ul>			 <li>Progress status (year: 2012): <font color="green"><b>4.66% Increase</b></font>, since 2000.</li>			 <li>Current status (year: 2012): India is in the <font color="orange">lower-middle</b></font> bucket, with the position 88 (value: 23.017) out of 206 countries.<br>
+[Best: Suriname, position: 206, value: 94.6026; Worst: Monaco, position: 1, value: 0.0]</li>		 </ul>	 </p>	 <p>		 <h2>Performance over time against the Best, Worst, South Asia and World </h2>
+	 </p>	 <center>
+	   <div id="vAGLNDFRSTZS" style="height:300px; width:600px;"></div>
+	 </center>
+	 <div class="row no-bottom-margin">
+		 <section class="row2left">
+		   <h2>most inverse-correlated indicators</h2>
+		   <font color="grey" size=2>could be negative cause or negative effect of  Forest area (% of land area)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SH.MMR.RISK.ZS"> Lifetime risk of maternal death (%)</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.AGR.EMPL.MA.ZS"> "Employees - agriculture - male (% of male employment)"</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.MMR.DTHS"> Number of maternal deaths</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/TM.TAX.MRCH.IP.ZS"> "Share of tariff lines with international peaks - all products (%)"</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/TM.TAX.TCOM.IP.ZS"> "Share of tariff lines with international peaks - primary products (%)"</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/TM.TAX.MANF.IP.ZS"> "Share of tariff lines with international peaks - manufactured products (%)"</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.STA.MMRT"> "Maternal mortality ratio (modeled estimate - per 100,000 live births)"</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NY.ADJ.AEDU.GN.ZS"> Adjusted savings: education expenditure (% of GNI)</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.AGR.0714.MA.ZS"> "Child employment in agriculture - male (% of male economically active children ages 7-14)"</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.ATM.PFCG.KT.CE"> PFC gas emissions (thousand metric tons of CO2 equivalent)</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+		   </ol>
+		 </section>
+		 <section class="row2right">
+		   <h2>most correlated indicators</h2>
+		   <font color="grey" size=2>could be positive cause or positive effect of  Forest area (% of land area)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/AG.LND.FRST.K2"> Forest area (sq. km)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.SRV.EMPL.MA.ZS"> "Employees - services - male (% of male employment)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.PRM.PRS5.MA.ZS"> "Persistence to grade 5 - male (% of cohort)"</a> <font color="grey" size=2>[corr score: 0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.SRV.0714.FE.ZS"> "Child employment in services - female (% of female economically active children ages 7-14)"</a> <font color="grey" size=2>[corr score: 0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.ATM.METH.EG.ZS"> Energy related methane emissions (% of total)</a> <font color="grey" size=2>[corr score: 0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SI.DST.05TH.20"> Income share held by highest 20%</a> <font color="grey" size=2>[corr score: 0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.MNF.0714.MA.ZS"> "Child employment in manufacturing - male (% of male economically active children ages 7-14)"</a> <font color="grey" size=2>[corr score: 0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.ATM.NOXE.IN.KT.CE"> Industrial nitrous oxide emissions (thousand metric tons of CO2 equivalent)</a> <font color="grey" size=2>[corr score: 0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.ATM.NOXE.EG.KT.CE"> Nitrous oxide emissions in energy sector (thousand metric tons of CO2 equivalent)</a> <font color="grey" size=2>[corr score: 0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.ATM.SF6G.KT.CE"> SF6 gas emissions (thousand metric tons of CO2 equivalent)</a> <font color="grey" size=2>[corr score: 0.98]</font><br></li>
+		   </ol>
+		 </section>
+	 </div>
+	 <a class="back-to-top" href="#main">Back to Top</a>
+</section>
+
+<p>
+</p>
+
+<section id="EG.USE.ELEC.KH.PC">
+	 <h1><a href="http://data.worldbank.org/indicator/EG.USE.ELEC.KH.PC"> Electric power consumption (kWh per capita)</a></h1>
+
+	 <br><br>
+	 <p>		 <h2>Performance of India</h2>
+		 <ul>			 <li>Progress status (year: 2012): <font color="red"><b>47.67% Decrease</b></font>, since 2000.</li>			 <li>Current status (year: 2012): India is in the <font color="green">upper</b></font> bucket, with the position 28 (value: 570.9315) out of 134 countries.<br>
+[Best: Haiti, position: 1, value: 35.6844; Worst: Iceland, position: 134, value: 51259.1876]</li>		 </ul>	 </p>	 <p>		 <h2>Performance over time against the Best, Worst, South Asia and World </h2>
+	 </p>	 <center>
+	   <div id="vEGUSEELECKHPC" style="height:300px; width:600px;"></div>
+	 </center>
+	 <div class="row no-bottom-margin">
+		 <section class="row2left">
+		   <h2>most inverse-correlated indicators</h2>
+		   <font color="grey" size=2>could be negative cause or negative effect of  Electric power consumption (kWh per capita)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/EN.CO2.BLDG.ZS"> CO2 emissions from residential buildings and commercial and public services (% of total fuel combustion)</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.DOD.ALLC.ZS"> Concessional debt (% of total external debt)</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.DOD.MLAT.ZS"> Multilateral debt (% of total external debt)</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EG.USE.CRNW.ZS"> Combustible renewables and waste (% of total energy)</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.AMRT.MA"> "Mortality rate - adult - male (per 1,000 male adults)"</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.AMRT.FE"> "Mortality rate - adult - female (per 1,000 female adults)"</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NE.RSB.GNFS.ZS"> External balance on goods and services (% of GDP)</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.ADO.TFRT"> "Adolescent fertility rate (births per 1,000 women ages 15-19)"</a> <font color="grey" size=2>[corr score: -0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.POP.DPND"> Age dependency ratio (% of working-age population)</a> <font color="grey" size=2>[corr score: -0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.POP.DPND.YG"> "Age dependency ratio - young (% of working-age population)"</a> <font color="grey" size=2>[corr score: -0.97]</font><br></li>
+		   </ol>
+		 </section>
+		 <section class="row2right">
+		   <h2>most correlated indicators</h2>
+		   <font color="grey" size=2>could be positive cause or positive effect of  Electric power consumption (kWh per capita)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/EG.USE.ELEC.KH"> Electric power consumption (kWh)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.ATM.CO2E.SF.KT"> CO2 emissions from solid fuel consumption (kt)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.ATM.CO2E.KT"> CO2 emissions (kt)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IS.AIR.DPRT"> "Air transport - registered carrier departures worldwide"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.CO2.ETOT.MT"> "CO2 emissions from electricity and heat production - total (million metric tons)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IP.JRN.ARTC.SC"> Scientific and technical journal articles</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.ATM.CO2E.PC"> CO2 emissions (metric tons per capita)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EG.ELC.PROD.KH"> Electricity production (kWh)</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/BX.KLT.DREM.CD.DT"> Profit remittances on FDI (current US$)</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EG.ELC.COAL.KH"> Electricity production from coal sources (kWh)</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+		   </ol>
+		 </section>
+	 </div>
+	 <a class="back-to-top" href="#main">Back to Top</a>
+</section>
+
+<p>
+</p>
+
+<section id="AG.LND.AGRI.ZS">
+	 <h1><a href="http://data.worldbank.org/indicator/AG.LND.AGRI.ZS"> Agricultural land (% of land area)</a></h1>
+
+	 <br><br>
+	 <p>		 <h2>Performance of India</h2>
+		 <ul>			 <li>Progress status (year: 2012): <font color="red"><b>1.43% Decrease</b></font>, since 2000.</li>			 <li>Current status (year: 2012): India is in the <font color="green"><b>upper</b></font> bucket, with the position 164 (value: 60.5286) out of 206 countries.<br>
+[Best: Uruguay, position: 206, value: 84.6018; Worst: Bermuda, position: 1, value: 0.0]</li>		 </ul>	 </p>	 <p>		 <h2>Performance over time against the Best, Worst, South Asia and World </h2>
+	 </p>	 <center>
+	   <div id="vAGLNDAGRIZS" style="height:300px; width:600px;"></div>
+	 </center>
+	 <div class="row no-bottom-margin">
+		 <section class="row2left">
+		   <h2>most inverse-correlated indicators</h2>
+		   <font color="grey" size=2>could be negative cause or negative effect of  Agricultural land (% of land area)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SE.ADT.LITR.ZS"> "Literacy rate - adult total (% of people ages 15 and above)"</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.ADT.LITR.MA.ZS"> "Literacy rate - adult male (% of males ages 15 and above)"</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.ADT.1524.LT.FM.ZS"> Ratio of young literate females to males (% ages 15-24)</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.ADT.LITR.FE.ZS"> "Literacy rate - adult female (% of females ages 15 and above)"</a> <font color="grey" size=2>[corr score: -0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.NFL.IMFC.CD"> "Net financial flows - IMF concessional (NFL - current US$)"</a> <font color="grey" size=2>[corr score: -0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/ER.PTD.TOTL.ZS"> Terrestrial and marine protected areas (% of total territorial area)</a> <font color="grey" size=2>[corr score: -0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/ER.LND.PTLD.ZS"> Terrestrial protected areas (% of total land area)</a> <font color="grey" size=2>[corr score: -0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.PRM.PRSL.FE.ZS"> "Persistence to last grade of primary - female (% of cohort)"</a> <font color="grey" size=2>[corr score: -0.95]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.SEC.REPT.MA.ZS"> "Repeaters - secondary - male (% of male enrollment)"</a> <font color="grey" size=2>[corr score: -0.95]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.EMP.SELF.MA.ZS"> "Self-employed - male (% of males employed)"</a> <font color="grey" size=2>[corr score: -0.94]</font><br></li>
+		   </ol>
+		 </section>
+		 <section class="row2right">
+		   <h2>most correlated indicators</h2>
+		   <font color="grey" size=2>could be positive cause or positive effect of  Agricultural land (% of land area)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/AG.LND.AGRI.K2"> Agricultural land (sq. km)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.AMT.DIMF.CD"> "IMF repurchases (AMT - current US$)"</a> <font color="grey" size=2>[corr score: 0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.INT.DIMF.CD"> "IMF charges (INT - current US$)"</a> <font color="grey" size=2>[corr score: 0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.TDS.DIMF.CD"> "IMF repurchases and charges (TDS - current US$)"</a> <font color="grey" size=2>[corr score: 0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.EMP.MPYR.ZS"> "Employers - total (% of employment)"</a> <font color="grey" size=2>[corr score: 0.94]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.EMP.MPYR.FE.ZS"> "Employers - female (% of employment)"</a> <font color="grey" size=2>[corr score: 0.94]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.REG.BRTH.RU.ZS"> "Completeness of birth registration - rural (%)"</a> <font color="grey" size=2>[corr score: 0.93]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IC.ELC.DURS"> Delay in obtaining an electrical connection (days)</a> <font color="grey" size=2>[corr score: 0.93]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SN.ITK.SALT.ZS"> Consumption of iodized salt (% of households)</a> <font color="grey" size=2>[corr score: 0.93]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.CON.1524.FE.ZS"> "Condom use - population ages 15-24 - female (% of females ages 15-24)"</a> <font color="grey" size=2>[corr score: 0.93]</font><br></li>
+		   </ol>
+		 </section>
+	 </div>
+	 <a class="back-to-top" href="#main">Back to Top</a>
+</section>
+
+<p>
+</p>
+
+<section id="NY.GDP.MKTP.CD">
+	 <h1><a href="http://data.worldbank.org/indicator/NY.GDP.MKTP.CD"> GDP (current US$)</a></h1>
+
+	 <br><br>
+	 <p>		 <h2>Performance of India</h2>
+		 <ul>			 <li>Progress status (year: 2012): <font color="green"><b>289.30% Increase</b></font>, since 2000.</li>			 <li>Current status (year: 2012): India is in the <font color="green"><b>upper</b></font> bucket, with the position 194 (value: 1.84798185364e+12) out of 203 countries.<br>
+[Best: United States, position: 203, value: 1.5094e+13; Worst: Tuvalu, position: 1, value: 35784426.8317]</li>		 </ul>	 </p>	 <p>		 <h2>Performance over time against the Best, Worst, South Asia and World </h2>
+	 </p>	 <center>
+	   <div id="vNYGDPMKTPCD" style="height:300px; width:600px;"></div>
+	 </center>
+	 <div class="row no-bottom-margin">
+		 <section class="row2left">
+		   <h2>most inverse-correlated indicators</h2>
+		   <font color="grey" size=2>could be negative cause or negative effect of  GDP (current US$)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SH.TBS.INCD"> "Incidence of tuberculosis (per 100,000 people)"</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NE.RSB.GNFS.CD"> External balance on goods and services (current US$)</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.RUR.TOTL.ZS"> Rural population (% of total population)</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NE.RSB.GNFS.CN"> External balance on goods and services (current LCU)</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/TM.VAL.TRVL.ZS.WT"> Travel services (% of commercial service imports)</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/BM.GSR.TRVL.ZS"> "Travel services (% of service imports - BoP)"</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.DYN.NMRT"> "Mortality rate - neonatal (per 1,000 live births)"</a> <font color="grey" size=2>[corr score: -0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.POP.0014.TO.ZS"> Population ages 0-14 (% of total)</a> <font color="grey" size=2>[corr score: -0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.POP.DPND.YG"> "Age dependency ratio - young (% of working-age population)"</a> <font color="grey" size=2>[corr score: -0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.IMRT.IN"> "Mortality rate - infant (per 1,000 live births)"</a> <font color="grey" size=2>[corr score: -0.97]</font><br></li>
+		   </ol>
+		 </section>
+		 <section class="row2right">
+		   <h2>most correlated indicators</h2>
+		   <font color="grey" size=2>could be positive cause or positive effect of  GDP (current US$)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/NY.GNP.MKTP.CD"> GNI (current US$)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NE.DAB.TOTL.CD"> Gross national expenditure (current US$)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NY.GDP.FCST.CD"> Gross value added at factor cost (current US$)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NE.CON.PRVT.CD"> Household final consumption expenditure (current US$)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NY.GDP.PCAP.CD"> GDP per capita (current US$)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NE.CON.TOTL.CD"> Final consumption expenditure (current US$)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NV.SRV.TETC.CD"> "Services - etc. - value added (current US$)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NV.AGR.TOTL.CD"> "Agriculture - value added (current US$)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NE.CON.PETC.CD"> "Household final consumption expenditure - etc. (current US$)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NE.CON.TETC.CD"> "Final consumption expenditure - etc. (current US$)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+		   </ol>
+		 </section>
+	 </div>
+	 <a class="back-to-top" href="#main">Back to Top</a>
+</section>
+
+<p>
+</p>
+
+<section id="SP.URB.TOTL.IN.ZS">
+	 <h1><a href="http://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS"> Urban population (% of total)</a></h1>
+
+	 <br><br>
+	 <p>		 <h2>Performance of India</h2>
+		 <ul>			 <li>Progress status (year: 2012): <font color="red"><b>13.11% Decrease</b></font>, since 2000.</li>			 <li>Current status (year: 2012): India is in the <font color="green">upper</b></font> bucket, with the position 37 (value: 31.295) out of 209 countries.<br>
+[Best: Burundi, position: 1, value: 10.928; Worst: "Macao SAR - China", position: 209, value: 100.0]</li>		 </ul>	 </p>	 <p>		 <h2>Performance over time against the Best, Worst, South Asia and World </h2>
+	 </p>	 <center>
+	   <div id="vSPURBTOTLINZS" style="height:300px; width:600px;"></div>
+	 </center>
+	 <div class="row no-bottom-margin">
+		 <section class="row2left">
+		   <h2>most inverse-correlated indicators</h2>
+		   <font color="grey" size=2>could be negative cause or negative effect of  Urban population (% of total)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SP.RUR.TOTL.ZS"> Rural population (% of total population)</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.DYN.NMRT"> "Mortality rate - neonatal (per 1,000 live births)"</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.POP.0014.TO.ZS"> Population ages 0-14 (% of total)</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.IMRT.IN"> "Mortality rate - infant (per 1,000 live births)"</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.POP.DPND.YG"> "Age dependency ratio - young (% of working-age population)"</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.POP.DPND"> Age dependency ratio (% of working-age population)</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.DYN.MORT"> "Mortality rate - under-5 (per 1,000 live births)"</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.CBRT.IN"> "Birth rate - crude (per 1,000 people)"</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.AMRT.MA"> "Mortality rate - adult - male (per 1,000 male adults)"</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.AMRT.FE"> "Mortality rate - adult - female (per 1,000 female adults)"</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+		   </ol>
+		 </section>
+		 <section class="row2right">
+		   <h2>most correlated indicators</h2>
+		   <font color="grey" size=2>could be positive cause or positive effect of  Urban population (% of total)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SP.URB.TOTL"> Urban population</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.LE00.MA.IN"> "Life expectancy at birth - male (years)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.POP.TOTL.FE.ZS"> "Population - female (% of total)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.LE00.IN"> "Life expectancy at birth - total (years)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.POP.TOTL"> "Population - total"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.POP.65UP.TO.ZS"> Population ages 65 and above (% of total)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.POP.DPND.OL"> "Age dependency ratio - old (% of working-age population)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.LE00.FE.IN"> "Life expectancy at birth - female (years)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.POP.1564.TO.ZS"> Population ages 15-64 (% of total)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.RUR.TOTL"> Rural population</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+		   </ol>
+		 </section>
+	 </div>
+	 <a class="back-to-top" href="#main">Back to Top</a>
+</section>
+
+<p>
+</p>
+
+</div>
+
+    
+<!-- footer -->
+<footer>
+
+    <div class="footer-content">
+<!-- 
+        <ul class="footer-menu">
+            <li><a href="#main">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#about-us">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <!-- <li class="rss-feed"><a href="#">RSS Feed</a></li> -->
+        </ul>
+
+
+        <p class="footer-text">Copyright DecipherData.Org [<a href="http://www.decipherdata.org">www.decipherdata.org</a>] and Naushad UzZaman [<a href="http://www.naushad.uzzaman.com">www.naushad.uzzaman.com</a>]. &nbsp;&nbsp;&nbsp; <br>
+		<font size=1, color="grey">Theme adapted from <a href="http://www.styleshout.com/">Styleshout</a>.</font>
+		</p>
+    </div>
+
+</footer>
+
+</body>
+</html>

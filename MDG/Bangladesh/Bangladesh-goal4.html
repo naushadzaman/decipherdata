@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
+
+<head>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta charset="utf-8"/>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Progress of Bangladesh in MDG</title>
+
+    <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../../css/nivo-slider.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/jquery.fancybox-1.3.4.css" type="text/css" />
+
+    <!--[if lt IE 9]>
+	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../js/jquery-1.6.1.min.js"><\/script>')</script>
+
+    <script src="js/jquery.smoothscroll.js"></script>
+    <script src="../../js/jquery.nivo.slider.pack.js"></script>
+    <script src="../../js/jquery.easing-1.3.pack.js"></script>
+    <script src="../../js/jquery.fancybox-1.3.4.pack.js"></script>
+    <script src="../../js/init.js"></script>
+        
+        <!-- Don't touch this! -->
+        
+        
+        <script class="include" type="text/javascript" src="../../jqplot/examples/../jquery.jqplot.min.js"></script>
+        <script type="text/javascript" src="../../jqplot/examples/syntaxhighlighter/scripts/shCore.min.js"></script>
+        <script type="text/javascript" src="../../jqplot/examples/syntaxhighlighter/scripts/shBrushJScript.min.js"></script>
+        <script type="text/javascript" src="../../jqplot/examples/syntaxhighlighter/scripts/shBrushXml.min.js"></script>
+        <!-- End Don't touch this! -->
+        
+        <!-- Additional plugins go here -->
+        
+        <script class="include" language="javascript" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.highlighter.min.js"></script>
+        <script class="include" language="javascript" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.cursor.min.js"></script>
+        <script class="include" language="javascript" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.dateAxisRenderer.min.js"></script>
+        
+        <!-- End additional plugins -->
+        
+        <!-- Bar/Plot plugins go here -->
+        
+        <script class="include" language="javascript" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.barRenderer.min.js"></script>
+        <script class="include" language="javascript" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.categoryAxisRenderer.min.js"></script>
+        <script class="include" language="javascript" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.pointLabels.min.js"></script>
+        <script class="include" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.pieRenderer.min.js"></script>
+        
+        <!-- End Bar/Plot plugins -->
+
+        
+        <script type="text/javascript" src="../../jqplot/examples/example.min.js"></script>
+
+        <link class="include" rel="stylesheet" type="text/css" href="../../jqplot/examples/../jquery.jqplot.min.css" />
+        <link rel="stylesheet" type="text/css" href="../../jqplot/examples/examples.min.css" />
+        <link type="text/css" rel="stylesheet" href="../../jqplot/examples/syntaxhighlighter/styles/shCoreDefault.min.css" />
+        <link type="text/css" rel="stylesheet" href="../../jqplot/examples/syntaxhighlighter/styles/shThemejqPlot.min.css" />
+        
+        
+        <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="../../jqplot/examples/../excanvas.js"></script><![endif]-->
+
+
+</head>
+
+<body>
+
+<!-- header-wrap -->
+<div id="header-wrap">
+    <header>
+
+        <hgroup>
+            <h1><a href="index.html">Progress of Bangladesh in MDG</a></h1>
+            <h3>Progress of Bangladesh in MDG</h3>
+        </hgroup>
+
+        <nav>
+
+	        <ul>
+                <li><a href="http://www.decipherdata.org">Home</a></li>
+                <li><a href="http://www.decipherdata.org/MDG/Bangladesh/Bangladesh-goal1.html">Goal 1</a></li>
+                <li><a href="http://www.decipherdata.org/MDG/Bangladesh/Bangladesh-goal2.html">Goal 2</a></li>
+                <li><a href="http://www.decipherdata.org/MDG/Bangladesh/Bangladesh-goal3.html">Goal 3</a></li>
+                <li><a href="http://www.decipherdata.org/MDG/Bangladesh/Bangladesh-goal4.html">Goal 4</a></li>
+                <li><a href="http://www.decipherdata.org/MDG/Bangladesh/Bangladesh-goal5.html">Goal 5</a></li>
+                <li><a href="http://www.decipherdata.org/MDG/Bangladesh/Bangladesh-goal6.html">Goal 6</a></li>
+                <li><a href="http://www.decipherdata.org/MDG/Bangladesh/Bangladesh-goal7.html">Goal 7</a></li>
+                <li><a href="http://www.decipherdata.org/MDG/Bangladesh/Bangladesh-goal8.html">Goal 8</a></li>
+
+            </ul>
+        </nav>
+
+    </header>
+</div>
+    
+
+<!-- stat data -->
+<script class="code" type="text/javascript">
+$(document).ready(function(){
+var Bangladesh=[[1990, 138.8], [1995, 110.8], [2000, 84.4], [2005, 64.1], [2010, 48.7], [2012, 46.0]];
+var World=[[1990, 87.3], [1995, 82.4], [2000, 72.7], [2005, 62.7], [2010, 53.3], [2012, 51.4]];
+var SouthAsia=[[1990, 118.6], [1995, 104.0], [2000, 89.0], [2005, 75.2], [2010, 64.2], [2012, 62.1]];
+var Best=[[1990, ('Iceland', 6.3)], [1995, ('Sweden', 4.9)], [2000, ('Iceland', 3.9)], [2005, ('Singapore', 3.0)], [2010, ('San Marino', 1.9)], [2012, ('San Marino', 1.8)]];
+var Worst=[[1990, ('Niger', 313.7)], [1995, ('Rwanda', 275.1)], [2000, ('Sierra Leone', 240.6)], [2005, ('Sierra Leone', 214.4)], [2010, ('Sierra Leone', 188.8)], [2012, ('Sierra Leone', 185.3)]];
+
+var plotSHDYNMORT = $.jqplot("vSHDYNMORT", [Bangladesh, World, SouthAsia, Best, Worst], {
+	 title:' "Mortality rate - under-5 (per 1 -000 live births)"',
+	 axes:{yaxis:{min:-8.1426203379, max:323.642620338}, xaxis:{min:1989, max:2021, label:'Year'}},
+	 legend: {show: true } ,
+	 series:[
+		 {label:'Bangladesh', showMarker: false, lineWidth: 3, color:'green'}, 
+		 {label:'World', showMarker: false, lineWidth: 1, linePattern: 'dashed', color: 'rgb(66, 98, 144)'}, 
+		 {label:'SouthAsia', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'purple'}, 
+		 {label:'Best', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'yellow'},
+		 {label:'Worst', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'red'}
+		 ]
+	 });
+});
+</script>
+<script class="code" type="text/javascript">
+$(document).ready(function(){
+var Bangladesh=[[1990, 96.5], [1995, 78.8], [2000, 62.0], [2005, 49.1], [2010, 38.6], [2012, 36.7]];
+var World=[[1990, 60.7], [1995, 57.6], [2000, 50.9], [2005, 44.3], [2010, 38.0], [2012, 36.9]];
+var SouthAsia=[[1990, 84.8], [1995, 75.5], [2000, 65.9], [2005, 56.8], [2010, 49.7], [2012, 48.3]];
+var Best=[[1990, ('Japan', 4.6)], [1995, ('Iceland', 4.0)], [2000, ('Singapore', 2.9)], [2005, ('Iceland', 2.3)], [2010, ('San Marino', 1.7)], [2012, ('San Marino', 1.6)]];
+var Worst=[[1990, ('Liberia', 160.8)], [1995, ('Sierra Leone', 155.7)], [2000, ('Sierra Leone', 145.5)], [2005, ('Sierra Leone', 133.2)], [2010, ('Sierra Leone', 120.9)], [2012, ('Sierra Leone', 119.2)]];
+
+var plotSPDYNIMRTIN = $.jqplot("vSPDYNIMRTIN", [Bangladesh, World, SouthAsia, Best, Worst], {
+	 title:' "Mortality rate - infant (per 1 -000 live births)"',
+	 axes:{yaxis:{min:-8.30049751244, max:170.700497512}, xaxis:{min:1989, max:2021, label:'Year'}},
+	 legend: {show: true } ,
+	 series:[
+		 {label:'Bangladesh', showMarker: false, lineWidth: 3, color:'green'}, 
+		 {label:'World', showMarker: false, lineWidth: 1, linePattern: 'dashed', color: 'rgb(66, 98, 144)'}, 
+		 {label:'SouthAsia', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'purple'}, 
+		 {label:'Best', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'yellow'},
+		 {label:'Worst', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'red'}
+		 ]
+	 });
+});
+</script>
+<script class="code" type="text/javascript">
+$(document).ready(function(){
+var Bangladesh=[[1990, 65.0], [1995, 79.0], [2000, 72.0], [2005, 94.0], [2010, 94.0], [2012, 94.0]];
+var World=[[1990, 72.8983], [1995, 73.6101], [2000, 72.7439], [2005, 77.8612], [2010, 85.2971], [2012, 85.2971]];
+var SouthAsia=[[1990, 55.9032], [1995, 68.8079], [2000, 57.2157], [2005, 68.5234], [2010, 77.2134], [2012, 77.2134]];
+var Best=[[1990, ('Iceland', 99.0)], [1995, ('Iceland', 99.0)], [2000, ('Sri Lanka', 99.0)], [2005, ('Sri Lanka', 99.0)], [2010, ('Greece', 99.0)], [2012, ('Greece', 99.0)]];
+var Worst=[[1990, ('Afghanistan', 20.0)], [1995, ('Chad', 26.0)], [2000, ('Somalia', 24.0)], [2005, ('Chad', 32.0)], [2010, ('Somalia', 46.0)], [2012, ('Somalia', 46.0)]];
+
+var plotSHIMMMEAS = $.jqplot("vSHIMMMEAS", [Bangladesh, World, SouthAsia, Best, Worst], {
+	 title:' "Immunization - measles (% of children ages 12-23 months)"',
+	 axes:{yaxis:{min:12.0202020202, max:106.97979798}, xaxis:{min:1989, max:2021, label:'Year'}},
+	 legend: {show: true } ,
+	 series:[
+		 {label:'Bangladesh', showMarker: false, lineWidth: 3, color:'green'}, 
+		 {label:'World', showMarker: false, lineWidth: 1, linePattern: 'dashed', color: 'rgb(66, 98, 144)'}, 
+		 {label:'SouthAsia', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'purple'}, 
+		 {label:'Best', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'yellow'},
+		 {label:'Worst', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'red'}
+		 ]
+	 });
+});
+</script>
+
+<script class="code" type="text/javascript">
+  $(document).ready(function(){
+	 var SHDYNMORT = [45.50];
+	 var SPDYNIMRTIN = [40.81];
+	 var SHIMMMEAS = [30.56];
+	 var plot1 = $.jqplot('chart1', [SHDYNMORT, SPDYNIMRTIN, SHIMMMEAS], {
+	 seriesDefaults:{
+		 renderer:$.jqplot.BarRenderer,
+		 rendererOptions: {fillToZero: true}
+	 },
+	 series:[
+		{label:'Mortality rate - under-5 (per 1,000 live births)'},
+		{label:'Mortality rate - infant (per 1,000 live births)'},
+		{label:'Immunization - measles (% of children ages 12-23 months)'},
+	 ],
+	 legend: {
+		 show: true,
+		 placement: 'outsideGrid'
+	 },
+	 axes: {
+		 xaxis: {
+		 renderer: $.jqplot.CategoryAxisRenderer,
+		 label: "Percentage Positive/Negative Improvement for Indicators"
+		 },
+		 yaxis: {
+		 pad: 1.05,
+		 tickOptions: {formatString: '%d%'}
+		 }
+	 } 
+	 });
+  });
+</script>
+
+
+
+<script class="code" type="text/javascript">
+  $(document).ready(function(){
+	 var plot3 = $.jqplot('pie3', [[['upper bucket', 0], ['upper-middle bucket', 1], ['lower-middle bucket', 2], ['lower bucket', 0]]], {
+	 seriesDefaults:{
+		 shadow: false,
+		 renderer:$.jqplot.PieRenderer,
+		 rendererOptions:{
+		 sliceMargin: 4,
+		 startAngle: -90,
+		 seriesColors: [ "green", "lime", "orange", "red"]
+		 }
+	 },
+	 legend:{ show: true },
+	 });
+  });
+</script>
+
+<div class="content-wrap">
+<!-- main -->
+<section>
+</section><section id="main">
+<div>
+	 <h1>Progress of Bangladesh in <a href="http://mdgs.un.org/unsd/mdg/Host.aspx?Content=Indicators/OfficialList.htm">MDG</a></h1>
+	 <h2>Goal 4: Reduce child mortality</h2>
+	 <p class="intro">
+		 <h3>Goals and Targets:</h3>
+		 <ol>
+		   <li>
+			 Target 4.A: Reduce by two-thirds, between 1990 and 2015, the under-five mortality rate<br>
+			 <h4>Indicators:</h4>
+			 <ul>
+				 <li><a href="#SH.DYN.MORT">Mortality rate - under-5 (per 1,000 live births)</a></li>
+				 <li><a href="#SP.DYN.IMRT.IN">Mortality rate - infant (per 1,000 live births)</a></li>
+				 <li><a href="#SH.IMM.MEAS">Immunization - measles (% of children ages 12-23 months)</a></li>
+			 </ul>
+		   </li>
+		 </ol>
+	 </p>
+</div>
+<a class="back-to-top" href="#main">Back to Top</a>
+</section>
+<section id="summary-goal4">
+	<h1>Bangladesh's Performance Summary for Goal 4</h1>
+<br><p>	 <h2>Percentage Increase/Decrease for Goal 4 Indicators, since 2000.</h2>
+	<center>
+	  <div id="chart1" style="width:800px; height:150px;"></div>
+	</center>
+</p>
+<p></p>
+<p>
+	 <h2>Summary of Current Status.</h2>
+
+<ul>
+	 <li>Indicators in <font color="green"><b>upper</b></font> bucket:</li>
+
+	 <li>Indicators in <font color="lime"><b>upper-middle</b></font> bucket: Immunization - measles (% of children ages 12-23 months) <a href="#SH.IMM.MEAS"><font color='grey'>[detail]</font></a></li>
+
+	 <li>Indicators in <font color="orange"><b>lower-middle</b></font> bucket: Mortality rate - infant (per 1,000 live births) <a href="#SP.DYN.IMRT.IN"><font color='grey'>[detail]</font></a>, Mortality rate - under-5 (per 1,000 live births) <a href="#SH.DYN.MORT"><font color='grey'>[detail]</font></a></li>
+
+	 <li>Indicators in <font color="red"><b>lower</b></font> bucket:</li>
+
+</ul>
+
+	<center>
+	  <div id="pie3" style="margin-top:20px; margin-left:20px; width:400px; height:200px;"></div>
+	</center>
+</p>
+<a class="back-to-top" href="#main">Back to Top</a>
+</section>
+<p></p>
+<section id="SH.DYN.MORT">
+	 <h1><a href="http://data.worldbank.org/indicator/SH.DYN.MORT"> "Mortality rate - under-5 (per 1,000 live births)"</a></h1>
+
+	 <br><br>
+	 <p>		 <h2>Performance of Bangladesh</h2>
+		 <ul>			 <li>Progress status (year: 2012): <font color="green"><b>45.50% Increase</b></font>, since 2000.</li>			 <li>Current status (year: 2012): Bangladesh is in the <font color="orange">lower-middle</b></font> bucket, with the position 134 (value: 46.0) out of 192 countries.<br>
+[Best: San Marino, position: 1, value: 1.8; Worst: Sierra Leone, position: 192, value: 185.3]</li>		 </ul>	 </p>	 <p>		 <h2>Performance over time against the Best, Worst, South Asia and World </h2>
+	 </p>	 <center>
+	   <div id="vSHDYNMORT" style="height:300px; width:600px;"></div>
+	 </center>
+	 <div class="row no-bottom-margin">
+		 <section class="row2left">
+		   <h2>most inverse-correlated indicators</h2>
+		   <font color="grey" size=2>could be negative cause or negative effect of  "Mortality rate - under-5 (per 1,000 live births)"</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.LE00.IN"> "Life expectancy at birth - total (years)"</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.POP.TOTL"> "Population - total"</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.LE00.MA.IN"> "Life expectancy at birth - male (years)"</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.LE00.FE.IN"> "Life expectancy at birth - female (years)"</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.TOTL.IN"> "Labor force - total"</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.URB.LCTY"> Population in largest city</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.URB.MCTY"> Population in urban agglomerations of more than 1 million</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.POP.DNST"> Population density (people per sq. km of land area)</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.URB.MCTY.TL.ZS"> Population in urban agglomerations of more than 1 million (% of total population)</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.CACT.FM.ZS"> Ratio of female to male labor participation rate (%)</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+		   </ol>
+		 </section>
+		 <section class="row2right">
+		   <h2>most correlated indicators</h2>
+		   <font color="grey" size=2>could be positive cause or positive effect of  "Mortality rate - under-5 (per 1,000 live births)"</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.IMRT.IN"> "Mortality rate - infant (per 1,000 live births)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.CBRT.IN"> "Birth rate - crude (per 1,000 people)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.DYN.NMRT"> "Mortality rate - neonatal (per 1,000 live births)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.TFRT.IN"> "Fertility rate - total (births per woman)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.POP.DPND.YG"> "Age dependency ratio - young (% of working-age population)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.POP.DPND"> Age dependency ratio (% of working-age population)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.AMRT.FE"> "Mortality rate - adult - female (per 1,000 female adults)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.POP.0014.TO.ZS"> Population ages 0-14 (% of total)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.CACT.MA.ZS"> "Labor participation rate - male (% of male population ages 15+)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.RUR.TOTL.ZS"> Rural population (% of total population)</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+		   </ol>
+		 </section>
+	 </div>
+	 <a class="back-to-top" href="#main">Back to Top</a>
+</section>
+
+<p>
+</p>
+
+<section id="SP.DYN.IMRT.IN">
+	 <h1><a href="http://data.worldbank.org/indicator/SP.DYN.IMRT.IN"> "Mortality rate - infant (per 1,000 live births)"</a></h1>
+
+	 <br><br>
+	 <p>		 <h2>Performance of Bangladesh</h2>
+		 <ul>			 <li>Progress status (year: 2012): <font color="green"><b>40.81% Increase</b></font>, since 2000.</li>			 <li>Current status (year: 2012): Bangladesh is in the <font color="orange">lower-middle</b></font> bucket, with the position 134 (value: 36.7) out of 192 countries.<br>
+[Best: San Marino, position: 1, value: 1.6; Worst: Sierra Leone, position: 192, value: 119.2]</li>		 </ul>	 </p>	 <p>		 <h2>Performance over time against the Best, Worst, South Asia and World </h2>
+	 </p>	 <center>
+	   <div id="vSPDYNIMRTIN" style="height:300px; width:600px;"></div>
+	 </center>
+	 <div class="row no-bottom-margin">
+		 <section class="row2left">
+		   <h2>most inverse-correlated indicators</h2>
+		   <font color="grey" size=2>could be negative cause or negative effect of  "Mortality rate - infant (per 1,000 live births)"</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.LE00.IN"> "Life expectancy at birth - total (years)"</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.LE00.FE.IN"> "Life expectancy at birth - female (years)"</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.POP.TOTL"> "Population - total"</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.LE00.MA.IN"> "Life expectancy at birth - male (years)"</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.TOTL.IN"> "Labor force - total"</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.URB.MCTY"> Population in urban agglomerations of more than 1 million</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.URB.LCTY"> Population in largest city</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.POP.1564.TO.ZS"> Population ages 15-64 (% of total)</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.POP.65UP.TO.ZS"> Population ages 65 and above (% of total)</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.URB.MCTY.TL.ZS"> Population in urban agglomerations of more than 1 million (% of total population)</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+		   </ol>
+		 </section>
+		 <section class="row2right">
+		   <h2>most correlated indicators</h2>
+		   <font color="grey" size=2>could be positive cause or positive effect of  "Mortality rate - infant (per 1,000 live births)"</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SH.DYN.MORT"> "Mortality rate - under-5 (per 1,000 live births)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.DYN.NMRT"> "Mortality rate - neonatal (per 1,000 live births)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.POP.DPND.YG"> "Age dependency ratio - young (% of working-age population)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.POP.DPND"> Age dependency ratio (% of working-age population)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.CBRT.IN"> "Birth rate - crude (per 1,000 people)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.AMRT.FE"> "Mortality rate - adult - female (per 1,000 female adults)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.POP.0014.TO.ZS"> Population ages 0-14 (% of total)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.TFRT.IN"> "Fertility rate - total (births per woman)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.RUR.TOTL.ZS"> Rural population (% of total population)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.CACT.MA.ZS"> "Labor participation rate - male (% of male population ages 15+)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+		   </ol>
+		 </section>
+	 </div>
+	 <a class="back-to-top" href="#main">Back to Top</a>
+</section>
+
+<p>
+</p>
+
+<section id="SH.IMM.MEAS">
+	 <h1><a href="http://data.worldbank.org/indicator/SH.IMM.MEAS"> "Immunization - measles (% of children ages 12-23 months)"</a></h1>
+
+	 <br><br>
+	 <p>		 <h2>Performance of Bangladesh</h2>
+		 <ul>			 <li>Progress status (year: 2012): <font color="green"><b>30.56% Increase</b></font>, since 2000.</li>			 <li>Current status (year: 2012): Bangladesh is in the <font color="lime">upper-middle</b></font> bucket, with the position 98 (value: 94.0) out of 189 countries.<br>
+[Best: Greece, position: 189, value: 99.0; Worst: Somalia, position: 1, value: 46.0]</li>		 </ul>	 </p>	 <p>		 <h2>Performance over time against the Best, Worst, South Asia and World </h2>
+	 </p>	 <center>
+	   <div id="vSHIMMMEAS" style="height:300px; width:600px;"></div>
+	 </center>
+	 <div class="row no-bottom-margin">
+		 <section class="row2left">
+		   <h2>most inverse-correlated indicators</h2>
+		   <font color="grey" size=2>could be negative cause or negative effect of  "Immunization - measles (% of children ages 12-23 months)"</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/TM.TAX.TCOM.IP.ZS"> "Share of tariff lines with international peaks - primary products (%)"</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/TM.TAX.TCOM.WM.FN.ZS"> "Tariff rate - most favored nation - weighted mean - primary products (%)"</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/TM.TAX.TCOM.WM.AR.ZS"> "Tariff rate - applied - weighted mean - primary products (%)"</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/TM.TAX.TCOM.SM.FN.ZS"> "Tariff rate - most favored nation - simple mean - primary products (%)"</a> <font color="grey" size=2>[corr score: -0.95]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.UEM.PRIM.ZS"> Unemployment with primary education (% of total unemployment)</a> <font color="grey" size=2>[corr score: -0.94]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.UEM.PRIM.MA.ZS"> "Unemployment with primary education - male (% of male unemployment)"</a> <font color="grey" size=2>[corr score: -0.94]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.H2O.SAFE.UR.ZS"> "Improved water source - urban (% of urban population with access)"</a> <font color="grey" size=2>[corr score: -0.94]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.ATM.METH.AG.ZS"> Agricultural methane emissions (% of total)</a> <font color="grey" size=2>[corr score: -0.94]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.ATM.METH.AG.KT.CE"> Agricultural methane emissions (thousand metric tons of CO2 equivalent)</a> <font color="grey" size=2>[corr score: -0.94]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.UEM.PRIM.FE.ZS"> "Unemployment with primary education - female (% of female unemployment)"</a> <font color="grey" size=2>[corr score: -0.94]</font><br></li>
+		   </ol>
+		 </section>
+		 <section class="row2right">
+		   <h2>most correlated indicators</h2>
+		   <font color="grey" size=2>could be positive cause or positive effect of  "Immunization - measles (% of children ages 12-23 months)"</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SP.REG.BRTH.RU.ZS"> "Completeness of birth registration - rural (%)"</a> <font color="grey" size=2>[corr score: 0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.REG.BRTH.UR.ZS"> "Completeness of birth registration - urban (%)"</a> <font color="grey" size=2>[corr score: 0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/TM.VAL.MMTL.ZS.UN"> Ores and metals imports (% of merchandise imports)</a> <font color="grey" size=2>[corr score: 0.94]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.ATM.NOXE.KT.CE"> Nitrous oxide emissions (thousand metric tons of CO2 equivalent)</a> <font color="grey" size=2>[corr score: 0.94]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.UEM.TERT.MA.ZS"> "Unemployment with tertiary education - male (% of male unemployment)"</a> <font color="grey" size=2>[corr score: 0.94]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.SEC.PROG.ZS"> Progression to secondary school (%)</a> <font color="grey" size=2>[corr score: 0.94]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.ATM.NOXE.AG.KT.CE"> Agricultural nitrous oxide emissions (thousand metric tons of CO2 equivalent)</a> <font color="grey" size=2>[corr score: 0.94]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.SEC.PROG.FE.ZS"> "Progression to secondary school - female (%)"</a> <font color="grey" size=2>[corr score: 0.94]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.UEM.TERT.FE.ZS"> "Unemployment with tertiary education - female (% of female unemployment)"</a> <font color="grey" size=2>[corr score: 0.94]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.ATM.NOXE.EI.ZS"> Nitrous oxide emissions in industrial and energy processes (% of total nitrous oxide emissions)</a> <font color="grey" size=2>[corr score: 0.94]</font><br></li>
+		   </ol>
+		 </section>
+	 </div>
+	 <a class="back-to-top" href="#main">Back to Top</a>
+</section>
+
+<p>
+</p>
+
+</div>
+
+    
+<!-- footer -->
+<footer>
+
+    <div class="footer-content">
+<!-- 
+        <ul class="footer-menu">
+            <li><a href="#main">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#about-us">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <!-- <li class="rss-feed"><a href="#">RSS Feed</a></li> -->
+        </ul>
+
+
+        <p class="footer-text">Copyright DecipherData.Org [<a href="http://www.decipherdata.org">www.decipherdata.org</a>] and Naushad UzZaman [<a href="http://www.naushad.uzzaman.com">www.naushad.uzzaman.com</a>]. &nbsp;&nbsp;&nbsp; <br>
+		<font size=1, color="grey">Theme adapted from <a href="http://www.styleshout.com/">Styleshout</a>.</font>
+		</p>
+    </div>
+
+</footer>
+
+</body>
+</html>

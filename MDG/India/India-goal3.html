@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
+
+<head>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta charset="utf-8"/>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Progress of India in MDG</title>
+
+    <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../../css/nivo-slider.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/jquery.fancybox-1.3.4.css" type="text/css" />
+
+    <!--[if lt IE 9]>
+	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../js/jquery-1.6.1.min.js"><\/script>')</script>
+
+    <script src="js/jquery.smoothscroll.js"></script>
+    <script src="../../js/jquery.nivo.slider.pack.js"></script>
+    <script src="../../js/jquery.easing-1.3.pack.js"></script>
+    <script src="../../js/jquery.fancybox-1.3.4.pack.js"></script>
+    <script src="../../js/init.js"></script>
+        
+        <!-- Don't touch this! -->
+        
+        
+        <script class="include" type="text/javascript" src="../../jqplot/examples/../jquery.jqplot.min.js"></script>
+        <script type="text/javascript" src="../../jqplot/examples/syntaxhighlighter/scripts/shCore.min.js"></script>
+        <script type="text/javascript" src="../../jqplot/examples/syntaxhighlighter/scripts/shBrushJScript.min.js"></script>
+        <script type="text/javascript" src="../../jqplot/examples/syntaxhighlighter/scripts/shBrushXml.min.js"></script>
+        <!-- End Don't touch this! -->
+        
+        <!-- Additional plugins go here -->
+        
+        <script class="include" language="javascript" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.highlighter.min.js"></script>
+        <script class="include" language="javascript" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.cursor.min.js"></script>
+        <script class="include" language="javascript" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.dateAxisRenderer.min.js"></script>
+        
+        <!-- End additional plugins -->
+        
+        <!-- Bar/Plot plugins go here -->
+        
+        <script class="include" language="javascript" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.barRenderer.min.js"></script>
+        <script class="include" language="javascript" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.categoryAxisRenderer.min.js"></script>
+        <script class="include" language="javascript" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.pointLabels.min.js"></script>
+        <script class="include" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.pieRenderer.min.js"></script>
+        
+        <!-- End Bar/Plot plugins -->
+
+        
+        <script type="text/javascript" src="../../jqplot/examples/example.min.js"></script>
+
+        <link class="include" rel="stylesheet" type="text/css" href="../../jqplot/examples/../jquery.jqplot.min.css" />
+        <link rel="stylesheet" type="text/css" href="../../jqplot/examples/examples.min.css" />
+        <link type="text/css" rel="stylesheet" href="../../jqplot/examples/syntaxhighlighter/styles/shCoreDefault.min.css" />
+        <link type="text/css" rel="stylesheet" href="../../jqplot/examples/syntaxhighlighter/styles/shThemejqPlot.min.css" />
+        
+        
+        <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="../../jqplot/examples/../excanvas.js"></script><![endif]-->
+
+
+</head>
+
+<body>
+
+<!-- header-wrap -->
+<div id="header-wrap">
+    <header>
+
+        <hgroup>
+            <h1><a href="index.html">Progress of India in MDG</a></h1>
+            <h3>Progress of India in MDG</h3>
+        </hgroup>
+
+        <nav>
+
+	        <ul>
+                <li><a href="http://www.decipherdata.org">Home</a></li>
+                <li><a href="India-goal1.html">Goal 1</a></li>
+                <li><a href="India-goal2.html">Goal 2</a></li>
+                <li><a href="India-goal3.html">Goal 3</a></li>
+                <li><a href="India-goal4.html">Goal 4</a></li>
+                <li><a href="India-goal5.html">Goal 5</a></li>
+                <li><a href="India-goal6.html">Goal 6</a></li>
+                <li><a href="India-goal7.html">Goal 7</a></li>
+                <li><a href="India-goal8.html">Goal 8</a></li>
+
+            </ul>
+        </nav>
+
+    </header>
+</div>
+    
+
+<!-- stat data -->
+<script class="code" type="text/javascript">
+$(document).ready(function(){
+var India=[[1990, 73.985], [1995, 81.358], [2000, 84.166], [2005, 95.945], [2010, 99.988], [2012, 99.988]];
+var World=[[1990, 87.95], [1995, 90.57], [2000, 92.502], [2005, 95.356], [2010, 97.461], [2012, 97.461]];
+var SouthAsia=[[1990, 73.051], [1995, 79.921], [2000, 83.056], [2005, 93.151], [2010, 97.789], [2012, 97.789]];
+var Best=[[1990, ('Lesotho', 121.762)], [1995, ('Dominica', 113.815)], [2000, ('Cayman Islands', 105.585)], [2005, ('Marshall Islands', 126.054)], [2010, ('San Marino', 113.358)], [2012, ('San Marino', 113.358)]];
+var Worst=[[1990, ('Chad', 43.756)], [1995, ('Chad', 48.295)], [2000, ('Afghanistan', 0.0)], [2005, ('Somalia', 49.989)], [2010, ('Somalia', 55.048)], [2012, ('Somalia', 55.048)]];
+
+var plotSEENRPRIMFMZS = $.jqplot("vSEENRPRIMFMZS", [India, World, SouthAsia, Best, Worst], {
+	 title:' Ratio of female to male primary enrollment (%)',
+	 axes:{yaxis:{min:-10.0, max:136.054}, xaxis:{min:1989, max:2021, label:'Year'}},
+	 legend: {show: true } ,
+	 series:[
+		 {label:'India', showMarker: false, lineWidth: 3, color:'green'}, 
+		 {label:'World', showMarker: false, lineWidth: 1, linePattern: 'dashed', color: 'rgb(66, 98, 144)'}, 
+		 {label:'SouthAsia', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'purple'}, 
+		 {label:'Best', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'yellow'},
+		 {label:'Worst', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'red'}
+		 ]
+	 });
+});
+</script>
+<script class="code" type="text/javascript">
+$(document).ready(function(){
+var India=[[1990, 57.257], [1995, 64.154], [2000, 71.008], [2005, 82.249], [2010, 91.794], [2012, 91.794]];
+var World=[[1990, 83.482], [1995, 87.42], [2000, 91.732], [2005, 94.964], [2010, 96.907], [2012, 96.907]];
+var SouthAsia=[[1990, 57.852], [1995, 65.088], [2000, 74.235], [2005, 83.744], [2010, 91.254], [2012, 91.254]];
+var Best=[[1990, ('Nicaragua', 162.877)], [1995, ('St. Lucia', 169.061)], [2000, ('St. Vincent and the Grenadines', 134.132)], [2005, ('Suriname', 128.969)], [2010, ('Lesotho', 138.199)], [2012, ('Lesotho', 138.199)]];
+var Worst=[[1990, ('Equatorial Guinea', 19.781)], [1995, ('Bhutan', 21.793)], [2000, ('Chad', 28.43)], [2005, ('Afghanistan', 32.841)], [2010, ('Chad', 42.108)], [2012, ('Chad', 42.108)]];
+
+var plotSEENRSECOFMZS = $.jqplot("vSEENRSECOFMZS", [India, World, SouthAsia, Best, Worst], {
+	 title:' Ratio of female to male secondary enrollment (%)',
+	 axes:{yaxis:{min:10.9510510467, max:177.890948953}, xaxis:{min:1989, max:2021, label:'Year'}},
+	 legend: {show: true } ,
+	 series:[
+		 {label:'India', showMarker: false, lineWidth: 3, color:'green'}, 
+		 {label:'World', showMarker: false, lineWidth: 1, linePattern: 'dashed', color: 'rgb(66, 98, 144)'}, 
+		 {label:'SouthAsia', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'purple'}, 
+		 {label:'Best', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'yellow'},
+		 {label:'Worst', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'red'}
+		 ]
+	 });
+});
+</script>
+<script class="code" type="text/javascript">
+$(document).ready(function(){
+var India=[[1990, 52.397], [1995, 57.084], [2000, 65.796], [2005, 70.624], [2010, 72.607], [2012, 72.607]];
+var World=[[1990, 89.824], [1995, 94.572], [2000, 99.615], [2005, 104.642], [2010, 107.933], [2012, 107.933]];
+var SouthAsia=[[1990, 48.182], [1995, 53.441], [2000, 64.533], [2005, 70.007], [2010, 72.208], [2012, 72.208]];
+var Best=[[1990, ('United Arab Emirates', 407.822)], [1995, ('Qatar', 559.531)], [2000, ('United Arab Emirates', 370.679)], [2005, ('Qatar', 369.44)], [2010, ('Qatar', 537.897)], [2012, ('Qatar', 537.897)]];
+var Worst=[[1990, ('Guinea-Bissau', 6.258)], [1995, ('Guinea-Bissau', 6.258)], [2000, ('"Congo - Dem. Rep."', 10.31)], [2005, ('Chad', 6.4)], [2010, ('Chad', 17.371)], [2012, ('Chad', 17.371)]];
+
+var plotSEENRTERTFMZS = $.jqplot("vSEENRTERTFMZS", [India, World, SouthAsia, Best, Worst], {
+	 title:' Ratio of female to male tertiary enrollment (%)',
+	 axes:{yaxis:{min:-3.63015633093, max:569.419156331}, xaxis:{min:1989, max:2021, label:'Year'}},
+	 legend: {show: true } ,
+	 series:[
+		 {label:'India', showMarker: false, lineWidth: 3, color:'green'}, 
+		 {label:'World', showMarker: false, lineWidth: 1, linePattern: 'dashed', color: 'rgb(66, 98, 144)'}, 
+		 {label:'SouthAsia', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'purple'}, 
+		 {label:'Best', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'yellow'},
+		 {label:'Worst', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'red'}
+		 ]
+	 });
+});
+</script>
+<script class="code" type="text/javascript">
+$(document).ready(function(){
+var India=[[1990, 12.7], [1995, 14.4], [2000, 16.6], [2005, 18.1], [2010, 18.1], [2012, 18.1]];
+var World=[[1990, 34.5594], [1995, 36.6679], [2000, 36.0556], [2005, 36.2976], [2010, 36.2976], [2012, 36.2976]];
+var SouthAsia=[[1990, 12.4861], [1995, 14.1787], [2000, 17.8908], [2005, 18.4116], [2010, 18.4116], [2012, 18.4116]];
+var Best=[[1990, ('Belarus', 55.4)], [1995, ('Belarus', 56.2)], [2000, ('Belarus', 55.9)], [2005, ('Belarus', 56.1)], [2010, ('Belarus', 55.8)], [2012, ('Belarus', 55.8)]];
+var Worst=[[1990, ('Chad', 3.8)], [1995, ('Chad', 5.5)], [2000, ('Chad', 5.5)], [2005, ('Chad', 5.5)], [2010, ('Chad', 5.5)], [2012, ('Chad', 5.5)]];
+
+var plotSLEMPINSVFEZS = $.jqplot("vSLEMPINSVFEZS", [India, World, SouthAsia, Best, Worst], {
+	 title:' Share of women employed in the nonagricultural sector (% of total nonagricultural employment)',
+	 axes:{yaxis:{min:-5.52384341637, max:65.5238434164}, xaxis:{min:1989, max:2021, label:'Year'}},
+	 legend: {show: true } ,
+	 series:[
+		 {label:'India', showMarker: false, lineWidth: 3, color:'green'}, 
+		 {label:'World', showMarker: false, lineWidth: 1, linePattern: 'dashed', color: 'rgb(66, 98, 144)'}, 
+		 {label:'SouthAsia', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'purple'}, 
+		 {label:'Best', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'yellow'},
+		 {label:'Worst', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'red'}
+		 ]
+	 });
+});
+</script>
+<script class="code" type="text/javascript">
+$(document).ready(function(){
+var India=[[1990, 5.0], [1995, 5.0], [2000, 9.0], [2005, 8.3], [2010, 10.8], [2012, 10.8]];
+var World=[[1990, 12.5063], [1995, 12.5063], [2000, 13.6209], [2005, 16.2624], [2010, 19.2775], [2012, 19.4696]];
+var SouthAsia=[[1990, 6.2977], [1995, 6.2977], [2000, 7.2347], [2005, 11.2603], [2010, 19.1764], [2012, 20.0984]];
+var Best=[[1990, ('Sweden', 38.0)], [1995, ('Sweden', 38.0)], [2000, ('Sweden', 43.0)], [2005, ('Rwanda', 48.8)], [2010, ('Rwanda', 56.3)], [2012, ('Rwanda', 56.3)]];
+var Worst=[[1990, ('St. Lucia', 0.0)], [1995, ('St. Lucia', 0.0)], [2000, ('Kuwait', 0.0)], [2005, ('Saudi Arabia', 0.0)], [2010, ('Saudi Arabia', 0.0)], [2012, ('Saudi Arabia', 0.0)]];
+
+var plotSGGENPARLZS = $.jqplot("vSGGENPARLZS", [India, World, SouthAsia, Best, Worst], {
+	 title:' Proportion of seats held by women in national parliaments (%)',
+	 axes:{yaxis:{min:-10.0, max:66.3}, xaxis:{min:1989, max:2021, label:'Year'}},
+	 legend: {show: true } ,
+	 series:[
+		 {label:'India', showMarker: false, lineWidth: 3, color:'green'}, 
+		 {label:'World', showMarker: false, lineWidth: 1, linePattern: 'dashed', color: 'rgb(66, 98, 144)'}, 
+		 {label:'SouthAsia', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'purple'}, 
+		 {label:'Best', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'yellow'},
+		 {label:'Worst', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'red'}
+		 ]
+	 });
+});
+</script>
+<script class="code" type="text/javascript">
+$(document).ready(function(){
+var India=[[1990, 67.448], [1995, 74.519], [2000, 78.805], [2005, 90.286], [2010, 94.85], [2012, 94.85]];
+var World=[[1990, 86.268], [1995, 89.292], [2000, 92.088], [2005, 95.117], [2010, 97.22], [2012, 97.22]];
+var SouthAsia=[[1990, 67.77], [1995, 74.169], [2000, 79.548], [2005, 89.446], [2010, 95.016], [2012, 95.016]];
+var Best=[[1990, ('Lesotho', 124.211)], [1995, ('Mongolia', 119.664)], [2000, ('Sweden', 115.102)], [2005, ('Marshall Islands', 114.939)], [2010, ('Tuvalu', 112.349)], [2012, ('Tuvalu', 112.349)]];
+var Worst=[[1990, ('Chad', 40.932)], [1995, ('Chad', 44.236)], [2000, ('Afghanistan', 46.534)], [2005, ('Somalia', 51.632)], [2010, ('Somalia', 53.434)], [2012, ('Somalia', 53.434)]];
+
+var plotSEENRPRSCFMZS = $.jqplot("vSEENRPRSCFMZS", [India, World, SouthAsia, Best, Worst], {
+	 title:' Ratio of girls to boys in primary and secondary education (%)',
+	 axes:{yaxis:{min:34.2273603143, max:130.915639686}, xaxis:{min:1989, max:2021, label:'Year'}},
+	 legend: {show: true } ,
+	 series:[
+		 {label:'India', showMarker: false, lineWidth: 3, color:'green'}, 
+		 {label:'World', showMarker: false, lineWidth: 1, linePattern: 'dashed', color: 'rgb(66, 98, 144)'}, 
+		 {label:'SouthAsia', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'purple'}, 
+		 {label:'Best', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'yellow'},
+		 {label:'Worst', showMarker: false, lineWidth: 1, linePattern: 'dashed', color:'red'}
+		 ]
+	 });
+});
+</script>
+
+<script class="code" type="text/javascript">
+  $(document).ready(function(){
+	 var SEENRPRIMFMZS = [18.80];
+	 var SEENRSECOFMZS = [29.27];
+	 var SEENRTERTFMZS = [10.35];
+	 var SLEMPINSVFEZS = [9.04];
+	 var SGGENPARLZS = [20.00];
+	 var SEENRPRSCFMZS = [20.36];
+	 var plot1 = $.jqplot('chart1', [SEENRPRIMFMZS, SEENRSECOFMZS, SEENRTERTFMZS, SLEMPINSVFEZS, SGGENPARLZS, SEENRPRSCFMZS], {
+	 seriesDefaults:{
+		 renderer:$.jqplot.BarRenderer,
+		 rendererOptions: {fillToZero: true}
+	 },
+	 series:[
+		{label:'Ratio of female to male primary enrollment (%)'},
+		{label:'Ratio of female to male secondary enrollment (%)'},
+		{label:'Ratio of female to male tertiary enrollment (%)'},
+		{label:'Share of women employed in the nonagricultural sector (% of total nonagricultural employment)'},
+		{label:'Proportion of seats held by women in national parliaments (%)'},
+		{label:'Ratio of girls to boys in primary and secondary education (%)'},
+	 ],
+	 legend: {
+		 show: true,
+		 placement: 'outsideGrid'
+	 },
+	 axes: {
+		 xaxis: {
+		 renderer: $.jqplot.CategoryAxisRenderer,
+		 label: "Percentage Positive/Negative Improvement for Indicators"
+		 },
+		 yaxis: {
+		 pad: 1.05,
+		 tickOptions: {formatString: '%d%'}
+		 }
+	 } 
+	 });
+  });
+</script>
+
+
+
+<script class="code" type="text/javascript">
+  $(document).ready(function(){
+	 var plot3 = $.jqplot('pie3', [[['upper bucket', 0], ['upper-middle bucket', 1], ['lower-middle bucket', 2], ['lower bucket', 3]]], {
+	 seriesDefaults:{
+		 shadow: false,
+		 renderer:$.jqplot.PieRenderer,
+		 rendererOptions:{
+		 sliceMargin: 4,
+		 startAngle: -90,
+		 seriesColors: [ "green", "lime", "orange", "red"]
+		 }
+	 },
+	 legend:{ show: true },
+	 });
+  });
+</script>
+
+<div class="content-wrap">
+<!-- main -->
+<section>
+</section><section id="main">
+<div>
+	 <h1>Progress of India in <a href="http://mdgs.un.org/unsd/mdg/Host.aspx?Content=Indicators/OfficialList.htm">MDG</a></h1>
+	 <h2>Goal 3: Promote gender equality and empower women</h2>
+	 <p class="intro">
+		 <h3>Goals and Targets:</h3>
+		 <ol>
+		   <li>
+			 Target 3.A: Eliminate gender disparity in primary and secondary education, preferably by 2005, and in all levels of education no later than 2015<br>
+			 <h4>Indicators:</h4>
+			 <ul>
+				 <li><a href="#SE.ENR.PRIM.FM.ZS">Ratio of female to male primary enrollment (%)</a></li>
+				 <li><a href="#SE.ENR.SECO.FM.ZS">Ratio of female to male secondary enrollment (%)</a></li>
+				 <li><a href="#SE.ENR.TERT.FM.ZS">Ratio of female to male tertiary enrollment (%)</a></li>
+				 <li><a href="#SL.EMP.INSV.FE.ZS">Share of women employed in the nonagricultural sector (% of total nonagricultural employment)</a></li>
+				 <li><a href="#SG.GEN.PARL.ZS">Proportion of seats held by women in national parliaments (%)</a></li>
+				 <li><a href="#SE.ENR.PRSC.FM.ZS">Ratio of girls to boys in primary and secondary education (%)</a></li>
+			 </ul>
+		   </li>
+		 </ol>
+	 </p>
+</div>
+<a class="back-to-top" href="#main">Back to Top</a>
+</section>
+<section id="summary-goal3">
+	<h1>India's Performance Summary for Goal 3</h1>
+<br><p>	 <h2>Percentage Increase/Decrease for Goal 3 Indicators, since 2000.</h2>
+	<center>
+	  <div id="chart1" style="width:800px; height:180px;"></div>
+	</center>
+</p>
+<p></p>
+<p>
+	 <h2>Summary of Current Status.</h2>
+
+<ul>
+	 <li>Indicators in <font color="green"><b>upper</b></font> bucket:</li>
+
+	 <li>Ratio of female to male primary enrollment (%) <a href="#SE.ENR.PRIM.FM.ZS"><font color='grey'>[detail]</font></a></li>
+
+	 <li>Proportion of seats held by women in national parliaments (%) <a href="#SG.GEN.PARL.ZS"><font color='grey'>[detail]</font></a>, Ratio of female to male secondary enrollment (%) <a href="#SE.ENR.SECO.FM.ZS"><font color='grey'>[detail]</font></a></li>
+
+	 <li>Share of women employed in the nonagricultural sector (% of total nonagricultural employment) <a href="#SL.EMP.INSV.FE.ZS"><font color='grey'>[detail]</font></a>, Ratio of female to male tertiary enrollment (%) <a href="#SE.ENR.TERT.FM.ZS"><font color='grey'>[detail]</font></a>, Ratio of girls to boys in primary and secondary education (%) <a href="#SE.ENR.PRSC.FM.ZS"><font color='grey'>[detail]</font></a></li>
+
+</ul>
+
+	<center>
+	  <div id="pie3" style="margin-top:20px; margin-left:20px; width:400px; height:200px;"></div>
+	</center>
+</p>
+<a class="back-to-top" href="#main">Back to Top</a>
+</section>
+<p></p>
+<section id="SE.ENR.PRIM.FM.ZS">
+	 <h1><a href="http://data.worldbank.org/indicator/SE.ENR.PRIM.FM.ZS"> Ratio of female to male primary enrollment (%)</a></h1>
+
+	 <br><br>
+	 <p>		 <h2>Performance of India</h2>
+		 <ul>			 <li>Progress status (year: 2012): <font color="green"><b>18.80% Increase</b></font>, since 2000.</li>			 <li>Current status (year: 2012): India is in the <font color="lime">upper-middle</b></font> bucket, with the position 144 (value: 99.988) out of 196 countries.<br>
+[Best: San Marino, position: 196, value: 113.358; Worst: Somalia, position: 1, value: 55.048]</li>		 </ul>	 </p>	 <p>		 <h2>Performance over time against the Best, Worst, South Asia and World </h2>
+	 </p>	 <center>
+	   <div id="vSEENRPRIMFMZS" style="height:300px; width:600px;"></div>
+	 </center>
+	 <div class="row no-bottom-margin">
+		 <section class="row2left">
+		   <h2>most inverse-correlated indicators</h2>
+		   <font color="grey" size=2>could be negative cause or negative effect of  Ratio of female to male primary enrollment (%)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/DT.CUR.OTHC.ZS"> "Currency composition of PPG debt - all other currencies (%)"</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NV.MNF.FBTO.ZS.UN"> "Food - beverages and tobacco (% of value added in manufacturing)"</a> <font color="grey" size=2>[corr score: -0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.STA.MMRT.NE"> "Maternal mortality ratio (national estimate - per 100,000 live births)"</a> <font color="grey" size=2>[corr score: -0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/VC.IHR.PSRC.P5"> "Intentional homicides (per 100,000 people)"</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.XPD.TERT.PC.ZS"> "Expenditure per student - tertiary (% of GDP per capita)"</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.PRM.UNER.FE"> "Children out of school - primary - female"</a> <font color="grey" size=2>[corr score: -0.95]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NV.MNF.TXTL.ZS.UN"> Textiles and clothing (% of value added in manufacturing)</a> <font color="grey" size=2>[corr score: -0.95]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.XPD.TOTL.GB.ZS"> "Public spending on education - total (% of government expenditure)"</a> <font color="grey" size=2>[corr score: -0.95]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.XPD.TOTL.GD.ZS"> "Public spending on education - total (% of GDP)"</a> <font color="grey" size=2>[corr score: -0.95]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.XPD.SECO.PC.ZS"> "Expenditure per student - secondary (% of GDP per capita)"</a> <font color="grey" size=2>[corr score: -0.94]</font><br></li>
+		   </ol>
+		 </section>
+		 <section class="row2right">
+		   <h2>most correlated indicators</h2>
+		   <font color="grey" size=2>could be positive cause or positive effect of  Ratio of female to male primary enrollment (%)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SE.PRM.ENRL.FE.ZS"> "Primary education - pupils (% female)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.ENR.PRSC.FM.ZS"> Ratio of girls to boys in primary and secondary education (%)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.SEC.ENRL.GC.FE.ZS"> "Secondary education - general pupils (% female)"</a> <font color="grey" size=2>[corr score: 0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.PRM.NENR.FE"> "School enrollment - primary - female (% net)"</a> <font color="grey" size=2>[corr score: 0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.PRM.ENRR.FE"> "School enrollment - primary - female (% gross)"</a> <font color="grey" size=2>[corr score: 0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.SEC.ENRL.FE.ZS"> "Secondary education - pupils (% female)"</a> <font color="grey" size=2>[corr score: 0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.PRM.TENR.FE"> "Total enrollment - primary - female (% net)"</a> <font color="grey" size=2>[corr score: 0.95]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.DOD.MIDA.CD"> "PPG - IDA (DOD - current US$)"</a> <font color="grey" size=2>[corr score: 0.95]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.DOD.MLTC.CD"> "PPG - multilateral concessional (DOD - current US$)"</a> <font color="grey" size=2>[corr score: 0.95]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.PRM.ENRL"> "Primary education - pupils"</a> <font color="grey" size=2>[corr score: 0.95]</font><br></li>
+		   </ol>
+		 </section>
+	 </div>
+	 <a class="back-to-top" href="#main">Back to Top</a>
+</section>
+
+<p>
+</p>
+
+<section id="SE.ENR.SECO.FM.ZS">
+	 <h1><a href="http://data.worldbank.org/indicator/SE.ENR.SECO.FM.ZS"> Ratio of female to male secondary enrollment (%)</a></h1>
+
+	 <br><br>
+	 <p>		 <h2>Performance of India</h2>
+		 <ul>			 <li>Progress status (year: 2012): <font color="green"><b>29.27% Increase</b></font>, since 2000.</li>			 <li>Current status (year: 2012): India is in the <font color="orange">lower-middle</b></font> bucket, with the position 50 (value: 91.794) out of 196 countries.<br>
+[Best: Lesotho, position: 196, value: 138.199; Worst: Chad, position: 1, value: 42.108]</li>		 </ul>	 </p>	 <p>		 <h2>Performance over time against the Best, Worst, South Asia and World </h2>
+	 </p>	 <center>
+	   <div id="vSEENRSECOFMZS" style="height:300px; width:600px;"></div>
+	 </center>
+	 <div class="row no-bottom-margin">
+		 <section class="row2left">
+		   <h2>most inverse-correlated indicators</h2>
+		   <font color="grey" size=2>could be negative cause or negative effect of  Ratio of female to male secondary enrollment (%)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SP.ADO.TFRT"> "Adolescent fertility rate (births per 1,000 women ages 15-19)"</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.POP.GROW"> Population growth (annual %)</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.AMRT.FE"> "Mortality rate - adult - female (per 1,000 female adults)"</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.AMRT.MA"> "Mortality rate - adult - male (per 1,000 male adults)"</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.TFRT.IN"> "Fertility rate - total (births per woman)"</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.CDRT.IN"> "Death rate - crude (per 1,000 people)"</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.DYN.MORT"> "Mortality rate - under-5 (per 1,000 live births)"</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.POP.DPND"> Age dependency ratio (% of working-age population)</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.POP.DPND.YG"> "Age dependency ratio - young (% of working-age population)"</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.DYN.IMRT.IN"> "Mortality rate - infant (per 1,000 live births)"</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+		   </ol>
+		 </section>
+		 <section class="row2right">
+		   <h2>most correlated indicators</h2>
+		   <font color="grey" size=2>could be positive cause or positive effect of  Ratio of female to male secondary enrollment (%)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SE.SEC.ENRL.FE.ZS"> "Secondary education - pupils (% female)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.TDS.MLTC.CD"> "PPG - multilateral concessional (TDS - current US$)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.TDS.MIDA.CD"> "PPG - IDA (TDS - current US$)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.AMT.MLTC.CD"> "PPG - multilateral concessional (AMT - current US$)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.AMT.MIDA.CD"> "PPG - IDA (AMT - current US$)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.H2O.SAFE.RU.ZS"> "Improved water source - rural (% of rural population with access)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.URB.MCTY"> Population in urban agglomerations of more than 1 million</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.H2O.SAFE.ZS"> Improved water source (% of population with access)</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.URB.LCTY"> Population in largest city</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.SEC.ENRR.FE"> "School enrollment - secondary - female (% gross)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+		   </ol>
+		 </section>
+	 </div>
+	 <a class="back-to-top" href="#main">Back to Top</a>
+</section>
+
+<p>
+</p>
+
+<section id="SE.ENR.TERT.FM.ZS">
+	 <h1><a href="http://data.worldbank.org/indicator/SE.ENR.TERT.FM.ZS"> Ratio of female to male tertiary enrollment (%)</a></h1>
+
+	 <br><br>
+	 <p>		 <h2>Performance of India</h2>
+		 <ul>			 <li>Progress status (year: 2012): <font color="green"><b>10.35% Increase</b></font>, since 2000.</li>			 <li>Current status (year: 2012): India is in the <font color="red">lower</b></font> bucket, with the position 46 (value: 72.607) out of 189 countries.<br>
+[Best: Qatar, position: 189, value: 537.897; Worst: Chad, position: 1, value: 17.371]</li>		 </ul>	 </p>	 <p>		 <h2>Performance over time against the Best, Worst, South Asia and World </h2>
+	 </p>	 <center>
+	   <div id="vSEENRTERTFMZS" style="height:300px; width:600px;"></div>
+	 </center>
+	 <div class="row no-bottom-margin">
+		 <section class="row2left">
+		   <h2>most inverse-correlated indicators</h2>
+		   <font color="grey" size=2>could be negative cause or negative effect of  Ratio of female to male tertiary enrollment (%)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SI.POV.GAPS"> Poverty gap at $1.25 a day (PPP) (%)</a> <font color="grey" size=2>[corr score: -0.87]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SI.POV.RUHC"> Poverty headcount ratio at rural poverty line (% of rural population)</a> <font color="grey" size=2>[corr score: -0.87]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SI.POV.GAP2"> Poverty gap at $2 a day (PPP) (%)</a> <font color="grey" size=2>[corr score: -0.87]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SI.POV.NAHC"> Poverty headcount ratio at national poverty line (% of population)</a> <font color="grey" size=2>[corr score: -0.87]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SI.POV.2DAY"> Poverty headcount ratio at $2 a day (PPP) (% of population)</a> <font color="grey" size=2>[corr score: -0.87]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SI.POV.DDAY"> Poverty headcount ratio at $1.25 a day (PPP) (% of population)</a> <font color="grey" size=2>[corr score: -0.87]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.AGR.EMPL.ZS"> Employment in agriculture (% of total employment)</a> <font color="grey" size=2>[corr score: -0.87]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SM.POP.TOTL"> "International migrant stock - total"</a> <font color="grey" size=2>[corr score: -0.87]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SM.POP.TOTL.ZS"> International migrant stock (% of population)</a> <font color="grey" size=2>[corr score: -0.86]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SI.POV.URHC"> Poverty headcount ratio at urban poverty line (% of urban population)</a> <font color="grey" size=2>[corr score: -0.86]</font><br></li>
+		   </ol>
+		 </section>
+		 <section class="row2right">
+		   <h2>most correlated indicators</h2>
+		   <font color="grey" size=2>could be positive cause or positive effect of  Ratio of female to male tertiary enrollment (%)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/IS.RRS.TOTL.KM"> Rail lines (total route-km)</a> <font color="grey" size=2>[corr score: 0.89]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.IND.EMPL.MA.ZS"> "Employees - industry - male (% of male employment)"</a> <font color="grey" size=2>[corr score: 0.87]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.IND.EMPL.ZS"> Employment in industry (% of total employment)</a> <font color="grey" size=2>[corr score: 0.87]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.SRV.EMPL.ZS"> Employment in services (% of total employment)</a> <font color="grey" size=2>[corr score: 0.87]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.IND.EMPL.FE.ZS"> "Employees - industry - female (% of female employment)"</a> <font color="grey" size=2>[corr score: 0.86]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.NFL.PCBK.CD"> "PPG - commercial banks (NFL - current US$)"</a> <font color="grey" size=2>[corr score: 0.86]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.MMR.RISK"> Lifetime risk of maternal death (1 in: rate varies by country)</a> <font color="grey" size=2>[corr score: 0.86]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IE.PPI.TRAN.CD"> Investment in transport with private participation (current US$)</a> <font color="grey" size=2>[corr score: 0.86]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/ST.INT.TRNX.CD"> "International tourism - expenditures for passenger transport items (current US$)"</a> <font color="grey" size=2>[corr score: 0.84]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.NTR.PCBK.CD"> "PPG - commercial banks (NTR - current US$)"</a> <font color="grey" size=2>[corr score: 0.84]</font><br></li>
+		   </ol>
+		 </section>
+	 </div>
+	 <a class="back-to-top" href="#main">Back to Top</a>
+</section>
+
+<p>
+</p>
+
+<section id="SL.EMP.INSV.FE.ZS">
+	 <h1><a href="http://data.worldbank.org/indicator/SL.EMP.INSV.FE.ZS"> Share of women employed in the nonagricultural sector (% of total nonagricultural employment)</a></h1>
+
+	 <br><br>
+	 <p>		 <h2>Performance of India</h2>
+		 <ul>			 <li>Progress status (year: 2012): <font color="green"><b>9.04% Increase</b></font>, since 2000.</li>			 <li>Current status (year: 2012): India is in the <font color="red">lower</b></font> bucket, with the position 24 (value: 18.1) out of 203 countries.<br>
+[Best: Belarus, position: 203, value: 55.8; Worst: Chad, position: 1, value: 5.5]</li>		 </ul>	 </p>	 <p>		 <h2>Performance over time against the Best, Worst, South Asia and World </h2>
+	 </p>	 <center>
+	   <div id="vSLEMPINSVFEZS" style="height:300px; width:600px;"></div>
+	 </center>
+	 <div class="row no-bottom-margin">
+		 <section class="row2left">
+		   <h2>most inverse-correlated indicators</h2>
+		   <font color="grey" size=2>could be negative cause or negative effect of  Share of women employed in the nonagricultural sector (% of total nonagricultural employment)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SP.REG.BRTH.UR.ZS"> "Completeness of birth registration - urban (%)"</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.CON.1524.FE.ZS"> "Condom use - population ages 15-24 - female (% of females ages 15-24)"</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SN.ITK.SALT.ZS"> Consumption of iodized salt (% of households)</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IC.ELC.DURS"> Delay in obtaining an electrical connection (days)</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SP.REG.BRTH.RU.ZS"> "Completeness of birth registration - rural (%)"</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.EMP.MPYR.FE.ZS"> "Employers - female (% of employment)"</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.EMP.MPYR.ZS"> "Employers - total (% of employment)"</a> <font color="grey" size=2>[corr score: -1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.XPD.PRIM.PC.ZS"> "Expenditure per student - primary (% of GDP per capita)"</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/EN.ATM.CO2E.LF.ZS"> CO2 emissions from liquid fuel consumption (% of total)</a> <font color="grey" size=2>[corr score: -0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/VC.IHR.PSRC.P5"> "Intentional homicides (per 100,000 people)"</a> <font color="grey" size=2>[corr score: -0.97]</font><br></li>
+		   </ol>
+		 </section>
+		 <section class="row2right">
+		   <h2>most correlated indicators</h2>
+		   <font color="grey" size=2>could be positive cause or positive effect of  Share of women employed in the nonagricultural sector (% of total nonagricultural employment)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SH.CON.1524.MA.ZS"> "Condom use - population ages 15-24 - male (% of males ages 15-24)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IC.FRM.CRIM.ZS"> "Losses due to theft - robbery - vandalism - and arson (% sales)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.STA.ORCF.ZS"> Diarrhea treatment (% of children under 5 receiving oral rehydration and continued feeding)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IC.FRM.BNKS.ZS"> Firms using banks to finance investment (% of firms)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.EMP.WORK.ZS"> "Wage and salaried workers - total (% of total employed)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.FAM.WORK.FE.ZS"> "Contributing family workers - female (% of females employed)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.EMP.VULN.FE.ZS"> "Vulnerable employment - female (% of female employment)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.EMP.MPYR.MA.ZS"> "Employers - male (% of employment)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.EMP.WORK.MA.ZS"> "Wage and salary workers - male (% of males employed)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.FAM.WORK.MA.ZS"> "Contributing family workers - male (% of males employed)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+		   </ol>
+		 </section>
+	 </div>
+	 <a class="back-to-top" href="#main">Back to Top</a>
+</section>
+
+<p>
+</p>
+
+<section id="SG.GEN.PARL.ZS">
+	 <h1><a href="http://data.worldbank.org/indicator/SG.GEN.PARL.ZS"> Proportion of seats held by women in national parliaments (%)</a></h1>
+
+	 <br><br>
+	 <p>		 <h2>Performance of India</h2>
+		 <ul>			 <li>Progress status (year: 2012): <font color="green"><b>20.00% Increase</b></font>, since 2000.</li>			 <li>Current status (year: 2012): India is in the <font color="orange">lower-middle</b></font> bucket, with the position 56 (value: 10.8) out of 189 countries.<br>
+[Best: Rwanda, position: 189, value: 56.3; Worst: Saudi Arabia, position: 1, value: 0.0]</li>		 </ul>	 </p>	 <p>		 <h2>Performance over time against the Best, Worst, South Asia and World </h2>
+	 </p>	 <center>
+	   <div id="vSGGENPARLZS" style="height:300px; width:600px;"></div>
+	 </center>
+	 <div class="row no-bottom-margin">
+		 <section class="row2left">
+		   <h2>most inverse-correlated indicators</h2>
+		   <font color="grey" size=2>could be negative cause or negative effect of  Proportion of seats held by women in national parliaments (%)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/GC.TAX.GSRV.VA.ZS"> Taxes on goods and services (% value added of industry and services)</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/IQ.CPA.DEBT.XQ"> CPIA debt policy rating (1=low to 6=high)</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/ER.H2O.FWAG.ZS"> "Annual freshwater withdrawals - agriculture (% of total freshwater withdrawal)"</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.SEC.ENRL.TC.ZS"> "Pupil-teacher ratio - secondary"</a> <font color="grey" size=2>[corr score: -0.95]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.TOTL.FE.ZS"> "Labor force - female (% of total labor force)"</a> <font color="grey" size=2>[corr score: -0.90]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.EMP.TOTL.SP.FE.ZS"> "Employment to population ratio - 15+ - female (%)"</a> <font color="grey" size=2>[corr score: -0.90]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.ACTI.FE.ZS"> "Labor force participation rate - female (% of female population ages 15-64)"</a> <font color="grey" size=2>[corr score: -0.90]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.CACT.FM.ZS"> Ratio of female to male labor participation rate (%)</a> <font color="grey" size=2>[corr score: -0.89]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.EMP.TOTL.SP.ZS"> "Employment to population ratio - 15+ - total (%)"</a> <font color="grey" size=2>[corr score: -0.89]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SL.TLF.ACTI.ZS"> "Labor force participation rate - total (% of total population ages 15-64)"</a> <font color="grey" size=2>[corr score: -0.89]</font><br></li>
+		   </ol>
+		 </section>
+		 <section class="row2right">
+		   <h2>most correlated indicators</h2>
+		   <font color="grey" size=2>could be positive cause or positive effect of  Proportion of seats held by women in national parliaments (%)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/ER.H2O.FWTL.K3"> "Annual freshwater withdrawals - total (billion cubic meters)"</a> <font color="grey" size=2>[corr score: 0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/ER.H2O.FWIN.ZS"> "Annual freshwater withdrawals - industry (% of total freshwater withdrawal)"</a> <font color="grey" size=2>[corr score: 0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/ER.H2O.FWDM.ZS"> "Annual freshwater withdrawals - domestic (% of total freshwater withdrawal)"</a> <font color="grey" size=2>[corr score: 0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.AMT.PNGB.CD"> "PNG - bonds (AMT - current US$)"</a> <font color="grey" size=2>[corr score: 0.94]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/FB.CBK.BRCH.P5"> "Commercial bank branches (per 100,000 adults)"</a> <font color="grey" size=2>[corr score: 0.94]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.SEC.TCHR.FE"> "Secondary education - teachers - female"</a> <font color="grey" size=2>[corr score: 0.93]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.TDS.PNGB.CD"> "PNG - bonds (TDS - current US$)"</a> <font color="grey" size=2>[corr score: 0.93]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/ER.GDP.FWTL.M3.KD"> "Water productivity - total (constant 2000 US$ GDP per cubic meter of total freshwater withdrawal)"</a> <font color="grey" size=2>[corr score: 0.93]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.DOD.BLAT.CD"> "PPG - bilateral (DOD - current US$)"</a> <font color="grey" size=2>[corr score: 0.92]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.SEC.TCHR"> "Secondary education - teachers"</a> <font color="grey" size=2>[corr score: 0.91]</font><br></li>
+		   </ol>
+		 </section>
+	 </div>
+	 <a class="back-to-top" href="#main">Back to Top</a>
+</section>
+
+<p>
+</p>
+
+<section id="SE.ENR.PRSC.FM.ZS">
+	 <h1><a href="http://data.worldbank.org/indicator/SE.ENR.PRSC.FM.ZS"> Ratio of girls to boys in primary and secondary education (%)</a></h1>
+
+	 <br><br>
+	 <p>		 <h2>Performance of India</h2>
+		 <ul>			 <li>Progress status (year: 2012): <font color="green"><b>20.36% Increase</b></font>, since 2000.</li>			 <li>Current status (year: 2012): India is in the <font color="red">lower</b></font> bucket, with the position 47 (value: 94.85) out of 196 countries.<br>
+[Best: Tuvalu, position: 196, value: 112.349; Worst: Somalia, position: 1, value: 53.434]</li>		 </ul>	 </p>	 <p>		 <h2>Performance over time against the Best, Worst, South Asia and World </h2>
+	 </p>	 <center>
+	   <div id="vSEENRPRSCFMZS" style="height:300px; width:600px;"></div>
+	 </center>
+	 <div class="row no-bottom-margin">
+		 <section class="row2left">
+		   <h2>most inverse-correlated indicators</h2>
+		   <font color="grey" size=2>could be negative cause or negative effect of  Ratio of girls to boys in primary and secondary education (%)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/DT.CUR.OTHC.ZS"> "Currency composition of PPG debt - all other currencies (%)"</a> <font color="grey" size=2>[corr score: -0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NV.MNF.FBTO.ZS.UN"> "Food - beverages and tobacco (% of value added in manufacturing)"</a> <font color="grey" size=2>[corr score: -0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SH.STA.MMRT.NE"> "Maternal mortality ratio (national estimate - per 100,000 live births)"</a> <font color="grey" size=2>[corr score: -0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NV.MNF.TXTL.ZS.UN"> Textiles and clothing (% of value added in manufacturing)</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.XPD.TERT.PC.ZS"> "Expenditure per student - tertiary (% of GDP per capita)"</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/VC.IHR.PSRC.P5"> "Intentional homicides (per 100,000 people)"</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/NV.MNF.CHEM.ZS.UN"> Chemicals (% of value added in manufacturing)</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.XPD.SECO.PC.ZS"> "Expenditure per student - secondary (% of GDP per capita)"</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.XPD.TOTL.GD.ZS"> "Public spending on education - total (% of GDP)"</a> <font color="grey" size=2>[corr score: -0.96]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.PRM.UNER"> "Children out of school - primary"</a> <font color="grey" size=2>[corr score: -0.95]</font><br></li>
+		   </ol>
+		 </section>
+		 <section class="row2right">
+		   <h2>most correlated indicators</h2>
+		   <font color="grey" size=2>could be positive cause or positive effect of  Ratio of girls to boys in primary and secondary education (%)</font>
+		   <ol>
+			 <li><a href="http://data.worldbank.org/indicator/SE.PRM.ENRL.FE.ZS"> "Primary education - pupils (% female)"</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.ENR.PRIM.FM.ZS"> Ratio of female to male primary enrollment (%)</a> <font color="grey" size=2>[corr score: 1.00]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.SEC.ENRL.GC.FE.ZS"> "Secondary education - general pupils (% female)"</a> <font color="grey" size=2>[corr score: 0.99]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.PRM.ENRR.FE"> "School enrollment - primary - female (% gross)"</a> <font color="grey" size=2>[corr score: 0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.PRM.NENR.FE"> "School enrollment - primary - female (% net)"</a> <font color="grey" size=2>[corr score: 0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.SEC.ENRL.FE.ZS"> "Secondary education - pupils (% female)"</a> <font color="grey" size=2>[corr score: 0.98]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.DOD.MIDA.CD"> "PPG - IDA (DOD - current US$)"</a> <font color="grey" size=2>[corr score: 0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/DT.DOD.MLTC.CD"> "PPG - multilateral concessional (DOD - current US$)"</a> <font color="grey" size=2>[corr score: 0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.PRM.CMPT.FE.ZS"> "Primary completion rate - female (% of relevant age group)"</a> <font color="grey" size=2>[corr score: 0.97]</font><br></li>
+			 <li><a href="http://data.worldbank.org/indicator/SE.ENR.SECO.FM.ZS"> Ratio of female to male secondary enrollment (%)</a> <font color="grey" size=2>[corr score: 0.97]</font><br></li>
+		   </ol>
+		 </section>
+	 </div>
+	 <a class="back-to-top" href="#main">Back to Top</a>
+</section>
+
+<p>
+</p>
+
+</div>
+
+    
+<!-- footer -->
+<footer>
+
+    <div class="footer-content">
+<!-- 
+        <ul class="footer-menu">
+            <li><a href="#main">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#about-us">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <!-- <li class="rss-feed"><a href="#">RSS Feed</a></li> -->
+        </ul>
+
+
+        <p class="footer-text">Copyright DecipherData.Org [<a href="http://www.decipherdata.org">www.decipherdata.org</a>] and Naushad UzZaman [<a href="http://www.naushad.uzzaman.com">www.naushad.uzzaman.com</a>]. &nbsp;&nbsp;&nbsp; <br>
+		<font size=1, color="grey">Theme adapted from <a href="http://www.styleshout.com/">Styleshout</a>.</font>
+		</p>
+    </div>
+
+</footer>
+
+</body>
+</html>

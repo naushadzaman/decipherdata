@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DecipherData.Org - Making Sense of Data</title>
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link rel="stylesheet" href="styles/style.css" media="screen" />
+<link rel="stylesheet" href="styles/media-queries.css" />
+<link rel="stylesheet" href="./flex-slider/flexslider.css" type="text/css" media="screen" />
+<link href="styles/prettyPhoto.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="styles/tipsy.css" rel="stylesheet" type="text/css" media="screen" />
+
+<script type="text/javascript" src="./scripts/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="./flex-slider/jquery.flexslider-min.js"></script>
+<script src="scripts/jquery.prettyPhoto.js" type="text/javascript"></script>
+<script src="scripts/jquery.tipsy.js" type="text/javascript"></script>
+<script src="scripts/jquery.knob.js" type="text/javascript"></script>
+<script type="text/javascript" src="./scripts/jquery.isotope.min.js"></script>
+<script type="text/javascript" src="./scripts/jquery.smooth-scroll.min.js"></script>
+<script type="text/javascript" src="./scripts/waypoints.min.js"></script>
+<script type="text/javascript" src="./scripts/setup.js"></script>
+
+<script type="text/javascript" src="http://www.google.com/jsapi">
+</script>
+
+<script type="text/javascript">
+google.load("feeds", "1");
+function initialize() {
+      var feed = new google.feeds.Feed("http://decipherdata.blogspot.com/feeds/posts/default?alt=rss");
+      feed.load(function(result) {
+        if (!result.error) {
+          var container = document.getElementById("feed");
+		  container.innerHTML += "<p><ul>";
+		  <!-- result.feed.entries.length --> 
+          for (var i = 0; i < result.feed.entries.length; i++) {
+            var entry = result.feed.entries[i];
+			container.innerHTML += "<li>" + "<a href='" + entry.link + "'>" + entry.title + "</a>"+ "<br>" + entry.contentSnippet + " " + "<a href='" + entry.link + "'>" + "more" + "</a>"+  "</li> <br>"
+          }
+		  container.innerHTML += "</ul></p>";
+        }
+		container.innerHTML += "<p><h3>Blog: <a href=\"http://blog.decipherdata.org\">blog.decipherdata.org</a></h3></p>";
+      });
+    }
+    google.setOnLoadCallback(initialize);
+
+</script>
+
+
+</head>
+<body>
+<div id="wrap"> 
+  <!-- wrapper -->
+  <div id="sidebar"> 
+    <!-- the  sidebar --> 
+    <!-- logo --> 
+    <a href="#" id="logo"> <img src="./dd-images/dd-logo.png" alt="" /></a> 
+    <!-- navigation menu -->
+    <ul id="navigation">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div id="container"> 
+    <!-- page container -->
+    <div class="page" id="home"> 
+      <!-- page home -->
+      <div class="page_content">
+        <div class="gf-slider"> 
+          <!-- slider -->
+          <ul class="slides">
+            <li> <a href="http://blog.decipherdata.org/search/label/%23BangladeshMDG"><img src="dd-images/bangladesh-mdg.jpg" alt="" /></a>
+              <p class="flex-caption"> Explore and understand Bangladesh's performance in Millennium Development Goals</p>
+            </li>
+            <li> <a href="http://blog.decipherdata.org/2012/11/twitterpaul-extracting-and-aggregating.html"><img src="dd-images/twitterpaul-2.jpg" alt="" /></a>
+              <p class="flex-caption"> TwitterPaul: Extracting and Aggregating Twitter Predictions</p>
+            </li>
+          </ul>
+        </div>
+        <div class="space"> </div>
+        <div class="clear"> </div>
+      </div>
+    </div>
+
+	
+    <div class="page" id="about"> 
+      <!-- page about -->
+      <h3 class="page_title"> About Us</h3>
+      <div class="page_content">
+        <p>We apply data mining techniques to decipher publicly available data and find meaningful information. Our goal is to understand the correlations among different factors, make predictive analyses, and to explore the current status and progress of different factors over time. Our primary interest and focus for now is to bring data science to the social development.</p>		</blockquote>
+        <div class="clear"> </div>
+      </div>
+    </div>
+
+    <div class="page" id="blog"> 
+	<h3 class="page_title"> Latest DecipherData Blog Posts</h3>
+
+	<div class="page_content" id="feed"></div>
+	</div> 
+
+
+    <div class="page" id="contact"> 
+      <!-- page contact -->
+      <h3 class="page_title"> Let's Get in Touch</h3>
+      <div class="page_content">
+        <div class="clear"> </div>
+        <ul class="social_icons">
+          <li><a href="https://twitter.com/naushadzaman" id="tw" original-title="Follow Me on Twitter"> <img src="images/twitter.png" alt="Twitter" /></a></li>
+          <li><a href="http://naushad.uzzaman.com" id="fb" original-title="Find about all of my activities in one place"> <img src="dd-images/n.png" alt="Naushad UzZaman" /></a></li>
+          <li><a href="http://www.linkedin.com/in/naushadzaman" id="ld" original-title="Find me on LinkedIn"> <img src="images/linkedin.png" alt="LinkedIn" /></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer">
+      <p> &copy; <a href="http://naushad.uzzaman.com">Naushad UzZaman</a>. All Rights Reserved.</p>
+      <p> Template From <a href="http://esarfraz.com">Sarfraz Shoukat</a></p>
+    </div>
+  </div>
+</div>
+<a class="gotop" href="#top">Top</a>
+</body>
+</html>

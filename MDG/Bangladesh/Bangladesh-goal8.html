@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
+
+<head>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta charset="utf-8"/>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Progress of Bangladesh in MDG</title>
+
+    <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../../css/nivo-slider.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/jquery.fancybox-1.3.4.css" type="text/css" />
+
+    <!--[if lt IE 9]>
+	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../js/jquery-1.6.1.min.js"><\/script>')</script>
+
+    <script src="js/jquery.smoothscroll.js"></script>
+    <script src="../../js/jquery.nivo.slider.pack.js"></script>
+    <script src="../../js/jquery.easing-1.3.pack.js"></script>
+    <script src="../../js/jquery.fancybox-1.3.4.pack.js"></script>
+    <script src="../../js/init.js"></script>
+        
+        <!-- Don't touch this! -->
+        
+        
+        <script class="include" type="text/javascript" src="../../jqplot/examples/../jquery.jqplot.min.js"></script>
+        <script type="text/javascript" src="../../jqplot/examples/syntaxhighlighter/scripts/shCore.min.js"></script>
+        <script type="text/javascript" src="../../jqplot/examples/syntaxhighlighter/scripts/shBrushJScript.min.js"></script>
+        <script type="text/javascript" src="../../jqplot/examples/syntaxhighlighter/scripts/shBrushXml.min.js"></script>
+        <!-- End Don't touch this! -->
+        
+        <!-- Additional plugins go here -->
+        
+        <script class="include" language="javascript" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.highlighter.min.js"></script>
+        <script class="include" language="javascript" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.cursor.min.js"></script>
+        <script class="include" language="javascript" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.dateAxisRenderer.min.js"></script>
+        
+        <!-- End additional plugins -->
+        
+        <!-- Bar/Plot plugins go here -->
+        
+        <script class="include" language="javascript" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.barRenderer.min.js"></script>
+        <script class="include" language="javascript" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.categoryAxisRenderer.min.js"></script>
+        <script class="include" language="javascript" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.pointLabels.min.js"></script>
+        <script class="include" type="text/javascript" src="../../jqplot/examples/../plugins/jqplot.pieRenderer.min.js"></script>
+        
+        <!-- End Bar/Plot plugins -->
+
+        
+        <script type="text/javascript" src="../../jqplot/examples/example.min.js"></script>
+
+        <link class="include" rel="stylesheet" type="text/css" href="../../jqplot/examples/../jquery.jqplot.min.css" />
+        <link rel="stylesheet" type="text/css" href="../../jqplot/examples/examples.min.css" />
+        <link type="text/css" rel="stylesheet" href="../../jqplot/examples/syntaxhighlighter/styles/shCoreDefault.min.css" />
+        <link type="text/css" rel="stylesheet" href="../../jqplot/examples/syntaxhighlighter/styles/shThemejqPlot.min.css" />
+        
+        
+        <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="../../jqplot/examples/../excanvas.js"></script><![endif]-->
+
+
+</head>
+
+<body>
+
+<!-- header-wrap -->
+<div id="header-wrap">
+    <header>
+
+        <hgroup>
+            <h1><a href="index.html">Progress of Bangladesh in MDG</a></h1>
+            <h3>Progress of Bangladesh in MDG</h3>
+        </hgroup>
+
+        <nav>
+
+	        <ul>
+                <li><a href="http://www.decipherdata.org">Home</a></li>
+                <li><a href="http://www.decipherdata.org/MDG/Bangladesh/Bangladesh-goal1.html">Goal 1</a></li>
+                <li><a href="http://www.decipherdata.org/MDG/Bangladesh/Bangladesh-goal2.html">Goal 2</a></li>
+                <li><a href="http://www.decipherdata.org/MDG/Bangladesh/Bangladesh-goal3.html">Goal 3</a></li>
+                <li><a href="http://www.decipherdata.org/MDG/Bangladesh/Bangladesh-goal4.html">Goal 4</a></li>
+                <li><a href="http://www.decipherdata.org/MDG/Bangladesh/Bangladesh-goal5.html">Goal 5</a></li>
+                <li><a href="http://www.decipherdata.org/MDG/Bangladesh/Bangladesh-goal6.html">Goal 6</a></li>
+                <li><a href="http://www.decipherdata.org/MDG/Bangladesh/Bangladesh-goal7.html">Goal 7</a></li>
+                <li><a href="http://www.decipherdata.org/MDG/Bangladesh/Bangladesh-goal8.html">Goal 8</a></li>
+
+            </ul>
+        </nav>
+
+    </header>
+</div>
+    
+
+<!-- stat data -->
+
+<script class="code" type="text/javascript">
+  $(document).ready(function(){
+	 var plot1 = $.jqplot('chart1', [], {
+	 seriesDefaults:{
+		 renderer:$.jqplot.BarRenderer,
+		 rendererOptions: {fillToZero: true}
+	 },
+	 series:[
+	 ],
+	 legend: {
+		 show: true,
+		 placement: 'outsideGrid'
+	 },
+	 axes: {
+		 xaxis: {
+		 renderer: $.jqplot.CategoryAxisRenderer,
+		 label: "Percentage Positive/Negative Improvement for Indicators"
+		 },
+		 yaxis: {
+		 pad: 1.05,
+		 tickOptions: {formatString: '%d%'}
+		 }
+	 } 
+	 });
+  });
+</script>
+
+
+
+<script class="code" type="text/javascript">
+  $(document).ready(function(){
+	 var plot3 = $.jqplot('pie3', [[['upper bucket', 0], ['upper-middle bucket', 0], ['lower-middle bucket', 0], ['lower bucket', 0]]], {
+	 seriesDefaults:{
+		 shadow: false,
+		 renderer:$.jqplot.PieRenderer,
+		 rendererOptions:{
+		 sliceMargin: 4,
+		 startAngle: -90,
+		 seriesColors: [ "green", "lime", "orange", "red"]
+		 }
+	 },
+	 legend:{ show: true },
+	 });
+  });
+</script>
+
+<div class="content-wrap">
+<!-- main -->
+<section>
+</section><section id="main">
+<div>
+	 <h1>Progress of Bangladesh in <a href="http://mdgs.un.org/unsd/mdg/Host.aspx?Content=Indicators/OfficialList.htm">MDG</a></h1>
+	 <h2>Still Under Construction!</h2>
+	 <p class="intro">
+		 <h3>Goals and Targets:</h3>
+		 <ol>
+		 </ol>
+	 </p>
+</div>
+<a class="back-to-top" href="#main">Back to Top</a>
+</section>
+<section id="summary-goal8">
+	<h1>Bangladesh's Performance Summary for Goal 8</h1>
+<br><p>	 <h2>Percentage Increase/Decrease for Goal 8 Indicators, since 2000.</h2>
+	<center>
+	  <div id="chart1" style="width:800px; height:0px;"></div>
+	</center>
+</p>
+<p></p>
+<p>
+	 <h2>Summary of Current Status.</h2>
+
+<ul>
+	 <li>Indicators in <font color="green"><b>upper</b></font> bucket:</li>
+
+	 <li>Indicators in <font color="lime"><b>upper-middle</b></font> bucket:</li>
+
+	 <li>Indicators in <font color="orange"><b>lower-middle</b></font> bucket:</li>
+
+	 <li>Indicators in <font color="red"><b>lower</b></font> bucket:</li>
+
+</ul>
+
+	<center>
+	  <div id="pie3" style="margin-top:20px; margin-left:20px; width:400px; height:200px;"></div>
+	</center>
+</p>
+<a class="back-to-top" href="#main">Back to Top</a>
+</section>
+<p></p>
+</div>
+
+    
+<!-- footer -->
+<footer>
+
+    <div class="footer-content">
+<!-- 
+        <ul class="footer-menu">
+            <li><a href="#main">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#about-us">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <!-- <li class="rss-feed"><a href="#">RSS Feed</a></li> -->
+        </ul>
+
+
+        <p class="footer-text">Copyright DecipherData.Org [<a href="http://www.decipherdata.org">www.decipherdata.org</a>] and Naushad UzZaman [<a href="http://www.naushad.uzzaman.com">www.naushad.uzzaman.com</a>]. &nbsp;&nbsp;&nbsp; <br>
+		<font size=1, color="grey">Theme adapted from <a href="http://www.styleshout.com/">Styleshout</a>.</font>
+		</p>
+    </div>
+
+</footer>
+
+</body>
+</html>
